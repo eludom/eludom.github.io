@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bears on Curious Musings</title>
+    <link>https://eludom.github.io/tags/bears/</link>
+    <description>Recent content in bears on Curious Musings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 19 Mar 2020 00:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://eludom.github.io/tags/bears/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bear attacks, no-win situations and cybersecurity</title>
+      <link>https://eludom.github.io/blog/cybersecurity-and-bears/</link>
+      <pubDate>Thu, 19 Mar 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/blog/cybersecurity-and-bears/</guid>
+      <description>I spend a good amount of time hiking in Shenandoah National Park and surrounding areas. I&amp;rsquo;ve seen quite a few #bears and I&amp;rsquo;ve followed one down the trail. I&amp;rsquo;ve been growled at by a mother bear when I unknowingly came between her and her cubs. This is going somewhere related to #cybersecurity. I promise.
+You can&amp;rsquo;t outrun a bear. Climbing a tree won&amp;rsquo;t help. If a bear actually decides to attack you, the odds are not in your favor, but fortunately they almost never attack.</description>
+    </item>
+    
+  </channel>
+</rss>
