@@ -19,7 +19,7 @@
     "articleSection" : "Blog",
     "name" : "Fixing GNU bash associative array insert speed",
     "headline" : "Fixing GNU bash associative array insert speed",
-    "description" : "\x3cp\x3eBash uses linear search to insert values in to associative arrays.\nThis is all well and good for small numbers of keys.   I was adding\nmillions\x3csup id=\x22fnref:1\x22\x3e\x3ca href=\x22#fn:1\x22 class=\x22footnote-ref\x22 role=\x22doc-noteref\x22\x3e1\x3c\/a\x3e\x3c\/sup\x3e.    I went poking around the bash source code today\n(2020-04-18) to confirm my suspicion and gauge the difficulty of\nadding an option to do something more sensible.\x3c\/p\x3e",
+    "description" : "\x3cp\x3eBash uses linear search to insert values in to associative arrays.\nThis is all well and good for small numbers of keys.   I was adding\nmillions\x3csup id=\x22fnref:1\x22\x3e\x3ca href=\x22#fn:1\x22 class=\x22footnote-ref\x22 role=\x22doc-noteref\x22\x3e1\x3c\/a\x3e\x3c\/sup\x3e.    I went poking around the bash source code today\n(2020-04-18) to confirm my suspicion and gauge the difficulty of\nadding an option to do something more sensible.\x3c\/p\x3e\n\x3cp\x3eIn less than a day after I reported it, there is a patch\n\x3ca href=\x22https:\/\/lists.gnu.org\/archive\/html\/bug-bash\/2020-04\/msg00114.html\x22\x3ehttps:\/\/lists.gnu.org\/archive\/html\/bug-bash\/2020-04\/msg00114.html\x3c\/a\x3e My\ntiming code and pre and post patch timings are here:\n\x3ca href=\x22https:\/\/github.com\/eludom\/snippits\/tree\/master\/bash\/tests\x22\x3ehttps:\/\/github.com\/eludom\/snippits\/tree\/master\/bash\/tests\x3c\/a\x3e\x3c\/p\x3e",
     "inLanguage" : "en-US",
     "author" : "eludom.github.ioGeorge Jones",
     "creator" : "eludom.github.ioGeorge Jones",
@@ -30,7 +30,7 @@
     "datePublished": "2020-04-18 00:00:00 -0400 EDT",
     "dateModified" : "2020-04-18 00:00:00 -0400 EDT",
     "url" : "https:\/\/eludom.github.io\/blog\/20200418\/",
-    "wordCount" : "460",
+    "wordCount" : "493",
     "keywords" : [ "programming","gnu","linux","Blog" ]
 }
 </script>
@@ -119,6 +119,10 @@ This is all well and good for small numbers of keys.   I was adding
 millions<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.    I went poking around the bash source code today
 (2020-04-18) to confirm my suspicion and gauge the difficulty of
 adding an option to do something more sensible.</p>
+<p>In less than a day after I reported it, there is a patch
+<a href="https://lists.gnu.org/archive/html/bug-bash/2020-04/msg00114.html">https://lists.gnu.org/archive/html/bug-bash/2020-04/msg00114.html</a> My
+timing code and pre and post patch timings are here:
+<a href="https://github.com/eludom/snippits/tree/master/bash/tests">https://github.com/eludom/snippits/tree/master/bash/tests</a></p>
 <p>Here the steps I took and where I might go if I get serious about
 fixing the problem:</p>
 <h2 id="get-the-source-code">Get the source code</h2>
@@ -199,16 +203,17 @@ BUCKET_CONTENTS <span style="color:#f92672">*</span>
           <span style="color:#66d9ef">return</span> (list);
         }
     }
-</code></pre></div><h3 id="next-steps">Next steps</h3>
-<h4 id="reach-out-to-the-maintainers"><!-- raw HTML omitted -->TODO<!-- raw HTML omitted --> Reach out to the maintainers</h4>
+</code></pre></div><h2 id="next-steps">Next steps</h2>
+<h3 id="done-reach-out-to-the-maintainers">DONE Reach out to the maintainers</h3>
 <p>see if they would even entertain the idea of a patch</p>
-<h4 id="look-for-appropriate-in-memory-hash-insert-lookup-functions"><!-- raw HTML omitted -->TODO<!-- raw HTML omitted --> Look for appropriate in-memory hash insert/lookup functions</h4>
+<h3 id="canceled-look-for-appropriate-in-memory-hash-insert-lookup-functions">CANCELED Look for appropriate in-memory hash insert/lookup functions</h3>
 <ul>
 <li>btrees ?</li>
 </ul>
-<h4 id="code-it"><!-- raw HTML omitted -->TODO<!-- raw HTML omitted --> Code it</h4>
-<h4 id="test-it"><!-- raw HTML omitted -->TODO<!-- raw HTML omitted --> test it</h4>
-<h4 id="submit-patch"><!-- raw HTML omitted -->TODO<!-- raw HTML omitted --> submit patch</h4>
+<h3 id="canceled-code-it">CANCELED Code it</h3>
+<h3 id="canceled-test-it">CANCELED test it</h3>
+<h3 id="canceled-submit-patch">CANCELED submit patch</h3>
+<p>See <a href="https://lists.gnu.org/archive/html/bug-bash/2020-04/msg00114.html">https://lists.gnu.org/archive/html/bug-bash/2020-04/msg00114.html</a></p>
 <section class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
