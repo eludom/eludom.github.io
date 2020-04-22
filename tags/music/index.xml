@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>music on Curious Musings</title>
+    <link>https://eludom.github.io/tags/music/</link>
+    <description>Recent content in music on Curious Musings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 Apr 2020 00:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://eludom.github.io/tags/music/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Some Happy Notes</title>
+      <link>https://eludom.github.io/blog/happy-notes/</link>
+      <pubDate>Tue, 21 Apr 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/blog/happy-notes/</guid>
+      <description>&lt;p&gt;And on a happy note&amp;hellip;my son Bryan has finished his Masters of
+Piano Performance at Duquesne University and will be headed to
+Penn State to pursue a Doctor of Musical Arts.  You can watch
+listen to &lt;a href=&#34;https://www.youtube.com/playlist?list=PLp9RFZrc7DMtCEg0SmtEL5weDiTis3rH5&#34;&gt;Bryan Jones&amp;rsquo; masters degree piano recitle at Duquesne&lt;/a&gt; on
+Youtube.&lt;/p&gt;
+
+
+
+&lt;figure&gt;
+    
+        &lt;img src=&#34;https://eludom.github.io/ox-hugo/2020-04-21-BryanJonesRecital.png&#34;/&gt; &lt;/figure&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

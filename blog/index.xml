@@ -12,6 +12,25 @@
     
     
     <item>
+      <title>Some Happy Notes</title>
+      <link>https://eludom.github.io/blog/happy-notes/</link>
+      <pubDate>Tue, 21 Apr 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/blog/happy-notes/</guid>
+      <description>&lt;p&gt;And on a happy note&amp;hellip;my son Bryan has finished his Masters of
+Piano Performance at Duquesne University and will be headed to
+Penn State to pursue a Doctor of Musical Arts.  You can watch
+listen to &lt;a href=&#34;https://www.youtube.com/playlist?list=PLp9RFZrc7DMtCEg0SmtEL5weDiTis3rH5&#34;&gt;Bryan Jones&amp;rsquo; masters degree piano recitle at Duquesne&lt;/a&gt; on
+Youtube.&lt;/p&gt;
+
+
+
+&lt;figure&gt;
+    
+        &lt;img src=&#34;https://eludom.github.io/ox-hugo/2020-04-21-BryanJonesRecital.png&#34;/&gt; &lt;/figure&gt;</description>
+    </item>
+    
+    <item>
       <title>Fixing GNU bash associative array insert speed</title>
       <link>https://eludom.github.io/blog/20200418/</link>
       <pubDate>Sat, 18 Apr 2020 00:00:00 -0400</pubDate>
