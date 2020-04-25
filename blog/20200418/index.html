@@ -72,6 +72,18 @@
         <h3>◾ Frequent</h3>
         
         
+        <li>
+          <a href="https://eludom.github.io/tags/cybersecurity"> cybersecurity <small>(2)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/life"> life <small>(2)</small></a>
+        </li>
+        
+        
+        
         
         
         
@@ -109,7 +121,19 @@
 </aside>
 
     <main class="content container">
-    <div class="post">
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Fixing GNU bash associative array insert speed"/>
+<meta name="twitter:description" content="Bash uses linear search to insert values in to associative arrays.
+This is all well and good for small numbers of keys.   I was adding
+millions1.    I went poking around the bash source code today
+(2020-04-18) to confirm my suspicion and gauge the difficulty of
+adding an option to do something more sensible.
+In less than a day after I reported it, there is a patch
+https://lists.gnu.org/archive/html/bug-bash/2020-04/msg00114.html My
+timing code and pre and post patch timings are here:
+https://github.com/eludom/snippits/tree/master/bash/tests"/>
+
+<div class="post">
   <h1>Fixing GNU bash associative array insert speed</h1>
  <time datetime=2020-04-18T00:00:00-0400 class="post-date">2020-04-18 
 
@@ -120,7 +144,7 @@
       / <a href="https://eludom.github.io/tags/gnu/"> gnu</a>
       / <a href="https://eludom.github.io/tags/linux/"> linux</a>
 </time>
- <p>Bash uses linear search to insert values in to associative arrays.
+<p>Bash uses linear search to insert values in to associative arrays.
 This is all well and good for small numbers of keys.   I was adding
 millions<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.    I went poking around the bash source code today
 (2020-04-18) to confirm my suspicion and gauge the difficulty of
