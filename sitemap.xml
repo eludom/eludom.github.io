@@ -3,8 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://eludom.github.io/tags/blogging/</loc>
+    <lastmod>2020-04-29T08:28:09-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://eludom.github.io/</loc>
-    <lastmod>2020-04-27T08:13:22-04:00</lastmod>
+    <lastmod>2020-04-29T08:28:09-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eludom.github.io/tags/life/</loc>
+    <lastmod>2020-04-29T08:28:09-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eludom.github.io/tags/poetry/</loc>
+    <lastmod>2020-04-29T08:28:09-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eludom.github.io/blog/poetry-in-the-trash/</loc>
+    <lastmod>2020-04-29T08:28:09-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eludom.github.io/tags/</loc>
+    <lastmod>2020-04-29T08:28:09-04:00</lastmod>
   </url>
   
   <url>
@@ -14,16 +39,6 @@
   
   <url>
     <loc>https://eludom.github.io/tags/digitalfrontiers/</loc>
-    <lastmod>2020-04-27T08:13:22-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eludom.github.io/tags/life/</loc>
-    <lastmod>2020-04-27T08:13:22-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eludom.github.io/tags/</loc>
     <lastmod>2020-04-27T08:13:22-04:00</lastmod>
   </url>
   
