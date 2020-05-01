@@ -6,10 +6,46 @@
     <description>Recent content on Curious Musings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Apr 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2020 19:39:00 -0400</lastBuildDate>
     
 	<atom:link href="https://eludom.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>HOWTO: Using Pi-hole DNS to block ads.  The struggle continues…</title>
+      <link>https://eludom.github.io/blog/2020-05-01/</link>
+      <pubDate>Fri, 01 May 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/blog/2020-05-01/</guid>
+      <description>&lt;p&gt;&lt;em&gt;This article is a work in progress.  To be updated as exploration continues.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Day 03 of #100DaysToOffload.&lt;/p&gt;
+&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;p&gt;The war against ads continues. &lt;a href=&#34;https://pi-hole.net/&#34;&gt;https://pi-hole.net/&lt;/a&gt; looks like a
+reasonable, good, new?, open source entry in the war against ads. Get
+&amp;lsquo;yer source/install for linux at &lt;a href=&#34;https://github.com/pi-hole/pi-hole&#34;&gt;https://github.com/pi-hole/pi-hole&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Per Paul Vixie&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;not even non-technical users need a &amp;ldquo;public DNS&amp;rdquo; to shield themselves
+from a lot of known-evil internet sites. check out @The_Pi_Hole or
+have your 12yo child or cousin install it.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;..but I always make things harder.&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+
+
+
+&lt;figure&gt;
+    
+        &lt;img src=&#34;https://eludom.github.io/ox-hugo/pi-hole.png&#34; alt=&#34;Figure 1: pi-hole console after a few hours on my system&#34;/&gt; &lt;figcaption&gt;
+                
+                &lt;p&gt;
+                    Figure 1: pi-hole console after a few hours on my system
+                    
+                        
+                        &lt;/p&gt;
+                
+            &lt;/figcaption&gt;&lt;/figure&gt;</description>
+    </item>
     
     <item>
       <title>Choosy Programmers Choose GIF</title>
