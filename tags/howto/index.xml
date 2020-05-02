@@ -17,8 +17,9 @@
       <pubDate>Fri, 01 May 2020 00:00:00 -0400</pubDate>
       
       <guid>https://eludom.github.io/blog/2020-05-01/</guid>
-      <description>&lt;p&gt;&lt;em&gt;This article is a work in progress.  To be updated as exploration continues.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Day 03 of #100DaysToOffload.&lt;/p&gt;
+      <description>&lt;p&gt;&lt;em&gt;This article is a work in progress.  Updated: 2020-05-02.  This is
+turning into a bit of a catch-up on the state of DNS for me.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Day 03 and 04 of #100DaysToOffload.&lt;/p&gt;
 &lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 &lt;p&gt;The war against ads continues. &lt;a href=&#34;https://pi-hole.net/&#34;&gt;https://pi-hole.net/&lt;/a&gt; looks like a
 reasonable, good, new?, open source entry in the war against ads. Get
