@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>writing on Curious Musings</title>
+    <link>https://eludom.github.io/tags/writing/</link>
+    <description>Recent content in writing on Curious Musings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 08 May 2020 00:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://eludom.github.io/tags/writing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>9 day of #100DaysToOffload</title>
+      <link>https://eludom.github.io/blog/2020-05-08/</link>
+      <pubDate>Fri, 08 May 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/blog/2020-05-08/</guid>
+      <description>Experiences after 9 days of blogging About 3 weeks ago I decided to start blogging. For various still ill-defined reasons, some of which I explored in a blog post contemplating the fate of writing and writers great and small But it&amp;rsquo;s still somewhat mushy.
+I spent some time coming up the curve on the Hugo framework for building static web sites and the emacs org mode counterpart ox-hugo which let me put up my Curious Musings blog.</description>
+    </item>
+    
+  </channel>
+</rss>
