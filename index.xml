@@ -12,13 +12,23 @@
     
     
     <item>
-      <title>9 day of #100DaysToOffload</title>
+      <title>9 days of #100DaysToOffload</title>
       <link>https://eludom.github.io/blog/2020-05-08/</link>
       <pubDate>Fri, 08 May 2020 00:00:00 -0400</pubDate>
       
       <guid>https://eludom.github.io/blog/2020-05-08/</guid>
-      <description>Experiences after 9 days of blogging About 3 weeks ago I decided to start blogging. For various still ill-defined reasons, some of which I explored in a blog post contemplating the fate of writing and writers great and small But it&amp;rsquo;s still somewhat mushy.
-I spent some time coming up the curve on the Hugo framework for building static web sites and the emacs org mode counterpart ox-hugo which let me put up my Curious Musings blog.</description>
+      <description>&lt;h2 id=&#34;experiences-after-9-days-of-blogging&#34;&gt;Experiences after 9 days of blogging&lt;/h2&gt;
+&lt;p&gt;About 3 weeks ago I decided to start blogging.  For various still
+ill-defined reasons, some of which I explored in a &lt;a href=&#34;https://eludom.github.io/blog/poetry-in-the-trash/&#34;&gt;blog post
+contemplating the fate of writing and writers great and small&lt;/a&gt;.
+But it&amp;rsquo;s still somewhat mushy.&lt;/p&gt;
+&lt;p&gt;I spent some time coming up the curve on the &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo framework for
+building static web sites&lt;/a&gt; and the &lt;a href=&#34;https://ox-hugo.scripter.co/&#34;&gt;emacs org mode counterpart ox-hugo&lt;/a&gt;
+which let me put up my &lt;a href=&#34;https://eludom.github.io/&#34;&gt;Curious Musings&lt;/a&gt; blog.&lt;/p&gt;
+&lt;p&gt;The a few days after that on &lt;a href=&#34;https://fosstodon.org/web/timelines/home&#34;&gt;Fosstodon&lt;/a&gt; (open source distributed social
+media) I came across the &lt;a href=&#34;https://100daystooffload.com/&#34;&gt;https://100daystooffload.com/&lt;/a&gt; challenge
+which, basically encourages you to &amp;ldquo;just write&amp;rdquo;.   Good timing.
+Here it is.&lt;/p&gt;</description>
     </item>
     
     <item>
