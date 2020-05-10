@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="//gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.69.0" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/eludom.github.io\/"
+    },
+    "articleSection" : "Blog",
+    "name" : "HOWTO: Breaking and fixing DNS - Understanding modern DNS on Ubuntu.",
+    "headline" : "HOWTO: Breaking and fixing DNS - Understanding modern DNS on Ubuntu.",
+    "description" : "\x3cp\x3eOne dark and stormy night I broke my DNS.   I decided to move\nbeyond \x3ccode\x3e\/etc\/resolv.conf\x3c\/code\x3e and see what demons (daemons?) were\nlurking under the hood.  \x26ldquo;Its complicated.\x26rdquo;  This is the story of\nunderstanding, debugging and fixing it.\x3c\/p\x3e",
+    "inLanguage" : "en-US",
+    "author" : "eludom.github.ioGeorge Jones",
+    "creator" : "eludom.github.ioGeorge Jones",
+    "publisher": "eludom.github.ioGeorge Jones",
+    "accountablePerson" : "eludom.github.ioGeorge Jones",
+    "copyrightHolder" : "eludom.github.ioGeorge Jones",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-05-10 00:00:00 -0400 EDT",
+    "dateModified" : "2020-05-10 00:00:00 -0400 EDT",
+    "url" : "https:\/\/eludom.github.io\/blog\/dns-today\/",
+    "wordCount" : "1122",
+    "keywords" : [ "DNS","Ubuntu","HOWTO","Linux","systemd","Blog" ]
+}
+</script>
+
+  
+  <title>HOWTO: Breaking and fixing DNS - Understanding modern DNS on Ubuntu. &middot; Curious Musings</title>
+
+  
+  <link type="text/css" rel="stylesheet" href="https://eludom.github.io/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://eludom.github.io/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://eludom.github.io/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://eludom.github.io/css/hyde.css">
+  
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous|Oswald|Merriweather|PT+Sans:400,400i,700">
+
+
+
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://eludom.github.io/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="https://eludom.github.io/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Curious Musings" />
+
+  
+</head>
+
+  <body class="theme-base-0a ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://eludom.github.io/"><h1>Curious Musings</h1></a>
+    </div>
+    <nav>
+      <ul class="sidebar-nav">
+        <h3>◾ Frequent</h3>
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/life"> life <small>(6)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/emacs"> emacs <small>(3)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/100daystooffload"> 100daystooffload <small>(2)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/blogging"> blogging <small>(2)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/cybersecurity"> cybersecurity <small>(2)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/dns"> dns <small>(2)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/family"> family <small>(2)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/howto"> howto <small>(2)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/latin"> latin <small>(2)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/linux"> linux <small>(2)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/music"> music <small>(2)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/programming"> programming <small>(2)</small></a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <h4><a href="https://eludom.github.io/tags/">All Topics ►</a></h4>
+        
+          <h3>◾ About </h3>
+          <a href="https://eludom.github.io//about">George Jones</a>
+          <a href="https://eludom.github.io//curious">Curious Musings</a>
+          <img src="https://eludom.github.io/title-logo.png">
+      </ul>
+    </nav>
+  </div>
+</aside>
+
+    <main class="content container">
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="HOWTO: Breaking and fixing DNS - Understanding modern DNS on Ubuntu."/>
+<meta name="twitter:description" content="One dark and stormy night I broke my DNS.   I decided to move
+beyond /etc/resolv.conf and see what demons (daemons?) were
+lurking under the hood.  &ldquo;Its complicated.&rdquo;  This is the story of
+understanding, debugging and fixing it."/>
+
+<div class="post">
+  <h1>HOWTO: Breaking and fixing DNS - Understanding modern DNS on Ubuntu.</h1>
+ <time datetime=2020-05-10T00:00:00-0400 class="post-date">2020-05-10 
+
+
+
+    
+      / <a href="https://eludom.github.io/tags/dns/"> dns</a>
+      / <a href="https://eludom.github.io/tags/ubuntu/"> ubuntu</a>
+      / <a href="https://eludom.github.io/tags/howto/"> howto</a>
+      / <a href="https://eludom.github.io/tags/linux/"> linux</a>
+      / <a href="https://eludom.github.io/tags/systemd/"> systemd</a>
+</time>
+<p>One dark and stormy night I broke my DNS.   I decided to move
+beyond <code>/etc/resolv.conf</code> and see what demons (daemons?) were
+lurking under the hood.  &ldquo;Its complicated.&rdquo;  This is the story of
+understanding, debugging and fixing it.</p>
+<h2 id="etc-resolv-dot-conf">/etc/resolv.conf</h2>
+<p>If you  look at <code>/etc/resolv.conf</code> on a Linux system today (Ubuntu
+19.10) you will find something like:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text"># Dynamic resolv.conf(5) file for glibc resolver(3) generated by resolvconf(8)
+#     DO NOT EDIT THIS FILE BY HAND -- YOUR CHANGES WILL BE OVERWRITTEN
+# 127.0.0.53 is the systemd-resolved stub resolver.
+# run &#34;systemd-resolve --status&#34; to see details about the actual nameservers.
+
+nameserver 127.0.0.1
+search lan
+</code></pre></div><p>But the file seems to change.  I&rsquo;ve seen it without most of the
+verbiage above.  I&rsquo;ve seen the file contain both 127.0.0.1 and
+127.0.0.53.  Confusing.  systemd?</p>
+<h2 id="you-can-edit-etc-resolv-dot-conf">You <em>can</em> edit <code>/etc/resolv.conf</code></h2>
+<p>First let me say that despite the dire warnings below, you <strong>can</strong>
+edit <code>/etc/resolv.conf</code>, e.g. to make it look like</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text"># Generated by NetworkManager
+search lan
+nameserver 9.9.9.9
+</code></pre></div><p>And it will work until NetworkManager chooses to overwrite the
+file.  Not sure if <code>sudo chmod 444 /etc/resolv.conf</code> be enough to
+keep NetworkManager from overwriting it.</p>
+<h2 id="debugging-a-broken-dns">Debugging a broken DNS</h2>
+<p>I was living dangerously and simultaneously playing with
+<a href="https://pi-hole.net/">https://pi-hole.net/</a> and letting Ubuntu try to upgrade my system.
+It went south.  DNS stopped working.  The following were some of
+the debugging steps I took to try to understand/fix the issue:</p>
+<h3 id="testing-resolution-is-name-resolution-working">Testing resolution - is name resolution working?</h3>
+<p>In this phase of debugging, I try to do name resolution as configured:</p>
+<dl>
+<dt>dig - no namserver specified</dt>
+<dd>I ran <code>$ dig www.uu.net</code> to see if everything was working as
+intended.  Nope.  No response.</dd>
+<dt>dig - known-good nameserver</dt>
+<dd>I ran <code>$ dig www.uu.net @9.9.9.9</code> to see if I could resolve against a known-good
+nameserver.  This worked.  No issues with connectivity/routing.</dd>
+<dt>dig - 127.0.0.53</dt>
+<dd>I ran <code>$ dig www.uu.net @127.0.0.53</code> to see
+if the local systemd-resolved nameserver specified in
+/etc/resolv.conf was working.  Nope.</dd>
+<dt>systemd-resolved - how is it configured?</dt>
+<dd>I ran <code>$ systemd-resolve --status</code> to see how systemd thought dns was
+configured.  The wireless interface I was using pointed to a
+nameserver (the proxy server on my wireless router) that should work:</dd>
+</dl>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">$ systemd-resolve --status
+...
+Link 3 (wlp2s0)
+      Current Scopes: DNS
+       LLMNR setting: yes
+MulticastDNS setting: no
+      DNSSEC setting: no
+    DNSSEC supported: no
+         DNS Servers: 192.168.86.1
+          DNS Domain: ~.
+                      lan
+</code></pre></div><dl>
+<dt>systemd-resolve - let systemd resolve a name</dt>
+<dd>dig(1) and host(1) are
+not the only game in town for doing command line DNS look-ups.
+Systemd (of course) will do it for you:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">            $ systemd-resolve www.uu.net
+            www.uu.net: 152.195.32.39
+</code></pre></div><p>In this case, it worked, which tells me that systemd-resolved
+is happy and working.</p>
+</dd>
+<dt>try dig again</dt>
+<dd>Try another &ldquo;normal&rdquo; lookup:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">            $ dig www.uu.net
+</code></pre></div><p>This failed.  The conclusion seems to be that the whatever the
+resolver library is looking at (127.0.0.53) is not working.</p>
+</dd>
+<dt>edit <code>/etc/resolv.conf</code></dt>
+<dd>Pointing <code>/etc/resolv.conf</code> at
+working nameservers fixed the problem:</dd>
+</dl>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text"># Generated by NetworkManager
+search lan
+#nameserver 127.0.0.53  # BROKEN. systemd-resolved nameserver set by NetworkManager
+#nameserver 9.9.9.9     # WORKS. quad9 nameserver
+nameserver 192.168.86.1 # WORKS. wireless router nameserver
+</code></pre></div><h4 id="conclusion-the-systemd-resolved-is-not-answering">Conclusion - the systemd-resolved is not answering</h4>
+<h3 id="what-name-resolution-processes-are-running">What name resolution processes are running?</h3>
+<p>The next question is: what&rsquo;s (not) running?  What&rsquo;s (not) listening?</p>
+<p>To answer these questions, I poked at the network and the
+running processes:</p>
+<dl>
+<dt>nmap - look for listeners</dt>
+<dd>nmap did not show a DNS listener at 127.0.0.53</dd>
+</dl>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">gmj@ed home-computing [master] $ sudo nmap -v -sU -PS  127.0.0.53
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2020-05-10 07:51 EDT
+Initiating Parallel DNS resolution of 1 host. at 07:51
+Completed Parallel DNS resolution of 1 host. at 07:51, 0.02s elapsed
+Initiating UDP Scan at 07:51
+Scanning 127.0.0.53 [1000 ports]
+Completed UDP Scan at 07:51, 2.80s elapsed (1000 total ports)
+Nmap scan report for 127.0.0.53
+Host is up (0.000049s latency).
+Not shown: 997 closed ports
+PORT     STATE         SERVICE
+68/udp   open|filtered dhcpc
+631/udp  open|filtered ipp
+5353/udp open|filtered zeroconf
+</code></pre></div><p>zeroconf :: Is zeroconf listening?  What is 5353?</p>
+<p>It looks like 5353 is multicast DNS.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">$ egrep -i domain\|dns /etc/services
+domain		53/tcp				# Domain Name Server
+domain		53/udp
+mdns		5353/tcp			# Multicast DNS
+mdns		5353/udp
+</code></pre></div><dl>
+<dt>lsof -i</dt>
+<dd>look at listening ports
+<p>Next, I used lsof(1) to look at listening and connected ports,
+successively grepping out the &ldquo;known&rdquo; and &ldquo;uninteresting&rdquo;:</p>
+</dd>
+</dl>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">gmj@ed home-computing [master] $  sudo lsof -i -n  | egrep -vi established\|dropbox\|ssh\|http\|smtp\|bootp\|ipp
+COMMAND     PID            USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+avahi-dae  1064           avahi   12u  IPv4  25434      0t0  UDP *:mdns
+avahi-dae  1064           avahi   13u  IPv6  25435      0t0  UDP *:mdns
+avahi-dae  1064           avahi   14u  IPv4  25436      0t0  UDP *:42027
+avahi-dae  1064           avahi   15u  IPv6  25437      0t0  UDP *:44240
+dnsmasq    2538 libvirt-dnsmasq    5u  IPv4  37248      0t0  UDP 192.168.122.1:domain
+dnsmasq    2538 libvirt-dnsmasq    6u  IPv4  37249      0t0  TCP 192.168.122.1:domain (LISTEN)
+brave     28951             gmj   43u  IPv4 250584      0t0  UDP 224.0.0.251:mdns
+</code></pre></div><p>Looks like avahe-dae[mon] is listening on multicast-dns (mdns) on
+5353, and there are outbound connections to 192.168.122.1:53, which
+<strong>was</strong> a wired connection to the router, but nothing listening on
+port 53.  This is a problem.</p>
+<h3 id="why-is-systemd-resolved-not-answering-do-i-care">Why is systemd-resolved not answering - do I care?</h3>
+<p>Do I really want to debug systemd-resolved? No.  I was half
+planing on upgrading to the latest Ubuntu release (20.04)
+anyhow.  This seems like the time to do it, rather than
+debugging this problem further.</p>
+<h3 id="lessons-learned">Lessons learned</h3>
+<dl>
+<dt>run servers on dedicated systems</dt>
+<dd>I had been messing with
+<a href="https://pi-hole.net/">https://pi-hole.net/</a> on this system (a laptop that mostly does
+not move/go off the net).  There was some confusion/doubt
+about whether this interacted badly with things/caused the
+problems.   It may have.  I un-installed it.   But running a
+dedicated server would be better.</dd>
+<dt>Failed Ubuntu &ldquo;upgrade&rdquo;</dt>
+<dd>The actual trigger that made things not
+work was an attempt to let the Ubuntu installer upgrade the
+system.  This failed in strange ways.  After running, my
+system which was Ubuntu 19.10 reported (/etc/issue) to being
+18.04 and the pi-hole logs reported that they could not find
+the wireless interface it had been configured to use (but the
+device was still there, same name, still working&hellip;)</dd>
+</dl>
+<h2 id="next-steps">Next Steps</h2>
+<h3 id="do-a-hard-upgrade-to-ubuntu-20-dot-04"><!-- raw HTML omitted -->TODO<!-- raw HTML omitted --> Do a hard upgrade to Ubuntu 20.04</h3>
+<ul>
+<li>Full backup, wipe disk, restore&hellip;</li>
+<li>Use ansible, docker, chief or similar to make configs
+repeatable.</li>
+</ul>
+<h3 id="set-up-a-server-to-run-pi-hole-and-other-services"><!-- raw HTML omitted -->TODO<!-- raw HTML omitted --> Set up a server to run pi-hole and other services</h3>
+<ul>
+<li>Possibly re-purpose an old laptop or pogo-plug device running
+something minimal like Arch Linux</li>
+<li>Use ansible, docker, chief or similar to make configs
+repeatable.</li>
+</ul>
+<h2 id="things-to-learn-more-about">Things to learn more about</h2>
+<dl>
+<dt>avhai</dt>
+<dd>So what is <a href="https://en.wikipedia.org/wiki/Avahi%5F%28software%29">avhai</a>-dae[mon]?  It looks like a
+zero-configuration (I wish !) networking services that uses
+multi-cast DNS on a local network.  Do I need to be running this?</dd>
+<dt>systemd-resolved</dt>
+<dd>I may want to learn more about this, as it is
+part of the new regime in most Linux distros.  But not now.</dd>
+</dl>
+<h2 id="for-further-reading">For Further Reading</h2>
+<dl>
+<dt>resolvers, stub resolvers and nameservers</dt>
+<dd><a href="https://unix.stackexchange.com/questions/500536/what-are-dns-server-resolver-and-stub-resolver">https://unix.stackexchange.com/questions/500536/what-are-dns-server-resolver-and-stub-resolver</a></dd>
+</dl>
+<p>Day 10 of #100DaysToOffload.  Delayed a day due to DNS problems :-)</p>
+</div>
+<hr>
+<h2>Comments</h2>
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "curiousmusings" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </main>
+
+    
+  </body>
+</html>

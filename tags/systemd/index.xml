@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>systemd on Curious Musings</title>
+    <link>https://eludom.github.io/tags/systemd/</link>
+    <description>Recent content in systemd on Curious Musings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 10 May 2020 00:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://eludom.github.io/tags/systemd/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HOWTO: Breaking and fixing DNS - Understanding modern DNS on Ubuntu.</title>
+      <link>https://eludom.github.io/blog/dns-today/</link>
+      <pubDate>Sun, 10 May 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/blog/dns-today/</guid>
+      <description>&lt;p&gt;One dark and stormy night I broke my DNS.   I decided to move
+beyond &lt;code&gt;/etc/resolv.conf&lt;/code&gt; and see what demons (daemons?) were
+lurking under the hood.  &amp;ldquo;Its complicated.&amp;rdquo;  This is the story of
+understanding, debugging and fixing it.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
