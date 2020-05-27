@@ -6,10 +6,46 @@
     <description>Recent content in Tags on Curious Musings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 May 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 26 May 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://eludom.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>cybersecurity</title>
+      <link>https://eludom.github.io/tags/cybersecurity/</link>
+      <pubDate>Tue, 26 May 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/tags/cybersecurity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OODA</title>
+      <link>https://eludom.github.io/tags/ooda/</link>
+      <pubDate>Tue, 26 May 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/tags/ooda/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>outdoors</title>
+      <link>https://eludom.github.io/tags/outdoors/</link>
+      <pubDate>Tue, 26 May 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/tags/outdoors/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SOC</title>
+      <link>https://eludom.github.io/tags/soc/</link>
+      <pubDate>Tue, 26 May 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/tags/soc/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>life</title>
@@ -17,15 +53,6 @@
       <pubDate>Mon, 25 May 2020 00:00:00 -0400</pubDate>
       
       <guid>https://eludom.github.io/tags/life/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>outdoors</title>
-      <link>https://eludom.github.io/tags/outdoors/</link>
-      <pubDate>Mon, 25 May 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://eludom.github.io/tags/outdoors/</guid>
       <description></description>
     </item>
     
@@ -440,15 +467,6 @@
       <pubDate>Thu, 19 Mar 2020 00:00:00 -0400</pubDate>
       
       <guid>https://eludom.github.io/tags/bears/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cybersecurity</title>
-      <link>https://eludom.github.io/tags/cybersecurity/</link>
-      <pubDate>Thu, 19 Mar 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://eludom.github.io/tags/cybersecurity/</guid>
       <description></description>
     </item>
     

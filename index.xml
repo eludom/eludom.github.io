@@ -6,10 +6,40 @@
     <description>Recent content on Curious Musings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 May 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 26 May 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://eludom.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Thoughts on the OODA loop and falling out of a canoe</title>
+      <link>https://eludom.github.io/posts/ooda-loop-and-getting-wet/</link>
+      <pubDate>Tue, 26 May 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/posts/ooda-loop-and-getting-wet/</guid>
+      <description>&lt;p&gt;In my never ending quest for synthesis, this post combines thoughts on
+&lt;a href=&#34;https://en.wikipedia.org/wiki/OODA%5Floop&#34;&gt;the OODA loop&lt;/a&gt; and falling out of a canoe twice this weekend in rapids
+on the Shenandoah river.  There is a connection.  Maybe.&lt;/p&gt;
+&lt;p&gt;If you want to see the full trip report, pictures, etc. go here &lt;a href=&#34;https://eludom.github.io/blog/get-wet/&#34;&gt;Things
+that fall in the river get wet&lt;/a&gt;.  If you&amp;rsquo;re interested in how this relates to
+the OODA loop or, better, if you have experience/thoughts on applying
+the OODA loop to operational cybersecurity settings, read on (and
+comment !)&lt;/p&gt;
+
+
+
+&lt;figure&gt;
+    
+        &lt;img src=&#34;https://eludom.github.io/ox-hugo/paddling.jpg&#34; alt=&#34;Figure 1: On the river during calm between crisis events&#34; width=&#34;400px&#34;/&gt; &lt;figcaption&gt;
+                
+                &lt;p&gt;
+                    Figure 1: On the river during calm between crisis events
+                    
+                        
+                        &lt;/p&gt;
+                
+            &lt;/figcaption&gt;&lt;/figure&gt;</description>
+    </item>
     
     <item>
       <title>Things that fall in the river get wet</title>

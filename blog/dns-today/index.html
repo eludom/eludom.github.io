@@ -30,7 +30,7 @@
     "datePublished": "2020-05-10 00:00:00 -0400 EDT",
     "dateModified" : "2020-05-10 00:00:00 -0400 EDT",
     "url" : "https:\/\/eludom.github.io\/blog\/dns-today\/",
-    "wordCount" : "1122",
+    "wordCount" : "1159",
     "keywords" : [ "DNS","Ubuntu","HOWTO","Linux","systemd","Blog" ]
 }
 </script>
@@ -79,13 +79,19 @@
         
         
         <li>
-          <a href="https://eludom.github.io/tags/outdoors"> outdoors <small>(4)</small></a>
+          <a href="https://eludom.github.io/tags/outdoors"> outdoors <small>(5)</small></a>
         </li>
         
         
         
         <li>
           <a href="https://eludom.github.io/tags/blogging"> blogging <small>(3)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/cybersecurity"> cybersecurity <small>(3)</small></a>
         </li>
         
         
@@ -128,12 +134,6 @@
         
         <li>
           <a href="https://eludom.github.io/tags/computers"> computers <small>(2)</small></a>
-        </li>
-        
-        
-        
-        <li>
-          <a href="https://eludom.github.io/tags/cybersecurity"> cybersecurity <small>(2)</small></a>
         </li>
         
         
@@ -189,6 +189,10 @@
         <li>
           <a href="https://eludom.github.io/tags/ubuntu"> ubuntu <small>(2)</small></a>
         </li>
+        
+        
+        
+        
         
         
         
@@ -313,7 +317,13 @@ nameserver 9.9.9.9
 </code></pre></div><p>And it will work until NetworkManager chooses to overwrite the
 file.  Not sure if <code>sudo chmod 444 /etc/resolv.conf</code> be enough to
 keep NetworkManager from overwriting it.</p>
-<h2 id="debugging-a-broken-dns">Debugging a broken DNS</h2>
+<h2 id="you-can-make-etc-resolv-dot-conf-immutable">You <em>can</em> make <code>/etc/resolv.conf</code> immutable</h2>
+<p>If you <em>do</em> edit <code>/etc/resolv.conf</code> you can make it immutable to
+prevent systemd from updating it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">$ sudo chattr +i /etc/resolv.conf
+$ sudo rm /etc/resolv.conf
+rm: cannot remove &#39;/etc/resolv.conf&#39;: Operation not permitted
+</code></pre></div><h2 id="debugging-a-broken-dns">Debugging a broken DNS</h2>
 <p>I was living dangerously and simultaneously playing with
 <a href="https://pi-hole.net/">https://pi-hole.net/</a> and letting Ubuntu try to upgrade my system.
 It went south.  DNS stopped working.  The following were some of
