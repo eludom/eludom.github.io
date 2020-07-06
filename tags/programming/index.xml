@@ -40,6 +40,34 @@ of amazing software which helped set the stage for the Web.&lt;/p&gt;
     </item>
     
     <item>
+      <title>Choosy Programmers Choose GIF</title>
+      <link>https://eludom.github.io/posts/steve/</link>
+      <pubDate>Thu, 30 Apr 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/posts/steve/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Steve%5FWilhite&#34;&gt;Steve Wilhite&lt;/a&gt; is the most prolific programmer I&amp;rsquo;ve ever known.  He&amp;rsquo;s
+mostly remembered for creating &lt;a href=&#34;https://en.wikipedia.org/wiki/gif&#34;&gt;GIF&lt;/a&gt; but he spent 30 years writing piles
+of amazing software which helped set the stage for the Web.&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+
+
+
+&lt;figure&gt;
+    
+        &lt;img src=&#34;https://eludom.github.io/ox-hugo/XF4MAN.gif&#34; alt=&#34;Figure 1: CompuServe XF4 Fortran Manual&#34;/&gt; &lt;figcaption&gt;
+                
+                &lt;p&gt;
+                    Figure 1: CompuServe XF4 Fortran Manual
+                    
+                        
+                        &lt;/p&gt;
+                
+            &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Day 02 of #100DaysToOffload.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Fixing GNU bash associative array insert speed</title>
       <link>https://eludom.github.io/blog/20200418/</link>
       <pubDate>Sat, 18 Apr 2020 00:00:00 -0400</pubDate>
