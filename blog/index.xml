@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>INTRO on Curious Musings</title>
+    <title>Blogs on Curious Musings</title>
     <link>https://eludom.github.io/blog/</link>
-    <description>Recent content in INTRO on Curious Musings</description>
+    <description>Recent content in Blogs on Curious Musings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Aug 2020 07:06:18 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 08 Aug 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://eludom.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
@@ -49,6 +49,16 @@ enlighten his fellows, and being thought crazy.&lt;/p&gt;
       <guid>https://eludom.github.io/blog/who-says-so/</guid>
       <description>I recently picked up reader of samples of important ancient texts that I&amp;rsquo;ve had for a LONG time and read excerpts from Socrates Apology. Short version:
  Oracle of Delphi &amp;ldquo;Socrates is the wisest man&amp;rdquo; Socrates Nice hypothesis, Apollo, you may be a god, but let&amp;rsquo;s test it&amp;hellip;. Socrates Seeks out &amp;ldquo;The Wise&amp;rdquo; of his day, Politicians, Poets, Artisans &amp;hellip; questions them &amp;hellip; has them all expose themselves as blithering idiots.</description>
+    </item>
+    
+    <item>
+      <title>Adding uncertainty in uncertain times</title>
+      <link>https://eludom.github.io/blog/2020-06-30/</link>
+      <pubDate>Tue, 30 Jun 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/blog/2020-06-30/</guid>
+      <description>So, when life turns uncertain you have two choices. Cling to things that seem to add stability and certainty, i.e. try to &amp;ldquo;stay safe&amp;rdquo;, or embrace the uncertainty, live now, carpe diem, and do things would seem to be fulfilling now.
+I&amp;rsquo;m choosing the latter. At 58, in the middle of a pandemic and social unrest, I&amp;rsquo;m moving to a startup. The following are notes from a friend who has been playing the silicon valley startup game for a few decades.</description>
     </item>
     
     <item>
@@ -108,6 +118,36 @@ radio) say &amp;ldquo;Play Ball.&amp;rdquo;  I am declaring today my personal
                 
                 &lt;p&gt;
                     Figure 1: In Yankee Stadium
+                    
+                        
+                        &lt;/p&gt;
+                
+            &lt;/figcaption&gt;&lt;/figure&gt;</description>
+    </item>
+    
+    <item>
+      <title>Thoughts on the OODA loop and falling out of a canoe</title>
+      <link>https://eludom.github.io/blog/ooda-loop-and-getting-wet/</link>
+      <pubDate>Tue, 26 May 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/blog/ooda-loop-and-getting-wet/</guid>
+      <description>&lt;p&gt;In my never ending quest for synthesis, this post combines thoughts on
+&lt;a href=&#34;https://en.wikipedia.org/wiki/OODA%5Floop&#34;&gt;the OODA loop&lt;/a&gt; and falling out of a canoe twice this weekend in rapids
+on the Shenandoah river.  There is a connection.  Maybe.&lt;/p&gt;
+&lt;p&gt;If you want to see the full trip report, pictures, etc. go here &lt;a href=&#34;https://eludom.github.io/blog/get-wet/&#34;&gt;Things
+that fall in the river get wet&lt;/a&gt;.  If you&amp;rsquo;re interested in how this relates to
+the OODA loop or, better, if you have experience/thoughts on applying
+the OODA loop to operational cybersecurity settings, read on (and
+comment !)&lt;/p&gt;
+
+
+
+&lt;figure&gt;
+    
+        &lt;img src=&#34;https://eludom.github.io/ox-hugo/paddling.jpg&#34; alt=&#34;Figure 1: On the river during calm between crisis events&#34; width=&#34;400px&#34;/&gt; &lt;figcaption&gt;
+                
+                &lt;p&gt;
+                    Figure 1: On the river during calm between crisis events
                     
                         
                         &lt;/p&gt;
@@ -218,6 +258,16 @@ pack and put it on.  Feels good!  There may be rain, but&lt;/p&gt;
                         &lt;/p&gt;
                 
             &lt;/figcaption&gt;&lt;/figure&gt;</description>
+    </item>
+    
+    <item>
+      <title>My Computer ?</title>
+      <link>https://eludom.github.io/blog/my-computer/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/blog/my-computer/</guid>
+      <description>The windows desktop has (had? I don&amp;rsquo;t pay attention) icons labeled &amp;ldquo;My Computer&amp;rdquo;. I always thought that was odd, or at least very often out of context as many (most?) instances of Windows ran on machines at people&amp;rsquo;s jobs. They didn&amp;rsquo;t own the computer. It was not &amp;ldquo;My Computer&amp;rdquo;.
+Similarly, Apple has a long history of asserting they know what&amp;rsquo;s best for other people and their computers. The last time I had to go to &amp;ldquo;The Apple Store&amp;rdquo; all I wanted was a power cable.</description>
     </item>
     
     <item>
@@ -471,7 +521,7 @@ social-media-of-doom-amplifier) I tend to get a rather gloomy view of
 life.  There is indeed a lot one can be gloomy about these days.  But
 if you just go for a walk and look around you may be
 surprised:&lt;/p&gt;
-&lt;p&gt;I found this art &lt;a href=&#34;#org88f3289&#34;&gt;sidewalk art&lt;/a&gt; at just about the exact place where last
+&lt;p&gt;I found this art &lt;a href=&#34;#org52002ea&#34;&gt;sidewalk art&lt;/a&gt; at just about the exact place where last
 fall I had purchased a cup of lemonade from 4 eager young
 entrepreneurs.  I suspect the ring leader of that optimistic young
 bunch.&lt;/p&gt;

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Computers on Curious Musings</title>
+    <title>computers on Curious Musings</title>
     <link>https://eludom.github.io/tags/computers/</link>
-    <description>Recent content in Computers on Curious Musings</description>
+    <description>Recent content in computers on Curious Musings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 12 May 2020 00:00:00 -0400</lastBuildDate>
@@ -13,10 +13,10 @@
     
     <item>
       <title>My Computer ?</title>
-      <link>https://eludom.github.io/posts/my-computer/</link>
+      <link>https://eludom.github.io/blog/my-computer/</link>
       <pubDate>Tue, 12 May 2020 00:00:00 -0400</pubDate>
       
-      <guid>https://eludom.github.io/posts/my-computer/</guid>
+      <guid>https://eludom.github.io/blog/my-computer/</guid>
       <description>The windows desktop has (had? I don&amp;rsquo;t pay attention) icons labeled &amp;ldquo;My Computer&amp;rdquo;. I always thought that was odd, or at least very often out of context as many (most?) instances of Windows ran on machines at people&amp;rsquo;s jobs. They didn&amp;rsquo;t own the computer. It was not &amp;ldquo;My Computer&amp;rdquo;.
 Similarly, Apple has a long history of asserting they know what&amp;rsquo;s best for other people and their computers. The last time I had to go to &amp;ldquo;The Apple Store&amp;rdquo; all I wanted was a power cable.</description>
     </item>
@@ -27,34 +27,6 @@ Similarly, Apple has a long history of asserting they know what&amp;rsquo;s best
       <pubDate>Thu, 30 Apr 2020 00:00:00 -0400</pubDate>
       
       <guid>https://eludom.github.io/blog/steve/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Steve%5FWilhite&#34;&gt;Steve Wilhite&lt;/a&gt; is the most prolific programmer I&amp;rsquo;ve ever known.  He&amp;rsquo;s
-mostly remembered for creating &lt;a href=&#34;https://en.wikipedia.org/wiki/gif&#34;&gt;GIF&lt;/a&gt; but he spent 30 years writing piles
-of amazing software which helped set the stage for the Web.&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-
-
-
-&lt;figure&gt;
-    
-        &lt;img src=&#34;https://eludom.github.io/ox-hugo/XF4MAN.gif&#34; alt=&#34;Figure 1: CompuServe XF4 Fortran Manual&#34;/&gt; &lt;figcaption&gt;
-                
-                &lt;p&gt;
-                    Figure 1: CompuServe XF4 Fortran Manual
-                    
-                        
-                        &lt;/p&gt;
-                
-            &lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Day 02 of #100DaysToOffload.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Choosy Programmers Choose GIF</title>
-      <link>https://eludom.github.io/posts/steve/</link>
-      <pubDate>Thu, 30 Apr 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://eludom.github.io/posts/steve/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Steve%5FWilhite&#34;&gt;Steve Wilhite&lt;/a&gt; is the most prolific programmer I&amp;rsquo;ve ever known.  He&amp;rsquo;s
 mostly remembered for creating &lt;a href=&#34;https://en.wikipedia.org/wiki/gif&#34;&gt;GIF&lt;/a&gt; but he spent 30 years writing piles
 of amazing software which helped set the stage for the Web.&lt;/p&gt;
