@@ -12,6 +12,21 @@
     
     
     <item>
+      <title>HOWTO: Notes on Publishing a static blog with Hugo, Org mode and Github Pages</title>
+      <link>https://eludom.github.io/blog/hugo-org-github/</link>
+      <pubDate>Sun, 16 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/blog/hugo-org-github/</guid>
+      <description>&lt;p&gt;If you ever thought to yourself, &amp;ldquo;Gee, Emacs Org mode is a great
+outlining and authoring tool, and I wish there were a powerful
+and simple way use it to publish static websites on github or in
+S3 buckets, I wish my blog could look as slick ast
+&lt;a href=&#34;https://eludom.github.io/&#34;&gt;https://eludom.github.io/&lt;/a&gt;&amp;rdquo; your&amp;rsquo;re in luck, All but the
+&lt;em&gt;simple&lt;/em&gt; part.  Here are some of the references I used.&lt;/p&gt;
+&lt;p&gt;Post 19 of #100DaysToOffload &lt;a href=&#34;https://100daystooffload.com/&#34;&gt;https://100daystooffload.com/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Plato&#39;s Cave: a plea for good leadership</title>
       <link>https://eludom.github.io/blog/platos-cave/</link>
       <pubDate>Sat, 08 Aug 2020 00:00:00 -0400</pubDate>

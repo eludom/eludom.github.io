@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://eludom.github.io/</loc>
-    <lastmod>2020-08-16T16:00:54-04:00</lastmod>
+    <lastmod>2020-08-16T21:03:53-04:00</lastmod>
   </url>
   
   <url>
@@ -18,8 +18,38 @@
   </url>
   
   <url>
+    <loc>https://eludom.github.io/tags/blogging/</loc>
+    <lastmod>2020-08-16T21:03:53-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://eludom.github.io/blog/</loc>
-    <lastmod>2020-08-16T16:00:54-04:00</lastmod>
+    <lastmod>2020-08-16T21:03:53-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eludom.github.io/tags/emacs/</loc>
+    <lastmod>2020-08-16T21:03:53-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eludom.github.io/tags/howto/</loc>
+    <lastmod>2020-08-16T21:03:53-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eludom.github.io/blog/hugo-org-github/</loc>
+    <lastmod>2020-08-16T21:03:53-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eludom.github.io/tags/org/</loc>
+    <lastmod>2020-08-16T21:03:53-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eludom.github.io/tags/</loc>
+    <lastmod>2020-08-16T21:03:53-04:00</lastmod>
   </url>
   
   <url>
@@ -40,11 +70,6 @@
   <url>
     <loc>https://eludom.github.io/tags/science/</loc>
     <lastmod>2020-08-16T15:50:49-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eludom.github.io/tags/</loc>
-    <lastmod>2020-08-16T16:00:54-04:00</lastmod>
   </url>
   
   <url>
@@ -84,11 +109,6 @@
   
   <url>
     <loc>https://eludom.github.io/tags/100daystooffload/</loc>
-    <lastmod>2020-08-16T15:51:49-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eludom.github.io/tags/blogging/</loc>
     <lastmod>2020-08-16T15:51:49-04:00</lastmod>
   </url>
   
@@ -238,11 +258,6 @@
   </url>
   
   <url>
-    <loc>https://eludom.github.io/tags/howto/</loc>
-    <lastmod>2020-08-16T16:00:54-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://eludom.github.io/blog/dns-today/</loc>
     <lastmod>2020-08-16T16:00:54-04:00</lastmod>
   </url>
@@ -254,11 +269,6 @@
   
   <url>
     <loc>https://eludom.github.io/blog/2020-05-08/</loc>
-    <lastmod>2020-08-16T15:51:45-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eludom.github.io/tags/emacs/</loc>
     <lastmod>2020-08-16T15:51:45-04:00</lastmod>
   </url>
   
@@ -475,11 +485,6 @@
   <url>
     <loc>https://eludom.github.io/tags/humanity/</loc>
     <lastmod>2020-08-16T15:48:58-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eludom.github.io/tags/org/</loc>
-    <lastmod>2020-08-16T15:47:47-04:00</lastmod>
   </url>
   
   <url>

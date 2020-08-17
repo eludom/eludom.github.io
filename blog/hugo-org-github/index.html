@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="//gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.69.0" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/eludom.github.io\/"
+    },
+    "articleSection" : "Blog",
+    "name" : "HOWTO: Notes on Publishing a static blog with Hugo, Org mode and Github Pages",
+    "headline" : "HOWTO: Notes on Publishing a static blog with Hugo, Org mode and Github Pages",
+    "description" : "\x3cp\x3eIf you ever thought to yourself, \x26ldquo;Gee, Emacs Org mode is a great\noutlining and authoring tool, and I wish there were a powerful\nand simple way use it to publish static websites on github or in\nS3 buckets, I wish my blog could look as slick ast\n\x3ca href=\x22https:\/\/eludom.github.io\/\x22\x3ehttps:\/\/eludom.github.io\/\x3c\/a\x3e\x26rdquo; your\x26rsquo;re in luck, All but the\n\x3cem\x3esimple\x3c\/em\x3e part.  Here are some of the references I used.\x3c\/p\x3e\n\x3cp\x3ePost 19 of #100DaysToOffload \x3ca href=\x22https:\/\/100daystooffload.com\/\x22\x3ehttps:\/\/100daystooffload.com\/\x3c\/a\x3e\x3c\/p\x3e",
+    "inLanguage" : "en-US",
+    "author" : "eludom.github.ioGeorge Jones",
+    "creator" : "eludom.github.ioGeorge Jones",
+    "publisher": "eludom.github.ioGeorge Jones",
+    "accountablePerson" : "eludom.github.ioGeorge Jones",
+    "copyrightHolder" : "eludom.github.ioGeorge Jones",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-08-16 00:00:00 -0400 EDT",
+    "dateModified" : "2020-08-16 00:00:00 -0400 EDT",
+    "url" : "https:\/\/eludom.github.io\/blog\/hugo-org-github\/",
+    "wordCount" : "927",
+    "keywords" : [ "blogging","org","emacs","HOWTO","Blog" ]
+}
+</script>
+
+  
+  <title>HOWTO: Notes on Publishing a static blog with Hugo, Org mode and Github Pages &middot; Curious Musings</title>
+
+  
+  <link type="text/css" rel="stylesheet" href="https://eludom.github.io/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://eludom.github.io/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://eludom.github.io/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://eludom.github.io/css/hyde.css">
+  
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous|Oswald|Merriweather|PT+Sans:400,400i,700">
+
+
+
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://eludom.github.io/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="https://eludom.github.io/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Curious Musings" />
+
+  
+</head>
+
+  <body class="theme-base-0a ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://eludom.github.io/"><h1>Curious Musings</h1></a>
+    </div>
+    <nav>
+      <ul class="sidebar-nav">
+        <h3>◾ Frequent</h3>
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/life"> life <small>(10)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/outdoors"> outdoors <small>(5)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/blogging"> blogging <small>(4)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/emacs"> emacs <small>(4)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/cybersecurity"> cybersecurity <small>(3)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/family"> family <small>(3)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/hiking"> hiking <small>(3)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/howto"> howto <small>(3)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/linux"> linux <small>(3)</small></a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <h4><a href="https://eludom.github.io/tags/">All Topics ►</a></h4>
+        
+          <h3>◾ About </h3>
+          <a href="https://eludom.github.io//about">George Jones</a>
+          <a href="https://eludom.github.io//curious">Curious Musings</a>
+          <img src="https://eludom.github.io/title-logo.png">
+      </ul>
+    </nav>
+  </div>
+</aside>
+
+    <main class="content container">
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="HOWTO: Notes on Publishing a static blog with Hugo, Org mode and Github Pages"/>
+<meta name="twitter:description" content="If you ever thought to yourself, &ldquo;Gee, Emacs Org mode is a great
+outlining and authoring tool, and I wish there were a powerful
+and simple way use it to publish static websites on github or in
+S3 buckets, I wish my blog could look as slick ast
+https://eludom.github.io/&rdquo; your&rsquo;re in luck, All but the
+simple part.  Here are some of the references I used.
+Post 19 of #100DaysToOffload https://100daystooffload.com/"/>
+
+<div class="post">
+  <h1>HOWTO: Notes on Publishing a static blog with Hugo, Org mode and Github Pages</h1>
+ <time datetime=2020-08-16T00:00:00-0400 class="post-date">2020-08-16 
+
+
+
+    
+      / <a href="https://eludom.github.io/tags/blogging/"> blogging</a>
+      / <a href="https://eludom.github.io/tags/org/"> org</a>
+      / <a href="https://eludom.github.io/tags/emacs/"> emacs</a>
+      / <a href="https://eludom.github.io/tags/howto/"> howto</a>
+</time>
+<p>If you ever thought to yourself, &ldquo;Gee, Emacs Org mode is a great
+outlining and authoring tool, and I wish there were a powerful
+and simple way use it to publish static websites on github or in
+S3 buckets, I wish my blog could look as slick ast
+<a href="https://eludom.github.io/">https://eludom.github.io/</a>&rdquo; your&rsquo;re in luck, All but the
+<em>simple</em> part.  Here are some of the references I used.</p>
+<p>Post 19 of #100DaysToOffload <a href="https://100daystooffload.com/">https://100daystooffload.com/</a></p>
+<h2 id="potential-ox-hugo-sites-to-copy">Potential ox-hugo sites to copy</h2>
+<h3 id="the-art-of-not-asking-why">The Art Of Not Asking Why</h3>
+<p>I started by looking for sample web sites to copy by perusing
+the sites on this list
+<a href="https://ox-hugo.scripter.co/doc/examples/">https://ox-hugo.scripter.co/doc/examples/</a></p>
+<p>I found the following</p>
+<dl>
+<dt>Site</dt>
+<dd><a href="https://joshrollinswrites.com/">https://joshrollinswrites.com/</a></dd>
+<dt>Source</dt>
+<dd><a href="https://github.com/jarss/TAONAW/tree/master">https://github.com/jarss/TAONAW/tree/master</a></dd>
+</dl>
+<p>Josh has been great in answering the odd question.  His blog is
+interesting too !!!  He accepts paypal&hellip;</p>
+<h2 id="general-info-on-hugo-ox-hugo-and-github-pages">General Info on Hugo, Ox-Hugo and github pages</h2>
+<p>Then I did some reading (this is where the <em>not simple</em> part
+comes in) on the following sites</p>
+<dl>
+<dt>hugo getting started</dt>
+<dd><a href="https://gohugo.io/getting-started/quick-start/">https://gohugo.io/getting-started/quick-start/</a></dd>
+<dt>hosting a blog on github pages</dt>
+<dd><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">https://gohugo.io/hosting-and-deployment/hosting-on-github/</a></dd>
+<dt>github pages</dt>
+<dd><a href="https://pages.github.com/">https://pages.github.com/</a></dd>
+<dt>HOWTO with Hugo and github pages</dt>
+<dd><a href="https://medium.com/swlh/hosting-a-hugo-blog-on-github-pages-with-travis-ci-e74a1d686f10">https://medium.com/swlh/hosting-a-hugo-blog-on-github-pages-with-travis-ci-e74a1d686f10</a></dd>
+<dt>Org mode hugo exporter</dt>
+<dd><a href="https://ox-hugo.scripter.co/">https://ox-hugo.scripter.co/</a>
+<ul>
+<li>I&rsquo;ll probably go here, but it seems like a bit much to start&hellip;</li>
+<li>Maybe learn the un-automated way first?</li>
+</ul>
+</dd>
+<dt>About Hugo</dt>
+<dd><a href="https://people.umass.edu/weikaichen/post/emacs-ox-hugo/">https://people.umass.edu/weikaichen/post/emacs-ox-hugo/</a></dd>
+<dt>About blogging with Hugo</dt>
+<dd><a href="https://www.shanesveller.com/blog/2018/02/13/blogging-with-org-mode-and-ox-hugo/">https://www.shanesveller.com/blog/2018/02/13/blogging-with-org-mode-and-ox-hugo/</a></dd>
+</dl>
+<h2 id="the-results">The results</h2>
+<p>You&rsquo;re looking at the results: <a href="https://eludom.github.io/">https://eludom.github.io/</a>, this
+and other posts.  It took a couple deep dives to understand it,
+but I think I more-or-less have it, and it is a very seamless
+integration wtih Org-Mode, which for some of us closes the deal
+even if there is pain involved</p>
+<h2 id="bonus-twitter-cards">Bonus: Twitter cards</h2>
+<p>And for bonus points I did reading on how to add twitter card
+support to ox-hugo bog posts, e.g., so you can write your post
+and have twitter or other sites (such as <a href="https://mastodon.social/about">Mastadon</a>) that
+understand the format pull the title, intro and possibly an
+image to post in the web sit.</p>
+<h3 id="twitter-cards-howto-the-short-story">Twitter Cards: HOWTO, the short story</h3>
+<p>Short version: if you drop <code>twitter_cards.html</code> in
+<code>layouts/partials/</code> of your blog, you then just write your
+blog, publish it, and past the URL into the <a href="https://cards-dev.twitter.com/validator">https://cards-dev.twitter.com/validator</a>
+to make sure it&rsquo;s going to work when posted</p>
+<h3 id="twitter-cards-more-than-you-ever-wanted-to-know-the-long-story-dot">Twitter Cards: More than you ever wanted to know, the long story.</h3>
+<dl>
+<dt>Twitter Cards</dt>
+<dd><a href="https://sproutsocial.com/insights/twitter-cards/">https://sproutsocial.com/insights/twitter-cards/</a></dd>
+<dt>Twitter cards in ox-hugo</dt>
+<dd><a href="https://ox-hugo.scripter.co/doc/org-toc/">https://ox-hugo.scripter.co/doc/org-toc/</a></dd>
+<dt>Twitter cards in Hugo</dt>
+<dd><a href="https://gohugo.io/templates/internal/">https://gohugo.io/templates/internal/</a></dd>
+<dt>Twitter cards partials for Hugo</dt>
+<dd><a href="https://gohugohq.com/partials/twitter-cards-partials-for-hugo/">https://gohugohq.com/partials/twitter-cards-partials-for-hugo/</a></dd>
+<dt>Ttitter card, ox-hugo discussion</dt>
+<dd><a href="https://discourse.gohugo.io/t/solved-help-with-twitter-card-image/14067">https://discourse.gohugo.io/t/solved-help-with-twitter-card-image/14067</a></dd>
+<dt>about hugo partials</dt>
+<dd><a href="https://gohugo.io/templates/partials/">https://gohugo.io/templates/partials/</a></dd>
+</dl>
+<h2 id="how-to-publish-files-settings-process">How to publish: files, settings, process</h2>
+<p>And, finally the gory details of actually publishing.</p>
+<p>These are raw/WIP notes, but mostly right.  They actually
+publish this blog.</p>
+<h3 id="important-files-and-directories">Important Files and Directories</h3>
+<dl>
+<dt>/home/gmj/public/github/ox-hugo-blogs/blog/curious.org</dt>
+<dd>The one file to rule them all
+o This is the blog.  All articles live in this one file as
+separate org trees.   This is the &ldquo;source&rdquo;.</dd>
+<dt>HUGO_BASE_DIR=/home/gmj/public/github/ox-hugo-blogs/blog</dt>
+<dd>The root of my blog
+o This is the root/source for the blog.  It gets pushed to
+<a href="mailto:git@github.com">git@github.com</a>:eludom/blog.git (fetch)</dd>
+<dt><code>${HUGO_BASE_DIR}/content/</code></dt>
+<dd>Where local content (markdown) goes,
+e.g. <code>content/posts/steve.md</code></dd>
+<dt><code>${HUGO_BASE_DIR}/docs/</code></dt>
+<dd>Where the content to publish (html) goes,</dd>
+</dl>
+<h3 id="settings-and-organization">Settings and Organization</h3>
+<h4 id="set-export-hugo-section">Set EXPORT_HUGO_SECTION</h4>
+<p>In the .org file that is the blog, set EXPORT_HUGO_SECTION
+to be &ldquo;Blog&rdquo; (or in whichever section you want posts to land,
+default is &ldquo;posts&rdquo;)</p>
+<p>This is inherited lower level headers in org so</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">** Blog
+   :PROPERTIES:
+   :EXPORT_HUGO_SECTION: Blog
+   :EXPORT_FILE_NAME:
+   :EXPORT_HUGO_PUBLISHDATE:
+   :END:
+</code></pre></div><p>covers things in</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">* Content
+** Blog
+*** Work Stuff
+*** PUBLISHED Choosy Programmers Choose GIF :Wilhite:CompuServe:GIF:History:Computers:Emacs:Programming:
+</code></pre></div><h3 id="processes">Processes</h3>
+<h4 id="drafting">Drafting</h4>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p><!-- raw HTML omitted -->TODO<!-- raw HTML omitted -->  start hugo in root directory</p>
+<p><code>hugo server -D</code></p>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p><!-- raw HTML omitted -->TODO<!-- raw HTML omitted -->  Edit curious.org</p>
+<p>Add an entry like this</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">*** WIP Walled Gardens
+    :PROPERTIES:
+    :EXPORT_HUGO_SECTION: Blog
+    :EXPORT_FILE_NAME: walled-gardens
+    :EXPORT_HUGO_PUBLISHDATE: 2020-08-11
+    :END:
+
+    This is a brain dump on something like 40 years experience with
+    &#34;social media&#34; of various forms.
+</code></pre></div><p>EXPORT_HUGO_SECTION
+: probably not needed if inherited from
+higher level headline</p>
+<p>EXPORT_FILE_NAME
+: The file name for this post.   Could be date.</p>
+<p>EXPORT_HUGO_PUBLISHDATE
+: Set to the date this post should be
+&ldquo;live&rdquo;.  Can be used to schedule &ldquo;future&rdquo; posts.</p>
+<p>IMPORTANT
+: Posts with a status of TODO are drafts.  WIP or
+PUBLISHED are &ldquo;live&rdquo;</p>
+<p>EVEN MORE IMPORTANT
+: <em>A valid Hugo post subtree is an Org
+subtree that has the EXPORT_FILE_NAME property set.</em>  ox-hugo
+only exports valid subtrees to markdown.  You can draft to your
+hearts content in subtrees that do not have EXPORT_FILE_NAME set
+(and maybe export the subtree to text or html to view)</p>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p><!-- raw HTML omitted -->TODO<!-- raw HTML omitted -->  Save</p>
+<p>With point in the newly created or updated subtree, save the file.</p>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p><!-- raw HTML omitted -->TODO<!-- raw HTML omitted -->  view at <a href="http://localhost:1313/">http://localhost:1313/</a></p>
+<p>view the drafts <a href="http://localhost:1313/">http://localhost:1313/</a>
+View the result in your browser</p>
+</li>
+</ul>
+<h4 id="publishing">Publishing</h4>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p>run hugo</p>
+<p>In the HUGO_BASE_DIR run <code>hugo</code>.  The results will be written to
+&ldquo;doc/&quot;.</p>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p>push to github</p>
+<ul>
+<li>I host on github.io.</li>
+</ul>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">      cd doc
+      git add -A
+      git commit -m&#34;name of new post&#34;
+      git push
+</code></pre></div></li>
+</ul>
+<h4 id="make-sure-post-is-live-looks-right">make sure post is live, looks right</h4>
+<ul>
+<li>Go to site: <a href="https://eludom.github.io/">https://eludom.github.io/</a></li>
+<li>It often takes a minute or so after push for things to show up
+on the web site.  You might have to refresh</li>
+</ul>
+<h4 id="add-and-push-the-source">Add and push the source</h4>
+<ul>
+<li>this needs work/understanding</li>
+<li>not clear exactly what does/does not need to be added here.</li>
+<li>be sure not to add docs/, as that is pushed a a subtree.</li>
+<li>possibly move the docs/ tree so that is not subsidiary to the root</li>
+</ul>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">     cd ..
+     git status .
+     git add [new files]
+     git commit -m&#34;name of new post&#34;
+</code></pre></div><h2 id="conclusion">Conclusion</h2>
+<p>&ldquo;I mean, why know just use blogger.com or Wordpress&rdquo;?  Been
+there done that.</p>
+<p>Companies come and go.  I ought to know.  I started my career
+working at CompuServe.  The forums where apparently finally
+deleted on 2017.  History was lost.</p>
+<p>There are issues of control.  There are the issues of using
+tools I like, not the GUI or &ldquo;download my app&rdquo; du jour with
+tracking, adds, minimization, bloat and more.</p>
+</div>
+<hr>
+<h2>Comments</h2>
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "curiousmusings" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </main>
+
+    
+  </body>
+</html>

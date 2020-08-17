@@ -6,10 +6,46 @@
     <description>Recent content in Tags on Curious Musings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 08 Aug 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 16 Aug 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://eludom.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>blogging</title>
+      <link>https://eludom.github.io/tags/blogging/</link>
+      <pubDate>Sun, 16 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/tags/blogging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>emacs</title>
+      <link>https://eludom.github.io/tags/emacs/</link>
+      <pubDate>Sun, 16 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/tags/emacs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HOWTO</title>
+      <link>https://eludom.github.io/tags/howto/</link>
+      <pubDate>Sun, 16 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/tags/howto/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>org</title>
+      <link>https://eludom.github.io/tags/org/</link>
+      <pubDate>Sun, 16 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/tags/org/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>leadership</title>
@@ -80,15 +116,6 @@
       <pubDate>Tue, 09 Jun 2020 00:00:00 -0400</pubDate>
       
       <guid>https://eludom.github.io/tags/100daystooffload/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>blogging</title>
-      <link>https://eludom.github.io/tags/blogging/</link>
-      <pubDate>Tue, 09 Jun 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://eludom.github.io/tags/blogging/</guid>
       <description></description>
     </item>
     
@@ -291,29 +318,11 @@
     </item>
     
     <item>
-      <title>HOWTO</title>
-      <link>https://eludom.github.io/tags/howto/</link>
-      <pubDate>Sun, 10 May 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://eludom.github.io/tags/howto/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>systemd</title>
       <link>https://eludom.github.io/tags/systemd/</link>
       <pubDate>Sun, 10 May 2020 00:00:00 -0400</pubDate>
       
       <guid>https://eludom.github.io/tags/systemd/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>emacs</title>
-      <link>https://eludom.github.io/tags/emacs/</link>
-      <pubDate>Fri, 08 May 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://eludom.github.io/tags/emacs/</guid>
       <description></description>
     </item>
     
@@ -575,15 +584,6 @@
       <pubDate>Mon, 09 Mar 2020 00:00:00 -0400</pubDate>
       
       <guid>https://eludom.github.io/tags/humanity/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>org</title>
-      <link>https://eludom.github.io/tags/org/</link>
-      <pubDate>Tue, 25 Feb 2020 00:00:00 -0500</pubDate>
-      
-      <guid>https://eludom.github.io/tags/org/</guid>
       <description></description>
     </item>
     
