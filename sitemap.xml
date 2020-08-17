@@ -3,8 +3,58 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://eludom.github.io/blog/walled-gardens-part-1/</loc>
+    <lastmod>2020-08-17T07:27:36-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eludom.github.io/blog/</loc>
+    <lastmod>2020-08-17T07:27:36-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eludom.github.io/tags/computing/</loc>
+    <lastmod>2020-08-17T07:27:36-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://eludom.github.io/</loc>
-    <lastmod>2020-08-16T21:24:47-04:00</lastmod>
+    <lastmod>2020-08-17T07:27:36-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eludom.github.io/tags/facebook/</loc>
+    <lastmod>2020-08-17T07:27:36-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eludom.github.io/tags/history/</loc>
+    <lastmod>2020-08-17T07:27:36-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eludom.github.io/tags/soc/</loc>
+    <lastmod>2020-08-17T07:27:36-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eludom.github.io/tags/social/</loc>
+    <lastmod>2020-08-17T07:27:36-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eludom.github.io/tags/</loc>
+    <lastmod>2020-08-17T07:27:36-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eludom.github.io/tags/twitter/</loc>
+    <lastmod>2020-08-17T07:27:36-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eludom.github.io/tags/usenet/</loc>
+    <lastmod>2020-08-17T07:27:36-04:00</lastmod>
   </url>
   
   <url>
@@ -19,11 +69,6 @@
   
   <url>
     <loc>https://eludom.github.io/tags/blogging/</loc>
-    <lastmod>2020-08-16T21:24:47-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eludom.github.io/blog/</loc>
     <lastmod>2020-08-16T21:24:47-04:00</lastmod>
   </url>
   
@@ -44,11 +89,6 @@
   
   <url>
     <loc>https://eludom.github.io/blog/hugo-org-github/</loc>
-    <lastmod>2020-08-16T21:24:47-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eludom.github.io/tags/</loc>
     <lastmod>2020-08-16T21:24:47-04:00</lastmod>
   </url>
   
@@ -163,11 +203,6 @@
   </url>
   
   <url>
-    <loc>https://eludom.github.io/tags/soc/</loc>
-    <lastmod>2020-08-16T15:49:11-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://eludom.github.io/blog/ooda-loop-and-getting-wet/</loc>
     <lastmod>2020-08-16T15:49:11-04:00</lastmod>
   </url>
@@ -179,11 +214,6 @@
   
   <url>
     <loc>https://eludom.github.io/tags/family/</loc>
-    <lastmod>2020-08-16T15:50:37-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eludom.github.io/tags/history/</loc>
     <lastmod>2020-08-16T15:50:37-04:00</lastmod>
   </url>
   
@@ -434,11 +464,6 @@
   
   <url>
     <loc>https://eludom.github.io/tags/digitalfrontiers/</loc>
-    <lastmod>2020-08-16T15:49:50-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eludom.github.io/tags/twitter/</loc>
     <lastmod>2020-08-16T15:49:50-04:00</lastmod>
   </url>
   
