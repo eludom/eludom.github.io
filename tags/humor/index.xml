@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>humor on Curious Musings</title>
+    <link>https://eludom.github.io/tags/humor/</link>
+    <description>Recent content in humor on Curious Musings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 19 Aug 2020 00:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://eludom.github.io/tags/humor/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Disclaimer</title>
+      <link>https://eludom.github.io/blog/disclaimer/</link>
+      <pubDate>Wed, 19 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/blog/disclaimer/</guid>
+      <description>The opinions expressed in this [FOO] are mine, and not those of my employer. In fact, they may not even be mine. I may have changed my mind. I may have grown beyond a particular opinion. I may be trolling you. I may be engaging in Socratic dialog to tear down your beliefs. I may be tearing down my own beliefs. γνῶθι σεαυτόν!</description>
+    </item>
+    
+  </channel>
+</rss>

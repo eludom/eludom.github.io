@@ -6,10 +6,37 @@
     <description>Recent content in Tags on Curious Musings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Aug 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 19 Aug 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://eludom.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>100DaysToOffload</title>
+      <link>https://eludom.github.io/tags/100daystooffload/</link>
+      <pubDate>Wed, 19 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/tags/100daystooffload/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>humor</title>
+      <link>https://eludom.github.io/tags/humor/</link>
+      <pubDate>Wed, 19 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/tags/humor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>philosophy</title>
+      <link>https://eludom.github.io/tags/philosophy/</link>
+      <pubDate>Wed, 19 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/tags/philosophy/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>computing</title>
@@ -120,15 +147,6 @@
     </item>
     
     <item>
-      <title>philosophy</title>
-      <link>https://eludom.github.io/tags/philosophy/</link>
-      <pubDate>Sat, 08 Aug 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://eludom.github.io/tags/philosophy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>science</title>
       <link>https://eludom.github.io/tags/science/</link>
       <pubDate>Sat, 08 Aug 2020 00:00:00 -0400</pubDate>
@@ -170,15 +188,6 @@
       <pubDate>Tue, 30 Jun 2020 00:00:00 -0400</pubDate>
       
       <guid>https://eludom.github.io/tags/work/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>100DaysToOffload</title>
-      <link>https://eludom.github.io/tags/100daystooffload/</link>
-      <pubDate>Tue, 09 Jun 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://eludom.github.io/tags/100daystooffload/</guid>
       <description></description>
     </item>
     
