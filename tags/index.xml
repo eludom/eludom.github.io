@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Curious Musings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 19 Aug 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 21 Aug 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://eludom.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,72 @@
     <item>
       <title>100DaysToOffload</title>
       <link>https://eludom.github.io/tags/100daystooffload/</link>
-      <pubDate>Wed, 19 Aug 2020 00:00:00 -0400</pubDate>
+      <pubDate>Fri, 21 Aug 2020 00:00:00 -0400</pubDate>
       
       <guid>https://eludom.github.io/tags/100daystooffload/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>computing</title>
+      <link>https://eludom.github.io/tags/computing/</link>
+      <pubDate>Fri, 21 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/tags/computing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Facebook</title>
+      <link>https://eludom.github.io/tags/facebook/</link>
+      <pubDate>Fri, 21 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/tags/facebook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>History</title>
+      <link>https://eludom.github.io/tags/history/</link>
+      <pubDate>Fri, 21 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/tags/history/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SOC</title>
+      <link>https://eludom.github.io/tags/soc/</link>
+      <pubDate>Fri, 21 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/tags/soc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>social</title>
+      <link>https://eludom.github.io/tags/social/</link>
+      <pubDate>Fri, 21 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/tags/social/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>twitter</title>
+      <link>https://eludom.github.io/tags/twitter/</link>
+      <pubDate>Fri, 21 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/tags/twitter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>USENET</title>
+      <link>https://eludom.github.io/tags/usenet/</link>
+      <pubDate>Fri, 21 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/tags/usenet/</guid>
       <description></description>
     </item>
     
@@ -35,69 +98,6 @@
       <pubDate>Wed, 19 Aug 2020 00:00:00 -0400</pubDate>
       
       <guid>https://eludom.github.io/tags/philosophy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>computing</title>
-      <link>https://eludom.github.io/tags/computing/</link>
-      <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://eludom.github.io/tags/computing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Facebook</title>
-      <link>https://eludom.github.io/tags/facebook/</link>
-      <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://eludom.github.io/tags/facebook/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>History</title>
-      <link>https://eludom.github.io/tags/history/</link>
-      <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://eludom.github.io/tags/history/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>SOC</title>
-      <link>https://eludom.github.io/tags/soc/</link>
-      <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://eludom.github.io/tags/soc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>social</title>
-      <link>https://eludom.github.io/tags/social/</link>
-      <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://eludom.github.io/tags/social/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>twitter</title>
-      <link>https://eludom.github.io/tags/twitter/</link>
-      <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://eludom.github.io/tags/twitter/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>USENET</title>
-      <link>https://eludom.github.io/tags/usenet/</link>
-      <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://eludom.github.io/tags/usenet/</guid>
       <description></description>
     </item>
     
