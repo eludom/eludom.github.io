@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Curious Musings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 21 Aug 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 22 Aug 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://eludom.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,27 @@
     <item>
       <title>100DaysToOffload</title>
       <link>https://eludom.github.io/tags/100daystooffload/</link>
-      <pubDate>Fri, 21 Aug 2020 00:00:00 -0400</pubDate>
+      <pubDate>Sat, 22 Aug 2020 00:00:00 -0400</pubDate>
       
       <guid>https://eludom.github.io/tags/100daystooffload/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>history</title>
+      <link>https://eludom.github.io/tags/history/</link>
+      <pubDate>Sat, 22 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/tags/history/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rome</title>
+      <link>https://eludom.github.io/tags/rome/</link>
+      <pubDate>Sat, 22 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/tags/rome/</guid>
       <description></description>
     </item>
     
@@ -35,15 +53,6 @@
       <pubDate>Fri, 21 Aug 2020 00:00:00 -0400</pubDate>
       
       <guid>https://eludom.github.io/tags/facebook/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>History</title>
-      <link>https://eludom.github.io/tags/history/</link>
-      <pubDate>Fri, 21 Aug 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://eludom.github.io/tags/history/</guid>
       <description></description>
     </item>
     
@@ -476,15 +485,6 @@
       <pubDate>Mon, 04 May 2020 00:00:00 -0400</pubDate>
       
       <guid>https://eludom.github.io/tags/latin/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>rome</title>
-      <link>https://eludom.github.io/tags/rome/</link>
-      <pubDate>Mon, 04 May 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://eludom.github.io/tags/rome/</guid>
       <description></description>
     </item>
     
