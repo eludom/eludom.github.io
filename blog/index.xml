@@ -6,10 +6,20 @@
     <description>Recent content in Blogs on Curious Musings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Aug 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://eludom.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Latin Flash Cards in the 21st century (2773 AUC)</title>
+      <link>https://eludom.github.io/blog/flashcards/</link>
+      <pubDate>Sun, 23 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/blog/flashcards/</guid>
+      <description>Latin flash cards are not what they were in 1983: https://latinlexicon.org.
+It&amp;rsquo;s got a thing where you can pop in a sentence (say, one form Cicro or random #Latin conversations on twitter (yes, they exist)), and you can click on the words (yellow above), it shows you all the possible words that particular inflected word might be and then offers to build flash cards for you&amp;hellip;complete with citations/examples from the literature&amp;hellip;.</description>
+    </item>
     
     <item>
       <title>The History Of Rome - nihil novi</title>

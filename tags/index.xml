@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Curious Musings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Aug 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://eludom.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>100DaysToOffload</title>
       <link>https://eludom.github.io/tags/100daystooffload/</link>
-      <pubDate>Sat, 22 Aug 2020 00:00:00 -0400</pubDate>
+      <pubDate>Sun, 23 Aug 2020 00:00:00 -0400</pubDate>
       
       <guid>https://eludom.github.io/tags/100daystooffload/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>latin</title>
+      <link>https://eludom.github.io/tags/latin/</link>
+      <pubDate>Sun, 23 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/tags/latin/</guid>
       <description></description>
     </item>
     
@@ -476,15 +485,6 @@
       <pubDate>Wed, 06 May 2020 00:00:00 -0400</pubDate>
       
       <guid>https://eludom.github.io/tags/singing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>latin</title>
-      <link>https://eludom.github.io/tags/latin/</link>
-      <pubDate>Mon, 04 May 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://eludom.github.io/tags/latin/</guid>
       <description></description>
     </item>
     
