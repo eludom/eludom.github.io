@@ -6,10 +6,37 @@
     <description>Recent content in Tags on Curious Musings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 23 Aug 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 24 Aug 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://eludom.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>hiking</title>
+      <link>https://eludom.github.io/tags/hiking/</link>
+      <pubDate>Mon, 24 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/tags/hiking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>latin</title>
+      <link>https://eludom.github.io/tags/latin/</link>
+      <pubDate>Mon, 24 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/tags/latin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>life</title>
+      <link>https://eludom.github.io/tags/life/</link>
+      <pubDate>Mon, 24 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/tags/life/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>100DaysToOffload</title>
@@ -17,15 +44,6 @@
       <pubDate>Sun, 23 Aug 2020 00:00:00 -0400</pubDate>
       
       <guid>https://eludom.github.io/tags/100daystooffload/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>latin</title>
-      <link>https://eludom.github.io/tags/latin/</link>
-      <pubDate>Sun, 23 Aug 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://eludom.github.io/tags/latin/</guid>
       <description></description>
     </item>
     
@@ -183,15 +201,6 @@
     </item>
     
     <item>
-      <title>life</title>
-      <link>https://eludom.github.io/tags/life/</link>
-      <pubDate>Tue, 30 Jun 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://eludom.github.io/tags/life/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>startups</title>
       <link>https://eludom.github.io/tags/startups/</link>
       <pubDate>Tue, 30 Jun 2020 00:00:00 -0400</pubDate>
@@ -305,15 +314,6 @@
       <pubDate>Sun, 17 May 2020 00:00:00 -0400</pubDate>
       
       <guid>https://eludom.github.io/tags/backpacking/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hiking</title>
-      <link>https://eludom.github.io/tags/hiking/</link>
-      <pubDate>Sun, 17 May 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://eludom.github.io/tags/hiking/</guid>
       <description></description>
     </item>
     
