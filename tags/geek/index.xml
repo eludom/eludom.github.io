@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>geek on Curious Musings</title>
+    <link>https://eludom.github.io/tags/geek/</link>
+    <description>Recent content in geek on Curious Musings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 28 Aug 2020 00:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://eludom.github.io/tags/geek/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HOWTO: /bin/ed by example</title>
+      <link>https://eludom.github.io/blog/bin-ed/</link>
+      <pubDate>Fri, 28 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/blog/bin-ed/</guid>
+      <description>&lt;p&gt;Below I &lt;strong&gt;show&lt;/strong&gt; an editing session that uses basic &lt;code&gt;/bin/ed&lt;/code&gt; commands.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;/bin/ed&lt;/code&gt; is the standard Unix Editor&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;ed&lt;/code&gt; was written round 1969.  It&amp;rsquo;s still here.  &lt;code&gt;grep&lt;/code&gt; comes from
+&lt;code&gt;/bin/ed&lt;/code&gt;: &lt;code&gt;g/re/p&lt;/code&gt; works as an ed command to search &lt;strong&gt;g&lt;/strong&gt;lobally for a
+&lt;strong&gt;re&lt;/strong&gt;gular expression and &lt;strong&gt;p&lt;/strong&gt;rint the matching lines.  ed commands
+will be familiar to users of &lt;code&gt;sed&lt;/code&gt;, as sed is the &amp;ldquo;stream editor&amp;rdquo;
+with a very similar set of commands.  ed commands will be familiar to
+&lt;code&gt;vi&lt;/code&gt; users.  If you type &amp;ldquo;:&amp;rdquo; in vi, you get, basically, an ed prompt.
+You can type ed commands (see below) and they work.  &amp;ldquo;vi&amp;rdquo; is the
+&amp;ldquo;visual interface&amp;rdquo; to ed (or one of it&amp;rsquo;s successors).  Though I am a
+die hard &lt;code&gt;emacs&lt;/code&gt; user, often when I just want to do a quick edit or take
+some note I just fire up &lt;code&gt;/bin/ed&lt;/code&gt; and go&amp;hellip;.&lt;/p&gt;
+&lt;h2 id=&#34;a-sample-bin-ed-session-dot-dot-dot&#34;&gt;A sample &lt;code&gt;/bin/ed&lt;/code&gt; session&amp;hellip;&lt;/h2&gt;</description>
+    </item>
+    
+    <item>
+      <title>Publishing a blog on Github with Org and Hugo</title>
+      <link>https://eludom.github.io/blog/hugo-org-github/</link>
+      <pubDate>Sun, 16 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/blog/hugo-org-github/</guid>
+      <description>&lt;p&gt;If you ever thought to yourself, &amp;ldquo;Gee, Emacs Org mode is a great
+outlining and authoring tool, and I wish there were a powerful
+and simple way use it to publish static websites on github or in
+S3 buckets, I wish my blog could look as slick ast
+&lt;a href=&#34;https://eludom.github.io/&#34;&gt;https://eludom.github.io/&lt;/a&gt;&amp;rdquo; your&amp;rsquo;re in luck, All but the
+&lt;em&gt;simple&lt;/em&gt; part.  Here are some of the references I used.&lt;/p&gt;
+&lt;p&gt;Post 19 of #100DaysToOffload &lt;a href=&#34;https://100daystooffload.com/&#34;&gt;https://100daystooffload.com/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

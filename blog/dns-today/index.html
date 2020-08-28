@@ -31,7 +31,7 @@
     "dateModified" : "2020-05-10 00:00:00 -0400 EDT",
     "url" : "https:\/\/eludom.github.io\/blog\/dns-today\/",
     "wordCount" : "1159",
-    "keywords" : [ "DNS","Ubuntu","HOWTO","Linux","systemd","Blog" ]
+    "keywords" : [ "HOWTO","DNS","Ubuntu","Linux","systemd","Blog" ]
 }
 </script>
 
@@ -73,13 +73,13 @@
         
         
         <li>
-          <a href="https://eludom.github.io/tags/life"> life <small>(12)</small></a>
+          <a href="https://eludom.github.io/tags/life"> life <small>(15)</small></a>
         </li>
         
         
         
         <li>
-          <a href="https://eludom.github.io/tags/100daystooffload"> 100daystooffload <small>(7)</small></a>
+          <a href="https://eludom.github.io/tags/100daystooffload"> 100daystooffload <small>(8)</small></a>
         </li>
         
         
@@ -121,38 +121,26 @@
         
         
         <li>
+          <a href="https://eludom.github.io/tags/howto"> howto <small>(4)</small></a>
+        </li>
+        
+        
+        
+        <li>
           <a href="https://eludom.github.io/tags/latin"> latin <small>(4)</small></a>
         </li>
         
         
         
-        <li>
-          <a href="https://eludom.github.io/tags/cybersecurity"> cybersecurity <small>(3)</small></a>
-        </li>
         
         
         
-        <li>
-          <a href="https://eludom.github.io/tags/howto"> howto <small>(3)</small></a>
-        </li>
         
         
         
-        <li>
-          <a href="https://eludom.github.io/tags/linux"> linux <small>(3)</small></a>
-        </li>
         
         
         
-        <li>
-          <a href="https://eludom.github.io/tags/philosophy"> philosophy <small>(3)</small></a>
-        </li>
-        
-        
-        
-        <li>
-          <a href="https://eludom.github.io/tags/twitter"> twitter <small>(3)</small></a>
-        </li>
         
         
         
@@ -267,6 +255,9 @@
         
         <h4><a href="https://eludom.github.io/tags/">All Topics ►</a></h4>
         
+        <h4><a href="https://eludom.github.io/blog/">All Posts ►</a></h4>
+        
+
           <h3>◾ About </h3>
           <a href="https://eludom.github.io//about">George Jones</a>
           <a href="https://eludom.github.io//curious">Curious Musings</a>
@@ -291,9 +282,9 @@ understanding, debugging and fixing it."/>
 
 
     
+      / <a href="https://eludom.github.io/tags/howto/"> howto</a>
       / <a href="https://eludom.github.io/tags/dns/"> dns</a>
       / <a href="https://eludom.github.io/tags/ubuntu/"> ubuntu</a>
-      / <a href="https://eludom.github.io/tags/howto/"> howto</a>
       / <a href="https://eludom.github.io/tags/linux/"> linux</a>
       / <a href="https://eludom.github.io/tags/systemd/"> systemd</a>
 </time>
@@ -369,14 +360,14 @@ MulticastDNS setting: no
 <dd>dig(1) and host(1) are
 not the only game in town for doing command line DNS look-ups.
 Systemd (of course) will do it for you:
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">            $ systemd-resolve www.uu.net
-            www.uu.net: 152.195.32.39
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">                 $ systemd-resolve www.uu.net
+                 www.uu.net: 152.195.32.39
 </code></pre></div><p>In this case, it worked, which tells me that systemd-resolved
 is happy and working.</p>
 </dd>
 <dt>try dig again</dt>
 <dd>Try another &ldquo;normal&rdquo; lookup:
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">            $ dig www.uu.net
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">                 $ dig www.uu.net
 </code></pre></div><p>This failed.  The conclusion seems to be that the whatever the
 resolver library is looking at (127.0.0.53) is not working.</p>
 </dd>
