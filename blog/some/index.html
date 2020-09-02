@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="//gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.69.0" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/eludom.github.io\/"
+    },
+    "articleSection" : "Blog",
+    "name" : "HOWTO: See SOME lines from a file",
+    "headline" : "HOWTO: See SOME lines from a file",
+    "description" : "\x3cp\x3eSometimes you want to see the head of a file.   Sometimes you want to\nsee the tail. Sometimes you just want to see \x3cstrong\x3esome\x3c\/strong\x3e lines from a file.\x3c\/p\x3e\n\x3cp\x3eThe bash function below gives you \x3cstrong\x3esome\x3c\/strong\x3e lines:\x3c\/p\x3e\n\x3cdiv class=\x22highlight\x22\x3e\x3cpre style=\x22color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4\x22\x3e\x3ccode class=\x22language-text\x22 data-lang=\x22text\x22\x3egmj@ed bash [master] $ cat \x26lt;\x26lt;END \x26gt; lines.txt\n\x26gt; 1\n\x26gt; 2\n\x26gt; 3\n\x26gt; 4\n\x26gt; 5\n\x26gt; 6\n\x26gt; 7\n\x26gt; 8\n\x26gt; 9\n\x26gt; 10\n\x26gt; 11\n\x26gt; 12\n\x26gt; 13\n\x26gt; 14\n\x26gt; 15\n\x26gt; END\ngmj@ed bash [master] $ source some.t\nsh\ngmj@ed bash [master] $\ngmj@ed bash [master] $ some -2 lines.txt\n14\n15\ngmj@ed bash [master] $ some -2 lines.txt\n9\n10\ngmj@ed bash [master] $ some -2 lines.txt\n6\n7\ngmj@ed bash [master] $ cat some.sh\n\x3c\/code\x3e\x3c\/pre\x3e\x3c\/div\x3e",
+    "inLanguage" : "en-US",
+    "author" : "eludom.github.ioGeorge Jones",
+    "creator" : "eludom.github.ioGeorge Jones",
+    "publisher": "eludom.github.ioGeorge Jones",
+    "accountablePerson" : "eludom.github.ioGeorge Jones",
+    "copyrightHolder" : "eludom.github.ioGeorge Jones",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-09-01 00:00:00 -0400 EDT",
+    "dateModified" : "2020-09-01 00:00:00 -0400 EDT",
+    "url" : "https:\/\/eludom.github.io\/blog\/some\/",
+    "wordCount" : "285",
+    "keywords" : [ "geek","unix","100DaysToOffload","HOWTO","Blog" ]
+}
+</script>
+
+  
+  <title>HOWTO: See SOME lines from a file &middot; Curious Musings</title>
+
+  
+  <link type="text/css" rel="stylesheet" href="https://eludom.github.io/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://eludom.github.io/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://eludom.github.io/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://eludom.github.io/css/hyde.css">
+  
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous|Oswald|Merriweather|PT+Sans:400,400i,700">
+
+
+
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://eludom.github.io/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="https://eludom.github.io/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Curious Musings" />
+
+  
+</head>
+
+  <body class="theme-base-0a ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://eludom.github.io/"><h1>Curious Musings</h1></a>
+    </div>
+    <nav>
+      <ul class="sidebar-nav">
+        <h3>◾ Frequent</h3>
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/life"> life <small>(12)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/100daystooffload"> 100daystooffload <small>(9)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/history"> history <small>(5)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/howto"> howto <small>(5)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/outdoors"> outdoors <small>(5)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/blogging"> blogging <small>(4)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/emacs"> emacs <small>(4)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/family"> family <small>(4)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/geek"> geek <small>(4)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/hiking"> hiking <small>(4)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/latin"> latin <small>(4)</small></a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <h4><a href="https://eludom.github.io/tags/">All Topics ►</a></h4>
+        
+        <h4><a href="https://eludom.github.io/blog/">All Posts ►</a></h4>
+        
+
+          <h3>◾ About </h3>
+          <a href="https://eludom.github.io//about">George Jones</a>
+          <a href="https://eludom.github.io//curious">Curious Musings</a>
+          <img src="https://eludom.github.io/title-logo.png">
+      </ul>
+    </nav>
+  </div>
+</aside>
+
+    <main class="content container">
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="HOWTO: See SOME lines from a file"/>
+<meta name="twitter:description" content="Sometimes you want to see the head of a file.   Sometimes you want to
+see the tail. Sometimes you just want to see some lines from a file.
+The bash function below gives you some lines:
+gmj@ed bash [master] $ cat &lt;&lt;END &gt; lines.txt
+&gt; 1
+&gt; 2
+&gt; 3
+&gt; 4
+&gt; 5
+&gt; 6
+&gt; 7
+&gt; 8
+&gt; 9
+&gt; 10
+&gt; 11
+&gt; 12
+&gt; 13
+&gt; 14
+&gt; 15
+&gt; END
+gmj@ed bash [master] $ source some.t
+sh
+gmj@ed bash [master] $
+gmj@ed bash [master] $ some -2 lines.txt
+14
+15
+gmj@ed bash [master] $ some -2 lines.txt
+9
+10
+gmj@ed bash [master] $ some -2 lines.txt
+6
+7
+gmj@ed bash [master] $ cat some.sh
+"/>
+
+<div class="post">
+  <h1>HOWTO: See SOME lines from a file</h1>
+ <time datetime=2020-09-01T00:00:00-0400 class="post-date">2020-09-01 
+
+
+
+    
+      / <a href="https://eludom.github.io/tags/geek/"> geek</a>
+      / <a href="https://eludom.github.io/tags/unix/"> unix</a>
+      / <a href="https://eludom.github.io/tags/100daystooffload/"> 100daystooffload</a>
+      / <a href="https://eludom.github.io/tags/howto/"> howto</a>
+</time>
+<p>Sometimes you want to see the head of a file.   Sometimes you want to
+see the tail. Sometimes you just want to see <strong>some</strong> lines from a file.</p>
+<p>The bash function below gives you <strong>some</strong> lines:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">gmj@ed bash [master] $ cat &lt;&lt;END &gt; lines.txt
+&gt; 1
+&gt; 2
+&gt; 3
+&gt; 4
+&gt; 5
+&gt; 6
+&gt; 7
+&gt; 8
+&gt; 9
+&gt; 10
+&gt; 11
+&gt; 12
+&gt; 13
+&gt; 14
+&gt; 15
+&gt; END
+gmj@ed bash [master] $ source some.t
+sh
+gmj@ed bash [master] $
+gmj@ed bash [master] $ some -2 lines.txt
+14
+15
+gmj@ed bash [master] $ some -2 lines.txt
+9
+10
+gmj@ed bash [master] $ some -2 lines.txt
+6
+7
+gmj@ed bash [master] $ cat some.sh
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#66d9ef">function</span> some <span style="color:#f92672">{</span>
+    <span style="color:#75715e"># Functon to print &#34;some&#34; lines of a file, like head or tail but, random start</span>
+    #
+    <span style="color:#75715e"># Usage: some [[-#] FILE]</span>
+
+    set -u; <span style="color:#75715e"># be safe out there</span>
+
+    HOW_MANY<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span> <span style="color:#75715e"># Number of lines to print.  Default.</span>
+    FILE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/dev/stdin&#34;</span> <span style="color:#75715e"># default</span>
+
+
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span>$#<span style="color:#e6db74">&#34;</span> -eq <span style="color:#ae81ff">0</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+        :
+    <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span>$#<span style="color:#e6db74">&#34;</span> -eq <span style="color:#ae81ff">1</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">=</span>~ -<span style="color:#f92672">[</span>0-9<span style="color:#f92672">]</span> <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+            HOW_MANY<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>echo <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> | sed <span style="color:#e6db74">&#39;s/^-//&#39;</span><span style="color:#e6db74">`</span>
+        <span style="color:#66d9ef">else</span>
+            FILE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
+        <span style="color:#66d9ef">fi</span>
+
+    <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span>$#<span style="color:#e6db74">&#34;</span> -eq <span style="color:#ae81ff">2</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">=</span>~ -<span style="color:#f92672">[</span>0-9<span style="color:#f92672">]</span> <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+            HOW_MANY<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>echo <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> | sed <span style="color:#e6db74">&#39;s/^-//&#39;</span><span style="color:#e6db74">`</span>
+        <span style="color:#66d9ef">else</span>
+            echo <span style="color:#e6db74">&#34;some: Usage: some [-# [FILE]]&#34;</span>
+            <span style="color:#66d9ef">return</span>
+        <span style="color:#66d9ef">fi</span>
+
+        FILE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$2<span style="color:#e6db74">&#34;</span>
+    <span style="color:#66d9ef">fi</span>
+
+    <span style="color:#75715e"># Count the lines to bound display</span>
+    LINES<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>wc -l $FILE | sed -e <span style="color:#e6db74">&#39;s/ .*//&#39;</span><span style="color:#e6db74">`</span>
+
+    <span style="color:#75715e"># pick a random starting line at least HOW_MANY back from the end</span>
+    FIRST<span style="color:#f92672">=</span><span style="color:#66d9ef">$((</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> RANDOM <span style="color:#f92672">%</span> <span style="color:#f92672">(</span>LINES <span style="color:#f92672">-</span> HOW_MANY <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">))</span><span style="color:#f92672">)</span>
+    LAST<span style="color:#f92672">=</span><span style="color:#66d9ef">$((</span>FIRST <span style="color:#f92672">+</span> HOW_MANY <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">))</span>
+
+    <span style="color:#75715e"># Let&#39;s see some lines !</span>
+    awk <span style="color:#e6db74">&#34;NR &gt;= </span>$FIRST<span style="color:#e6db74"> &amp;&amp; NR &lt;= </span>$LAST<span style="color:#e6db74">&#34;</span> $FILE
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Post 26 #100DaysToOffload <a href="https://100daystooffload.com/">https://100daystooffload.com/</a></p>
+</div>
+<hr>
+<h2>Comments</h2>
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "curiousmusings" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </main>
+
+    
+  </body>
+</html>

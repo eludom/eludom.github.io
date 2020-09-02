@@ -6,32 +6,60 @@
     <description>Recent content in unix on Curious Musings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Aug 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://eludom.github.io/tags/unix/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>HOWTO: /bin/ed by example</title>
+      <title>HOWTO: See SOME lines from a file</title>
+      <link>https://eludom.github.io/blog/some/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/blog/some/</guid>
+      <description>&lt;p&gt;Sometimes you want to see the head of a file.   Sometimes you want to
+see the tail. Sometimes you just want to see &lt;strong&gt;some&lt;/strong&gt; lines from a file.&lt;/p&gt;
+&lt;p&gt;The bash function below gives you &lt;strong&gt;some&lt;/strong&gt; lines:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;gmj@ed bash [master] $ cat &amp;lt;&amp;lt;END &amp;gt; lines.txt
+&amp;gt; 1
+&amp;gt; 2
+&amp;gt; 3
+&amp;gt; 4
+&amp;gt; 5
+&amp;gt; 6
+&amp;gt; 7
+&amp;gt; 8
+&amp;gt; 9
+&amp;gt; 10
+&amp;gt; 11
+&amp;gt; 12
+&amp;gt; 13
+&amp;gt; 14
+&amp;gt; 15
+&amp;gt; END
+gmj@ed bash [master] $ source some.t
+sh
+gmj@ed bash [master] $
+gmj@ed bash [master] $ some -2 lines.txt
+14
+15
+gmj@ed bash [master] $ some -2 lines.txt
+9
+10
+gmj@ed bash [master] $ some -2 lines.txt
+6
+7
+gmj@ed bash [master] $ cat some.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>HOWTO: sometimes you just want to see some lines</title>
       <link>https://eludom.github.io/blog/bin-ed/</link>
       <pubDate>Fri, 28 Aug 2020 00:00:00 -0400</pubDate>
       
       <guid>https://eludom.github.io/blog/bin-ed/</guid>
-      <description>&lt;p&gt;Below I &lt;strong&gt;show&lt;/strong&gt; an editing session that uses basic &lt;code&gt;/bin/ed&lt;/code&gt; commands.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;/bin/ed&lt;/code&gt; is the standard Unix Editor&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;code&gt;ed&lt;/code&gt; was written round 1969.  It&amp;rsquo;s still here.  &lt;code&gt;grep&lt;/code&gt; comes from
-&lt;code&gt;/bin/ed&lt;/code&gt;: &lt;code&gt;g/re/p&lt;/code&gt; works as an ed command to search &lt;strong&gt;g&lt;/strong&gt;lobally for a
-&lt;strong&gt;re&lt;/strong&gt;gular expression and &lt;strong&gt;p&lt;/strong&gt;rint the matching lines.  ed commands
-will be familiar to users of &lt;code&gt;sed&lt;/code&gt;, as sed is the &amp;ldquo;stream editor&amp;rdquo;
-with a very similar set of commands.  ed commands will be familiar to
-&lt;code&gt;vi&lt;/code&gt; users.  If you type &amp;ldquo;:&amp;rdquo; in vi, you get, basically, an ed prompt.
-You can type ed commands (see below) and they work.  &amp;ldquo;vi&amp;rdquo; is the
-&amp;ldquo;visual interface&amp;rdquo; to ed (or one of it&amp;rsquo;s successors).  Though I am a
-die hard &lt;code&gt;emacs&lt;/code&gt; user, often when I just want to do a quick edit or take
-some note I just fire up &lt;code&gt;/bin/ed&lt;/code&gt; and go&amp;hellip;.&lt;/p&gt;
-&lt;h2 id=&#34;a-sample-bin-ed-session-dot-dot-dot&#34;&gt;A sample &lt;code&gt;/bin/ed&lt;/code&gt; session&amp;hellip;&lt;/h2&gt;</description>
+      <description>Below I show an editing session that uses basic /bin/ed commands.</description>
     </item>
     
   </channel>
