@@ -115,12 +115,26 @@ gmj@ed bash [master] $ cat some.sh
     </item>
     
     <item>
-      <title>HOWTO: sometimes you just want to see some lines</title>
+      <title>HOWTO: /bin/ed by example</title>
       <link>https://eludom.github.io/blog/bin-ed/</link>
       <pubDate>Fri, 28 Aug 2020 00:00:00 -0400</pubDate>
       
       <guid>https://eludom.github.io/blog/bin-ed/</guid>
-      <description>Below I show an editing session that uses basic /bin/ed commands.</description>
+      <description>&lt;p&gt;Below I &lt;strong&gt;show&lt;/strong&gt; an editing session that uses basic &lt;code&gt;/bin/ed&lt;/code&gt; commands.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;/bin/ed&lt;/code&gt; is the standard Unix Editor&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;ed&lt;/code&gt; was written round 1969.  It&amp;rsquo;s still here.  &lt;code&gt;grep&lt;/code&gt; comes from
+&lt;code&gt;/bin/ed&lt;/code&gt;: &lt;code&gt;g/re/p&lt;/code&gt; works as an ed command to search &lt;strong&gt;g&lt;/strong&gt;lobally for a
+&lt;strong&gt;re&lt;/strong&gt;gular expression and &lt;strong&gt;p&lt;/strong&gt;rint the matching lines.  ed commands
+will be familiar to users of &lt;code&gt;sed&lt;/code&gt;, as sed is the &amp;ldquo;stream editor&amp;rdquo;
+with a very similar set of commands.  ed commands will be familiar to
+&lt;code&gt;vi&lt;/code&gt; users.  If you type &amp;ldquo;:&amp;rdquo; in vi, you get, basically, an ed prompt.
+You can type ed commands (see below) and they work.  &amp;ldquo;vi&amp;rdquo; is the
+&amp;ldquo;visual interface&amp;rdquo; to ed (or one of it&amp;rsquo;s successors).  Though I am a
+die hard &lt;code&gt;emacs&lt;/code&gt; user, often when I just want to do a quick edit or take
+some note I just fire up &lt;code&gt;/bin/ed&lt;/code&gt; and go&amp;hellip;.&lt;/p&gt;
+&lt;h2 id=&#34;a-sample-bin-ed-session-dot-dot-dot&#34;&gt;A sample &lt;code&gt;/bin/ed&lt;/code&gt; session&amp;hellip;&lt;/h2&gt;</description>
     </item>
     
     <item>
