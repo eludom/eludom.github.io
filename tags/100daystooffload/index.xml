@@ -92,7 +92,8 @@ I should finish in a few years.&lt;/p&gt;
       <pubDate>Sat, 19 Sep 2020 00:00:00 -0400</pubDate>
       
       <guid>https://eludom.github.io/blog/things-on-the-internet/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
+      <description>&lt;p&gt;foo&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;When talking about Internet assets we often confuse &amp;ldquo;What is it?&amp;quot;, &amp;ldquo;Is
 it bad?&amp;rdquo; and &amp;ldquo;What should I do about it?&amp;quot;.  This write-up intends to
 show why it is important to keep those questions and answers to them
