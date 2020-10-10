@@ -6,10 +6,40 @@
     <description>Recent content in unix on Curious Musings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Sep 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 10 Oct 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://eludom.github.io/tags/unix/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Source Code Distribution From Printouts to Github</title>
+      <link>https://eludom.github.io/blog/sourcecode/</link>
+      <pubDate>Sat, 10 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/blog/sourcecode/</guid>
+      <description>&lt;p&gt;Source code distribution has changed over the years.  Today we
+all love (hate?) git, github and friends, but, believe it or not
+there were ways to distribute source code even before the
+Internet.  In fact, this was the world in which the GNU Public
+License was created. Below are a few of the ways I&amp;rsquo;ve
+gotten/transferred source code through the years, in something
+like chronological order&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+
+
+
+&lt;figure&gt;
+    
+        &lt;img src=&#34;https://eludom.github.io/ox-hugo/code.jpg&#34; alt=&#34;Figure 1: Code on the Europython 2009 bag&amp;rdquo; by Thomas Guest is licensed with CC BY 2.0. To view a copy of this license, visit https://creativecommons.org/licenses/by/2.0/&#34;/&gt; &lt;figcaption&gt;
+                
+                &lt;p&gt;
+                    Figure 1: Code on the Europython 2009 bag&amp;rdquo; by Thomas Guest is licensed with CC BY 2.0. To view a copy of this license, visit &lt;a href=&#34;https://creativecommons.org/licenses/by/2.0/&#34;&gt;https://creativecommons.org/licenses/by/2.0/&lt;/a&gt;
+                    
+                        
+                        &lt;/p&gt;
+                
+            &lt;/figcaption&gt;&lt;/figure&gt;</description>
+    </item>
     
     <item>
       <title>HOWTO: See SOME lines from a file</title>
