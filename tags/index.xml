@@ -48,24 +48,6 @@
     </item>
     
     <item>
-      <title>SOC</title>
-      <link>https://eludom.github.io/tags/soc/</link>
-      <pubDate>Fri, 09 Oct 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://eludom.github.io/tags/soc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>social</title>
-      <link>https://eludom.github.io/tags/social/</link>
-      <pubDate>Fri, 09 Oct 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://eludom.github.io/tags/social/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>privacy</title>
       <link>https://eludom.github.io/tags/privacy/</link>
       <pubDate>Sun, 04 Oct 2020 00:00:00 -0400</pubDate>
@@ -170,6 +152,24 @@
       <pubDate>Fri, 21 Aug 2020 00:00:00 -0400</pubDate>
       
       <guid>https://eludom.github.io/tags/facebook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SOC</title>
+      <link>https://eludom.github.io/tags/soc/</link>
+      <pubDate>Fri, 21 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/tags/soc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>social</title>
+      <link>https://eludom.github.io/tags/social/</link>
+      <pubDate>Fri, 21 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/tags/social/</guid>
       <description></description>
     </item>
     

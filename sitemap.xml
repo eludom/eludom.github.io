@@ -43,21 +43,6 @@
   </url>
   
   <url>
-    <loc>https://eludom.github.io/blog/walled-gardens-part-3/</loc>
-    <lastmod>2020-10-09T07:01:45-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eludom.github.io/tags/soc/</loc>
-    <lastmod>2020-10-09T07:01:45-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eludom.github.io/tags/social/</loc>
-    <lastmod>2020-10-09T07:01:45-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://eludom.github.io/curious/</loc>
     <lastmod>2020-10-04T06:06:28-04:00</lastmod>
   </url>
@@ -184,6 +169,16 @@
   
   <url>
     <loc>https://eludom.github.io/tags/facebook/</loc>
+    <lastmod>2020-08-21T07:32:24-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eludom.github.io/tags/soc/</loc>
+    <lastmod>2020-08-28T08:19:59-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eludom.github.io/tags/social/</loc>
     <lastmod>2020-08-21T07:32:24-04:00</lastmod>
   </url>
   
