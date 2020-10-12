@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Curious Musings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Oct 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://eludom.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SOC</title>
+      <link>https://eludom.github.io/tags/soc/</link>
+      <pubDate>Mon, 12 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/tags/soc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>social</title>
+      <link>https://eludom.github.io/tags/social/</link>
+      <pubDate>Mon, 12 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/tags/social/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>100DaysToOffload</title>
@@ -152,24 +170,6 @@
       <pubDate>Fri, 21 Aug 2020 00:00:00 -0400</pubDate>
       
       <guid>https://eludom.github.io/tags/facebook/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>SOC</title>
-      <link>https://eludom.github.io/tags/soc/</link>
-      <pubDate>Fri, 21 Aug 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://eludom.github.io/tags/soc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>social</title>
-      <link>https://eludom.github.io/tags/social/</link>
-      <pubDate>Fri, 21 Aug 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://eludom.github.io/tags/social/</guid>
       <description></description>
     </item>
     

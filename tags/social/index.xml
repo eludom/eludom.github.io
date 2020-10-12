@@ -6,10 +6,20 @@
     <description>Recent content in social on Curious Musings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 21 Aug 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://eludom.github.io/tags/social/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Goodbye Twitter</title>
+      <link>https://eludom.github.io/blog/goodbye-twitter/</link>
+      <pubDate>Mon, 12 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/blog/goodbye-twitter/</guid>
+      <description>1 of 2 Goodbye twitter. In 2016 Facebook got too political so I dropped it. Now, Twitter. You can reach me as gmj AT pobox DOT com. Please drop an email if you to stay in touch. I blog semi-regularly at https://eludom.github.io/.
+2 of 2 https://en.wikipedia.org/wiki/Mastodon%5F(software) is a free, open source, ad-free, distributed twitter-like thing. No corporation algorithmically manipulates your timeline and AUPs are set by the community. I&amp;rsquo;m on the https://fosstodon.</description>
+    </item>
     
     <item>
       <title>40 years of walled gardens &amp; open platforms: Part II</title>
