@@ -6,10 +6,25 @@
     <description>Recent content in 100DaysToOffload on Curious Musings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Oct 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://eludom.github.io/tags/100daystooffload/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hello twtxt</title>
+      <link>https://eludom.github.io/blog/hello_twtxt/</link>
+      <pubDate>Sat, 17 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/blog/hello_twtxt/</guid>
+      <description>&lt;p&gt;And in the to-simple-to-be-true category&amp;hellip;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;twtxt is a decentralised, minimalist microblogging service for hackers.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://twtxt.readthedocs.io/en/latest/user/intro.html&#34;&gt;https://twtxt.readthedocs.io/en/latest/user/intro.html&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt; $ twtxt tweet &amp;#34;Is there anybody out there, just nod if you can hear me&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
     
     <item>
       <title>Source Code Distribution From Printouts to Github</title>
