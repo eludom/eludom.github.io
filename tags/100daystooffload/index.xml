@@ -6,10 +6,21 @@
     <description>Recent content in 100DaysToOffload on Curious Musings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Nov 2020 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2020 00:00:00 -0500</lastBuildDate>
     
 	<atom:link href="https://eludom.github.io/tags/100daystooffload/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>What a day for a daydream</title>
+      <link>https://eludom.github.io/blog/dream-on/</link>
+      <pubDate>Wed, 25 Nov 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://eludom.github.io/blog/dream-on/</guid>
+      <description>&amp;ldquo;Ladies and Gentlemen, may I have your attention&amp;hellip;&amp;rdquo;
+ This piece began as some thoughts on &amp;ldquo;attention&amp;rdquo; and wound up a reflections on daydreams. I think I&amp;rsquo;m a fan of daydreaming.
+Attention Attention is a finite commodity. You only have so much attention to give in your life, in your day. Parents want your attention. Brothers and sisters and friends want your attention. Teachers want your attention. Employers want your attention.</description>
+    </item>
     
     <item>
       <title>All we are saying, is give init.el a chance</title>
