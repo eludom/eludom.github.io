@@ -1,0 +1,1670 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="//gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.69.0" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/eludom.github.io\/"
+    },
+    "articleSection" : "Blog",
+    "name" : ".bashrc as literate programming",
+    "headline" : ".bashrc as literate programming",
+    "description" : "\x3ch2 id=\x22knuth-gets-annoyed-at-his-publishers--tex--is-born-dot\x22\x3eKnuth gets annoyed at his publishers, \\(\\TeX\\) is born.\x3c\/h2\x3e\n\x3cp\x3eBack in the late 70s Donald Knuth who was (and still is) publishing a\nseminal series of Computer Science text books got annoyed at the\ntypesetting, layouts and font choices he was being presented by\npublishers.   So he did what any self-respecting hacker who happened\nto be Donald Knuth would do: he created his own typesetting system\ncalled \\(\\TeX\\) which (along with \\(\\LaTeX\\) which borrowed heavily from SCRIBE)\nis something of a standard to this day in academic publishing.\x3c\/p\x3e\n\x3cp\x3eBecause, you know, why is it unreasonable to expect publishers to\nrender simple equations, right?\x3c\/p\x3e\n\x3cp\x3e\\begin{multline*}\n\\vec{E}_{\\mathrm{tot}}=\nq\\cdot k_{b}\\cdot \\dfrac{r}{r^3}\n\\left\\lgroup\n\\frac{\\hat{r}-\\left(\\dfrac{d}{2\\cdot r}\\right)\\hat{d}}\n{\\biggl(1\x2b\\left(\\dfrac{d}{2\\cdot r}\\right)^2-\n\\left(\\dfrac{d}{r}\\right)\\hat{r}\\cdot\\hat{d}\\cdot\\cos(\\theta)\n\\biggr)^{3\/2}}\n\\right.\n\\\\\\\x3cbr\x3e\n\\left.\n{}-\n\\frac{\\hat{r}\x2b\\left(\\dfrac{d}{2\\cdot r}\\right)\\hat{d}}\n{\\biggl(1\x2b\\left(\\dfrac{d}{2\\cdot r}\\right)^2\x2b\n\\left(\\dfrac{d}{r}\\right)\\cdot\\hat{r}\\cdot\\hat{d}\\cdot\\cos(\\theta)\n\\biggr)^{3\/2}}\n\\right\\rgroup\n\\end{multline*}\x3c\/p\x3e\n\x3c!-- raw HTML omitted --\x3e\n\x3c!-- raw HTML omitted --\x3e\n\x3cp\x3e\x3ca href=\x22https:\/\/tex.stackexchange.com\/questions\/371644\/how-to-write-this-long-equation\x22\x3ehttps:\/\/tex.stackexchange.com\/questions\/371644\/how-to-write-this-long-equation\x3c\/a\x3e\x3c\/p\x3e\n\x3c!-- raw HTML omitted --\x3e\n\x3cp\x3eBut wait, there\x26rsquo;s more.\x3c\/p\x3e",
+    "inLanguage" : "en-US",
+    "author" : "eludom.github.ioGeorge Jones",
+    "creator" : "eludom.github.ioGeorge Jones",
+    "publisher": "eludom.github.ioGeorge Jones",
+    "accountablePerson" : "eludom.github.ioGeorge Jones",
+    "copyrightHolder" : "eludom.github.ioGeorge Jones",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-12-05 00:00:00 -0500 EST",
+    "dateModified" : "2020-12-05 00:00:00 -0500 EST",
+    "url" : "https:\/\/eludom.github.io\/blog\/bashrc\/",
+    "wordCount" : "5246",
+    "keywords" : [ "geek","howto","emacs","100DaysToOffload","Blog" ]
+}
+</script>
+
+  
+  <title>.bashrc as literate programming &middot; Curious Musings</title>
+
+  
+  <link type="text/css" rel="stylesheet" href="https://eludom.github.io/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://eludom.github.io/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://eludom.github.io/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://eludom.github.io/css/hyde.css">
+  
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous|Oswald|Merriweather|PT+Sans:400,400i,700">
+
+
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://eludom.github.io/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="https://eludom.github.io/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Curious Musings" />
+
+  
+
+  <script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+</head>
+
+  <body class="theme-base-0a ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://eludom.github.io/"><h1>Curious Musings</h1></a>
+    </div>
+    <nav>
+      <ul class="sidebar-nav">
+        <h3>◾ Frequent</h3>
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/100daystooffload"> 100daystooffload <small>(20)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/life"> life <small>(15)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/geek"> geek <small>(8)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/history"> history <small>(8)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/howto"> howto <small>(7)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/hiking"> hiking <small>(6)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/emacs"> emacs <small>(5)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/outdoors"> outdoors <small>(5)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/blogging"> blogging <small>(4)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/cybersecurity"> cybersecurity <small>(4)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/family"> family <small>(4)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/latin"> latin <small>(4)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/privacy"> privacy <small>(4)</small></a>
+        </li>
+        
+        
+        
+        <li>
+          <a href="https://eludom.github.io/tags/social"> social <small>(4)</small></a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <h4><a href="https://eludom.github.io/tags/">All Topics ►</a></h4>
+        
+        <h4><a href="https://eludom.github.io/blog/">All Posts ►</a></h4>
+        
+
+          <h3>◾ About </h3>
+          <a href="https://eludom.github.io//about">George Jones</a>
+          <a href="https://eludom.github.io//curious">Curious Musings</a>
+          <img src="https://eludom.github.io/title-logo.png">
+      </ul>
+    </nav>
+  </div>
+</aside>
+
+    <main class="content container">
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=".bashrc as literate programming"/>
+<meta name="twitter:description" content="Knuth gets annoyed at his publishers, \(\TeX\) is born.
+Back in the late 70s Donald Knuth who was (and still is) publishing a
+seminal series of Computer Science text books got annoyed at the
+typesetting, layouts and font choices he was being presented by
+publishers.   So he did what any self-respecting hacker who happened
+to be Donald Knuth would do: he created his own typesetting system
+called \(\TeX\) which (along with \(\LaTeX\) which borrowed heavily from SCRIBE)
+is something of a standard to this day in academic publishing.
+Because, you know, why is it unreasonable to expect publishers to
+render simple equations, right?
+\begin{multline*}
+\vec{E}_{\mathrm{tot}}=
+q\cdot k_{b}\cdot \dfrac{r}{r^3}
+\left\lgroup
+\frac{\hat{r}-\left(\dfrac{d}{2\cdot r}\right)\hat{d}}
+{\biggl(1&#43;\left(\dfrac{d}{2\cdot r}\right)^2-
+\left(\dfrac{d}{r}\right)\hat{r}\cdot\hat{d}\cdot\cos(\theta)
+\biggr)^{3/2}}
+\right.
+\\\
+\left.
+{}-
+\frac{\hat{r}&#43;\left(\dfrac{d}{2\cdot r}\right)\hat{d}}
+{\biggl(1&#43;\left(\dfrac{d}{2\cdot r}\right)^2&#43;
+\left(\dfrac{d}{r}\right)\cdot\hat{r}\cdot\hat{d}\cdot\cos(\theta)
+\biggr)^{3/2}}
+\right\rgroup
+\end{multline*}
+
+
+https://tex.stackexchange.com/questions/371644/how-to-write-this-long-equation
+
+But wait, there&rsquo;s more."/>
+
+<div class="post">
+  <h1>.bashrc as literate programming</h1>
+ <time datetime=2020-12-05T00:00:00-0500 class="post-date">2020-12-05 
+
+
+
+    
+      / <a href="https://eludom.github.io/tags/geek/"> geek</a>
+      / <a href="https://eludom.github.io/tags/howto/"> howto</a>
+      / <a href="https://eludom.github.io/tags/emacs/"> emacs</a>
+      / <a href="https://eludom.github.io/tags/100daystooffload/"> 100daystooffload</a>
+</time>
+<h2 id="knuth-gets-annoyed-at-his-publishers--tex--is-born-dot">Knuth gets annoyed at his publishers, \(\TeX\) is born.</h2>
+<p>Back in the late 70s Donald Knuth who was (and still is) publishing a
+seminal series of Computer Science text books got annoyed at the
+typesetting, layouts and font choices he was being presented by
+publishers.   So he did what any self-respecting hacker who happened
+to be Donald Knuth would do: he created his own typesetting system
+called \(\TeX\) which (along with \(\LaTeX\) which borrowed heavily from SCRIBE)
+is something of a standard to this day in academic publishing.</p>
+<p>Because, you know, why is it unreasonable to expect publishers to
+render simple equations, right?</p>
+<p>\begin{multline*}
+\vec{E}_{\mathrm{tot}}=
+q\cdot k_{b}\cdot \dfrac{r}{r^3}
+\left\lgroup
+\frac{\hat{r}-\left(\dfrac{d}{2\cdot r}\right)\hat{d}}
+{\biggl(1+\left(\dfrac{d}{2\cdot r}\right)^2-
+\left(\dfrac{d}{r}\right)\hat{r}\cdot\hat{d}\cdot\cos(\theta)
+\biggr)^{3/2}}
+\right.
+\\\<br>
+\left.
+{}-
+\frac{\hat{r}+\left(\dfrac{d}{2\cdot r}\right)\hat{d}}
+{\biggl(1+\left(\dfrac{d}{2\cdot r}\right)^2+
+\left(\dfrac{d}{r}\right)\cdot\hat{r}\cdot\hat{d}\cdot\cos(\theta)
+\biggr)^{3/2}}
+\right\rgroup
+\end{multline*}</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><a href="https://tex.stackexchange.com/questions/371644/how-to-write-this-long-equation">https://tex.stackexchange.com/questions/371644/how-to-write-this-long-equation</a></p>
+<!-- raw HTML omitted -->
+<p>But wait, there&rsquo;s more.</p>
+<h2 id="literate-programming">Literate Programming</h2>
+<p>In addition to writing his own typesetting system, he came up with the
+concept of <em>Literate Programming</em> at the same time.   The basic idea
+is that you write for humans to read (e.g. text books) with a
+side-effect of outputting code (for machines to execute).   It is the
+ultimate in software documentation.   The code and the description are
+an integrated whole with different processes, &ldquo;tangle&rdquo;, to produce code
+and &ldquo;weave&rdquo;<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, to produce output for humans</p>
+<p>I&rsquo;ve been influenced by the concept of <em>Literate Programming</em> ever
+since I installed the original TeX (and LaTex) on CompuServe&rsquo;s DEC10s.</p>
+<h2 id="the-children-of-tangle-and-weave-org-babel-jupyter-and-zepplin">The children of tangle and weave - Org, Babel, Jupyter and Zepplin</h2>
+<p>Fast forward a few decades.  Carsten Dominick creates org mode for
+Emacs to organize, well, everything which, of course, has a back end
+to output .tex files.   Eric Schulte then has the bright ideas of
+creating org-babel, which allows small (or not so small) blocks of
+code to be imbedded in org files and executed with their output
+becoming part of the document.   Literate programming, here were are,
+again&hellip;.oh, and it&rsquo;s a tool for doing reproducible scientific
+research as well where the data, code, descriptions of experiments and
+results/conclusions are all one document:</p>
+<p><a href="https://www.jstatsoft.org/article/view/v046i03">https://www.jstatsoft.org/article/view/v046i03</a></p>
+<p>Jupyter and Zeppelin notebooks provide similar functionality today for
+Python, Spark, Scala and the data science community, but Knuth was
+there 40 years ago.</p>
+<h2 id="george-gets-annoyed-at-a-complicated-dot-bashrc-dot-bashrc-dot-org-is-born">George gets annoyed at a complicated .bashrc, .bashrc.org is born</h2>
+<p>Which brings me to my own humble annoyances which are not likely to
+change the course of science or academic publishing&hellip;</p>
+<p>As a nearly lifelong emacs user I am mildly annoyed any time I have to do
+something that can&rsquo;t be done in emacs in general, and have been
+particularly annoyed at the growing complexity of my <code>.bashrc</code> file
+which could not be organize and documented in org mode&hellip;.until now.</p>
+<h2 id="emacsconf-2020-talk-readme-driven-design">EmacsConf 2020 talk: README Driven Design</h2>
+<p>A talk at EmacsConf 2020 reminded me that Org mode can be used
+directly for literate programming.</p>
+<p>Test Driven Design (TDD) had been a concept for a while: write
+your tests first, once your code passes, you&rsquo;re done.  Find a
+bug, write a new test, code until it passes.</p>
+<p>&ldquo;README Driven Design&rdquo; continues in the same vein.  Often
+programmers will wait to the end to write their documentation,
+install notes, user guide etc.  What this talk advocates is to
+use literate programming and to <em>start</em> the README.org, which,
+given Org babel, could be the whole application, including TDD
+scripts.  See. Emacs does subsume all, did you notice how TDD
+just got swallowed up without missing a step?  See the blog post
+summarizing the talk at
+<a href="http://adamard.com/literate%5Fprogramming.html">http://adamard.com/literate_programming.html</a></p>
+<h2 id="1-my-dot-bashrc-as-literate-programming">1 - My .bashrc as literate programming</h2>
+<p>What follows are three different versions of my (457 line)
+<code>.bashrc</code> file.</p>
+<p>The first is the version for-human-consumption, complete with
+comments, descriptions, useful font highlighting and actual text
+blocked out. In Knuth&rsquo;s terms, this is the &ldquo;weave&rdquo; output.</p>
+<p>The second is the .bashrc that actually gets executed by bash.
+This is the &ldquo;tangle&rdquo; output.</p>
+<p>The last is the org mode source from which both preceding
+versions used as input.</p>
+<h3 id="1-dot-1-my-dot-bashrc-weave-output-for-humans">1.1 - My .bashrc - weave output for humans</h3>
+<p>Here is the human-readable .bashrc file with comments, etc.</p>
+<h4 id="about-this-dot-bashrc-file">About this .bashrc file</h4>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p>Intro</p>
+<p>This is George Jones&rsquo; .bashrc file as an literate programming file in
+emacs org mode using babel blocks.</p>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p>To generate the actual .bashrc</p>
+<p>This .bashrc.org file must be processed to generate the actual
+.bashrc It can be processed interactively to generate .bashrc via
+org-babel-tangle-file or from the command line as</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">  emacs --batch --eval &#34;(require &#39;org)&#34; --eval &#39;(org-babel-tangle-file &#34;.bashrc.org&#34;)&#39;
+</code></pre></div><p>Permanent changes must be made to the .org version, as the actual
+.bashrc will be overwritten when the .org version is &ldquo;compiled&rdquo;</p>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p>Debugging</p>
+<p>In most bash files I do</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">  set -e
+  set -u
+</code></pre></div><p>but there are problems setting it in .bashrc.   An error then causes
+you to exit the shell entirely (not what you want), and there are
+several constructs that cause warnings due to undefined variables
+(these can/probably should be fixd)</p>
+<p>Set</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">  export DEBUG=1
+</code></pre></div><p>to enable debugging output from the debug helper function.</p>
+</li>
+</ul>
+<h4 id="the-actual-executable-dot-bashrc">The actual executable .bashrc</h4>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p>Helper functions</p>
+<p>I define a few syslog-ish helper functions to print warnings,
+errors, etc.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">  <span style="color:#75715e">#PROG=`basename &#34;$0&#34; | tr -d &#39;\n&#39;`  # normal setting</span>
+  PROG<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bashrc&#34;</span> <span style="color:#75715e"># setting for bashrc due to errors</span>
+
+  <span style="color:#66d9ef">function</span> info<span style="color:#f92672">()</span>  <span style="color:#f92672">{</span> echo <span style="color:#e6db74">${</span>PROG<span style="color:#e6db74">}</span><span style="color:#ae81ff">\:</span> info: <span style="color:#e6db74">&#34;</span>$@<span style="color:#e6db74">&#34;</span> 1&gt;&amp;2; <span style="color:#f92672">}</span>
+  <span style="color:#66d9ef">function</span> warn<span style="color:#f92672">()</span>  <span style="color:#f92672">{</span> echo <span style="color:#e6db74">${</span>PROG<span style="color:#e6db74">}</span><span style="color:#ae81ff">\:</span> warning: <span style="color:#e6db74">&#34;</span>$@<span style="color:#e6db74">&#34;</span> 1&gt;&amp;2; <span style="color:#f92672">}</span>
+  <span style="color:#66d9ef">function</span> error<span style="color:#f92672">()</span> <span style="color:#f92672">{</span> echo <span style="color:#e6db74">${</span>PROG<span style="color:#e6db74">}</span><span style="color:#ae81ff">\:</span> error: <span style="color:#e6db74">&#34;</span>$@<span style="color:#e6db74">&#34;</span> 1&gt;&amp;2; <span style="color:#f92672">}</span>
+  <span style="color:#66d9ef">function</span> debug<span style="color:#f92672">()</span> <span style="color:#f92672">{</span> <span style="color:#f92672">[[</span> -v DEBUG <span style="color:#f92672">]]</span> <span style="color:#f92672">&amp;&amp;</span> echo <span style="color:#e6db74">${</span>PROG<span style="color:#e6db74">}</span><span style="color:#ae81ff">\:</span> debug: <span style="color:#e6db74">&#34;</span>$@<span style="color:#e6db74">&#34;</span> 1&gt;&amp;<span style="color:#ae81ff">2</span> <span style="color:#f92672">||</span> true ; <span style="color:#f92672">}</span>
+  <span style="color:#66d9ef">function</span> die<span style="color:#f92672">()</span>   <span style="color:#f92672">{</span> echo <span style="color:#e6db74">${</span>PROG<span style="color:#e6db74">}</span><span style="color:#ae81ff">\:</span> fatal: <span style="color:#e6db74">&#34;</span>$@<span style="color:#e6db74">&#34;</span> 1&gt;&amp;<span style="color:#ae81ff">2</span> <span style="color:#f92672">&amp;&amp;</span> exit 1; <span style="color:#f92672">}</span>
+</code></pre></div></li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p>Set a reasonable default prompt</p>
+<p>Here I set a reasonable default prompt that includes timestamp,
+username, host and current directory:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">export PS1<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;\# [\t] \u@\h \W/ </span>$<span style="color:#e6db74"> &#34;</span>
+</code></pre></div></li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p>Misc aliases</p>
+<p>Define various aliases that I use</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">  alias rm<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;	rm -i&#39;</span>
+  alias ag<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;	alias | grep -i&#39;</span>
+  alias eg<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;	printenv | grep -i&#39;</span>
+  alias hg<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;	history | grep -i&#39;</span>
+  alias ht<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;	history | tail&#39;</span>
+  alias fpg<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;	find . -print | egrep -i&#39;</span>
+  alias egi<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;	egrep -i&#39;</span>
+  alias psg<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;	/bin/ps -auxww | grep&#39;</span>
+  alias p8<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;	ping -c 3 8.8.8.8&#39;</span> <span style="color:#75715e"># make sure routing works</span>
+  alias pp<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;	ping -c 3 port111.com&#39;</span> <span style="color:#75715e"># make sure dns and routing work</span>
+  alias locate<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;locate -r&#39;</span>
+</code></pre></div></li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p>cd commands that use/print the directory stack</p>
+<p>These aliases support pushd_popd_dirs like functionality while
+listing one directory per line</p>
+<p>I like to keep a &ldquo;stack&rdquo; of directories so I can work on one thing
+then &ldquo;pop&rdquo; back to where I was.   <code>pushd</code> an <code>popd</code> support this,
+and <code>dirs</code> lists the directories, but I prefer to have them listed
+one per line.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">  <span style="color:#66d9ef">function</span> dirl<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+      <span style="color:#75715e"># &#34;DIR&#34;ectory &#34;L&#34;ist directory stack, one per line</span>
+      <span style="color:#75715e"># Usage: dirl</span>
+
+      <span style="color:#66d9ef">for</span> d in <span style="color:#e6db74">`</span>dirs<span style="color:#e6db74">`</span>; <span style="color:#66d9ef">do</span> echo $d; <span style="color:#66d9ef">done</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">function</span> dirc<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+      <span style="color:#75715e"># &#34;DIR&#34;ectory &#34;C&#34;onnect - connect to directory and list stack</span>
+      <span style="color:#75715e"># Usage: dirc [DIR</span>
+
+      pushd <span style="color:#e6db74">${</span>1<span style="color:#66d9ef">:-</span><span style="color:#e6db74">&#34;</span>$HOME<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">}</span> &gt; /dev/null
+      dirl
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">function</span> dirp <span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+      <span style="color:#75715e"># &#34;DIR&#34;ectory &#34;P&#34;op - pop N entries off the directory stack</span>
+      <span style="color:#75715e"># Usage: dirp [N]</span>
+      #
+      <span style="color:#75715e"># OLD:</span>
+      <span style="color:#75715e">#   alias  dirp=&#39;popd &gt; /dev/null &amp;&amp; dirl&#39;</span>
+      <span style="color:#66d9ef">for</span> i in <span style="color:#e6db74">`</span>seq <span style="color:#e6db74">${</span>1<span style="color:#66d9ef">:-</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>; <span style="color:#66d9ef">do</span>
+          debug <span style="color:#e6db74">&#34;dirl: popd. i is </span>$i<span style="color:#e6db74">&#34;</span>
+          popd &gt; /dev/null;
+      <span style="color:#66d9ef">done</span>
+      dirl
+  <span style="color:#f92672">}</span>
+
+  alias cd<span style="color:#f92672">=</span>pushd
+</code></pre></div></li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p>Misc functions</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">
+  <span style="color:#66d9ef">function</span> gf<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+  <span style="color:#75715e"># grep-find: grep for patterins in files via find</span>
+  #
+  <span style="color:#75715e"># Usage: gf patterns [files [days]]</span>
+  #
+  <span style="color:#75715e"># Examples:</span>
+  <span style="color:#75715e">#   gf findMeAnywhere</span>
+  <span style="color:#75715e">#   gf findMeInTextFiles &#39;*.txt&#39;</span>
+  <span style="color:#75715e">#   gf findMeInTextFiles .txt</span>
+  <span style="color:#75715e">#   gf BEGIN\|END .org 30</span>
+
+  local files<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>
+  local days<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;365&#34;</span>
+
+  set -o noglob
+
+  <span style="color:#75715e"># First arg is pattern(s) for egrep</span>
+  <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -z <span style="color:#e6db74">${</span>1+x<span style="color:#e6db74">}</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+    echo <span style="color:#e6db74">&#39;gf needs string(s) to search for &#39;</span> 1&gt;&amp;<span style="color:#ae81ff">2</span>
+    info <span style="color:#e6db74">&#34;Usage: gf patterns [files [days]]&#34;</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>
+  <span style="color:#66d9ef">fi</span>
+
+  <span style="color:#75715e"># Second arg (if present) is files for find.  No globbing, so &#34;*.txt&#34; OK</span>
+  <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> ! -z <span style="color:#e6db74">${</span>2+x<span style="color:#e6db74">}</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;</span>$2<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">=</span>~ ^<span style="color:#ae81ff">\.</span> <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+      <span style="color:#75715e"># Special case: treat &#34;.foo&#34; as &#34;*.foo&#34;</span>
+      <span style="color:#75715e"># Avoids needing to quote on command line</span>
+      files<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;-name *</span>$2<span style="color:#e6db74">&#34;</span>
+    <span style="color:#66d9ef">else</span>
+      files<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;-name </span><span style="color:#e6db74">${</span>2<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+    <span style="color:#66d9ef">fi</span>
+  <span style="color:#66d9ef">fi</span>
+
+  <span style="color:#75715e"># $3 (if present) is find -mtime arg, default 365</span>
+  <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> ! -z <span style="color:#e6db74">${</span>3+x<span style="color:#e6db74">}</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+    days<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>3<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+  <span style="color:#66d9ef">fi</span>
+
+  <span style="color:#75715e"># set -x</span>
+  find . -type f -mtime -<span style="color:#e6db74">${</span>days<span style="color:#e6db74">}</span> $files -exec egrep --color -H -i <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>1<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#ae81ff">\{\}</span> <span style="color:#ae81ff">\;</span>
+  <span style="color:#75715e"># set +x</span>
+
+  set +o noglob
+  <span style="color:#f92672">}</span>
+</code></pre></div></li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p>Bash history functions and settings</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">
+  <span style="color:#75715e"># Preserve history across sesssions</span>
+  #
+  <span style="color:#75715e"># http://unix.stackexchange.com/questions/1288/preserve-bash-history-in-multiple-terminal-windows</span>
+  #
+  export HISTCONTROL<span style="color:#f92672">=</span>ignoredups:erasedups  <span style="color:#75715e"># no duplicate entries</span>
+  export HISTSIZE<span style="color:#f92672">=</span><span style="color:#ae81ff">100000</span>                   <span style="color:#75715e"># big big history</span>
+  export HISTFILESIZE<span style="color:#f92672">=</span><span style="color:#ae81ff">100000</span>               <span style="color:#75715e"># big big history</span>
+  shopt -s histappend                      <span style="color:#75715e"># append to history, don&#39;t overwrite it</span>
+
+  <span style="color:#75715e"># Save and reload the history after each command finishes</span>
+  export PROMPT_COMMAND<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;history -a; history -c; history -r;&#34;</span>
+
+
+  <span style="color:#66d9ef">function</span> hgt<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+      <span style="color:#75715e"># hgt == &#34;history grep (for arg) tail&#34;</span>
+      <span style="color:#75715e">#echo &#34;Histroy Grep tail&#34;</span>
+
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -z <span style="color:#e6db74">${</span>1+x<span style="color:#e6db74">}</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+          echo <span style="color:#e6db74">&#39;hgt needs an argument&#39;</span> 1&gt;&amp;<span style="color:#ae81ff">2</span>
+          <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>
+      <span style="color:#66d9ef">fi</span>
+
+      history | grep -i <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> | tail
+      <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+  <span style="color:#f92672">}</span>
+</code></pre></div></li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p>Set the hostnane, timezone and local</p>
+<p>Set HOSTNAME if ~/etc/hostname exists</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">   <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -e <span style="color:#e6db74">${</span>HOME<span style="color:#e6db74">}</span>/etc/hostname <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+       export HOSTNAME<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>cat <span style="color:#e6db74">${</span>HOME<span style="color:#e6db74">}</span>/etc/hostname<span style="color:#e6db74">`</span>
+   <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> -e /etc/hostname <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+       export HOSTNAME<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>cat /etc/hostname<span style="color:#e6db74">`</span>
+   <span style="color:#66d9ef">else</span>
+       export HOSTNAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;unknown&#34;</span>
+   <span style="color:#66d9ef">fi</span>
+
+   <span style="color:#75715e"># Set timezone if ~/bin/tz.sh exists</span>
+
+   <span style="color:#75715e"># NEW, if neeeed?</span>
+   #
+   <span style="color:#75715e"># https://linuxize.com/post/how-to-set-or-change-timezone-in-linux/</span>
+   #
+   <span style="color:#75715e"># OLD:</span>
+   #
+   <span style="color:#75715e"># if [ -e ~/bin/tz.sh ]; then</span>
+   <span style="color:#75715e">#     echo Setting timezone.</span>
+   <span style="color:#75715e">#     source ~/bin/tz.sh # should be in ~/rc.local</span>
+   <span style="color:#75715e"># fi</span>
+
+   <span style="color:#75715e"># STILL NEEDED?</span>
+   #
+   <span style="color:#75715e"># Set local for numeric output</span>
+   LOCAL<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>locale -a | grep -i en_us | head -1<span style="color:#e6db74">`</span>
+   <span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;</span>$LOCAL<span style="color:#e6db74">&#34;</span> !<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span> export LC_NUMERIC<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$LOCAL<span style="color:#e6db74">&#34;</span>; <span style="color:#66d9ef">fi</span>
+</code></pre></div></li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p>Set up ssh agent</p>
+<p>Add keys by hand if needed via</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">   ssh-add ~/.ssh/id_*
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">   <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -e ~/bin/sshagent <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+       source ~/bin/sshagent
+   <span style="color:#66d9ef">fi</span>
+</code></pre></div></li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p>Copy stdin to clipboard</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">   <span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;</span>$OSTYPE<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;linux-gnu&#34;</span>* <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+     alias 2clip<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;xclip -selection c&#39;</span>
+     alias 3clip<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;printf %s &#34;$(cat /dev/stdin)&#34; | xclip -selection c&#39;</span>  <span style="color:#75715e"># no final \n</span>
+   <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;</span>$OSTYPE<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;darwin&#34;</span>* <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+     alias 2clip<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;pbcopy&#39;</span>
+   <span style="color:#66d9ef">fi</span>
+</code></pre></div></li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p>Path functions</p>
+<p>These path* functions add and remove elements to PATH.
+They insure that entries are unique.
+They allow you to place a path first or last in the order (e.g.
+so that <code>~/bin</code> comes before <code>/usr/local/bin</code>)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">  pathrm<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+      <span style="color:#75715e"># remove an item from the path</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -d <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+          removeThis<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;`echo </span>$1<span style="color:#e6db74"> | sed -e &#39;s#/#\\\/#&#39;g`&#34;</span>
+          newPath<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>echo $PATH | awk -v RS<span style="color:#f92672">=</span>: -v ORS<span style="color:#f92672">=</span>: <span style="color:#e6db74">&#34;/</span>$removeThis<span style="color:#e6db74">/ {next} {print}&#34;</span> | sed <span style="color:#e6db74">&#39;s/[ :]*$//g&#39;</span><span style="color:#e6db74">`</span>
+          export PATH<span style="color:#f92672">=</span>$newPath
+      <span style="color:#66d9ef">fi</span>
+  <span style="color:#f92672">}</span>
+
+
+  pathlast<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+      <span style="color:#75715e"># add path to the end if not there</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -d <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;:</span>$PATH<span style="color:#e6db74">:&#34;</span> !<span style="color:#f92672">=</span> *<span style="color:#e6db74">&#34;:</span>$1<span style="color:#e6db74">:&#34;</span>* <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+          export PATH<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>PATH:+<span style="color:#e6db74">&#34;</span>$PATH<span style="color:#e6db74">:&#34;</span><span style="color:#e6db74">}</span>$1<span style="color:#e6db74">&#34;</span>
+      <span style="color:#66d9ef">fi</span>
+  <span style="color:#f92672">}</span>
+
+
+  pathfirst<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+      <span style="color:#75715e"># add path to the front if not there</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -d <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;:</span>$PATH<span style="color:#e6db74">:&#34;</span> !<span style="color:#f92672">=</span> *<span style="color:#e6db74">&#34;:</span>$1<span style="color:#e6db74">:&#34;</span>* <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+          export PATH<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">:</span><span style="color:#e6db74">${</span>PATH<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+      <span style="color:#66d9ef">fi</span>
+  <span style="color:#f92672">}</span>
+
+  path<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e"># show path</span>
+    echo $PATH
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#75715e"># show path, one entry per line</span>
+  alias pathcat<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;echo </span>$PATH<span style="color:#e6db74"> | sed &#39;s/:/\n/g&#39;&#34;</span>
+
+
+  <span style="color:#75715e"># Be sure we have a few specific paths if they exist</span>
+
+  pathlast $HOME/bin
+  pathlast /usr/local/bin
+  pathlast /opt/bin
+</code></pre></div></li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p>source ~/rc.local/*.sh to do non-general bash setup</p>
+<p>Execute any .sh files in ~/rc.local/*.sh</p>
+<p>This allows me to split out setup for aliases and commands that
+only get used on certian systems or in certian contexts (git, go,
+mail, blog..)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">
+   <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -d <span style="color:#e6db74">${</span>HOME<span style="color:#e6db74">}</span>/rc.local <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+       <span style="color:#66d9ef">for</span> rcfile in <span style="color:#66d9ef">$(</span>find <span style="color:#e6db74">${</span>HOME<span style="color:#e6db74">}</span>/rc.local -name <span style="color:#ae81ff">\*</span>.sh<span style="color:#66d9ef">)</span>; <span style="color:#66d9ef">do</span>
+           debug running localrc <span style="color:#e6db74">${</span>rcfile<span style="color:#e6db74">}</span>
+           source <span style="color:#e6db74">${</span>rcfile<span style="color:#e6db74">}</span>
+       <span style="color:#66d9ef">done</span>
+   <span style="color:#66d9ef">fi</span>
+</code></pre></div></li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p>Invoking emacs</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">   alias emacs<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;setsid emacs&#39;</span>
+
+   <span style="color:#75715e"># from http://stuff-things.net/2014/12/16/working-with-emacsclient/</span>
+
+   <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -z <span style="color:#e6db74">&#34;</span>$SSH_CONNECTION<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+       export EMACSCLIENT<span style="color:#f92672">=</span>emacsclient
+       alias ec<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$EMACSCLIENT<span style="color:#e6db74"> -c -n&#34;</span>
+       export EDITOR<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$EMACSCLIENT<span style="color:#e6db74"> -c&#34;</span>
+       export ALTERNATE_EDITOR<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>
+   <span style="color:#66d9ef">else</span>
+       export EDITOR<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>type -P emacs <span style="color:#f92672">||</span> type -P ed<span style="color:#66d9ef">)</span>
+   <span style="color:#66d9ef">fi</span>
+   export VISUAL<span style="color:#f92672">=</span>$EDITOR
+</code></pre></div></li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p>ls aliases</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">
+   <span style="color:#75715e"># coloring for ls functions</span>
+
+   <span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;</span>$OSTYPE<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;linux-gnu&#34;</span> <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+       color<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;--color&#34;</span>;
+   <span style="color:#66d9ef">else</span>
+       color<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>
+   <span style="color:#66d9ef">fi</span>
+
+   BIN_LS<span style="color:#f92672">=</span>/bin/ls
+   alias ls<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;	ls &#39;</span>$color<span style="color:#e6db74">&#39; -a&#39;</span>
+
+
+   <span style="color:#75715e"># Long List Reverse Tail</span>
+   <span style="color:#66d9ef">function</span> llrt<span style="color:#f92672">()</span> <span style="color:#f92672">{</span> ls -lrt $color <span style="color:#e6db74">${</span>*<span style="color:#66d9ef">:-</span><span style="color:#e6db74">}</span>; <span style="color:#f92672">}</span>
+
+   <span style="color:#75715e"># Long List Time</span>
+   <span style="color:#66d9ef">function</span> llt<span style="color:#f92672">()</span> <span style="color:#f92672">{</span> ls -lt $color <span style="color:#e6db74">${</span>*<span style="color:#66d9ef">:-</span><span style="color:#e6db74">}</span>; <span style="color:#f92672">}</span>
+
+   <span style="color:#75715e"># Long List Time, More</span>
+   <span style="color:#66d9ef">function</span> lltm<span style="color:#f92672">()</span> <span style="color:#f92672">{</span> ls -lt $color <span style="color:#e6db74">${</span>*<span style="color:#66d9ef">:-</span><span style="color:#e6db74">}</span> | more; <span style="color:#f92672">}</span>
+
+   <span style="color:#75715e"># Long List Time, Less</span>
+   <span style="color:#66d9ef">function</span> lltl<span style="color:#f92672">()</span> <span style="color:#f92672">{</span> ls -alt $color <span style="color:#e6db74">${</span>*<span style="color:#66d9ef">:-</span><span style="color:#e6db74">}</span> | more; <span style="color:#f92672">}</span>
+
+   <span style="color:#75715e"># Long List Time, Head</span>
+   <span style="color:#66d9ef">function</span> llth<span style="color:#f92672">()</span> <span style="color:#f92672">{</span> ls -lt $color <span style="color:#e6db74">${</span>*<span style="color:#66d9ef">:-</span><span style="color:#e6db74">}</span> | head; <span style="color:#f92672">}</span>
+
+   <span style="color:#75715e"># Long List Time, Tail</span>
+   <span style="color:#66d9ef">function</span> lltt<span style="color:#f92672">()</span> <span style="color:#f92672">{</span> ls -alt $color <span style="color:#e6db74">${</span>*<span style="color:#66d9ef">:-</span><span style="color:#e6db74">}</span> | tail; <span style="color:#f92672">}</span>
+
+
+   <span style="color:#75715e"># List Sort Size</span>
+   <span style="color:#66d9ef">function</span> lss<span style="color:#f92672">()</span> <span style="color:#f92672">{</span> ls -a1s $color <span style="color:#e6db74">${</span>*<span style="color:#66d9ef">:-</span><span style="color:#e6db74">}</span> | sort -n; <span style="color:#f92672">}</span>
+
+   <span style="color:#75715e"># List Sort Size Reverse</span>
+   <span style="color:#66d9ef">function</span> lssr<span style="color:#f92672">()</span> <span style="color:#f92672">{</span> ls -a1s $color <span style="color:#e6db74">${</span>*<span style="color:#66d9ef">:-</span><span style="color:#e6db74">}</span> | sort -nr; <span style="color:#f92672">}</span>
+</code></pre></div></li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p>Aliases for viewing the newest file in a directoy</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">
+   <span style="color:#66d9ef">function</span> nf <span style="color:#f92672">()</span>
+   <span style="color:#f92672">{</span>
+       <span style="color:#75715e"># list the newest file in the current directory</span>
+       NF<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>find <span style="color:#e6db74">${</span>1<span style="color:#66d9ef">:-</span>.<span style="color:#e6db74">}</span> -maxdepth <span style="color:#ae81ff">1</span> -type f -print0 | xargs -0 ls -1t  |  head -1;<span style="color:#e6db74">`</span>;
+       echo <span style="color:#e6db74">${</span>NF<span style="color:#66d9ef">:-</span>/dev/null<span style="color:#e6db74">}</span> | sed <span style="color:#e6db74">&#34;s/ /\\\ /g&#34;</span>
+   <span style="color:#f92672">}</span>
+
+
+   <span style="color:#75715e"># new file tail file</span>
+   <span style="color:#66d9ef">function</span> nftf <span style="color:#f92672">{</span> NF<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>nf <span style="color:#e6db74">${</span>1<span style="color:#66d9ef">:-</span>.<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>; debug NF $NF;  echo <span style="color:#e6db74">&#34;</span>$NF<span style="color:#e6db74">&#34;</span> | xargs tail -f  ; <span style="color:#f92672">}</span>
+
+   <span style="color:#75715e"># new file tail</span>
+   <span style="color:#66d9ef">function</span> nft <span style="color:#f92672">{</span> NF<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>nf <span style="color:#e6db74">${</span>1<span style="color:#66d9ef">:-</span>.<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>; debug NF $NF;  echo <span style="color:#e6db74">&#34;</span>$NF<span style="color:#e6db74">&#34;</span> | xargs tail  ; <span style="color:#f92672">}</span>
+
+   <span style="color:#75715e"># new file head</span>
+   <span style="color:#66d9ef">function</span> nfh <span style="color:#f92672">{</span> NF<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>nf <span style="color:#e6db74">${</span>1<span style="color:#66d9ef">:-</span>.<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>; debug NF $NF;  echo <span style="color:#e6db74">&#34;</span>$NF<span style="color:#e6db74">&#34;</span> | xargs head  ; <span style="color:#f92672">}</span>
+
+   <span style="color:#75715e"># new file less</span>
+   <span style="color:#66d9ef">function</span> nfl <span style="color:#f92672">{</span> NF<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>nf <span style="color:#e6db74">${</span>1<span style="color:#66d9ef">:-</span>.<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>; debug NF $NF;  echo <span style="color:#e6db74">&#34;</span>$NF<span style="color:#e6db74">&#34;</span> | xargs less  ; <span style="color:#f92672">}</span>
+
+   <span style="color:#75715e"># new file cat</span>
+   <span style="color:#66d9ef">function</span> nfc <span style="color:#f92672">{</span> NF<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>nf <span style="color:#e6db74">${</span>1<span style="color:#66d9ef">:-</span>.<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>; debug NF $NF;  echo <span style="color:#e6db74">&#34;</span>$NF<span style="color:#e6db74">&#34;</span> | xargs cat  ; <span style="color:#f92672">}</span>
+
+   <span style="color:#75715e"># new file ls</span>
+   <span style="color:#66d9ef">function</span> nfls <span style="color:#f92672">{</span> NF<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>nf <span style="color:#e6db74">${</span>1<span style="color:#66d9ef">:-</span>.<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>; debug NF $NF;  echo <span style="color:#e6db74">&#34;</span>$NF<span style="color:#e6db74">&#34;</span> | xargs ls -A1t  ; <span style="color:#f92672">}</span>
+
+   <span style="color:#75715e"># new file ls -l</span>
+   <span style="color:#66d9ef">function</span> nflsl <span style="color:#f92672">{</span> NF<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>nf <span style="color:#e6db74">${</span>1<span style="color:#66d9ef">:-</span>.<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>; debug NF $NF;  echo <span style="color:#e6db74">&#34;</span>$NF<span style="color:#e6db74">&#34;</span> | xargs
+   ls -Atl  ; <span style="color:#f92672">}</span>
+</code></pre></div></li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p>viewing files</p>
+<p>Notes on setting up file/mime type associations can be found at</p>
+<p><a href="https://unix.stackexchange.com/questions/77136/xdg-open-default-applications-behavior">https://unix.stackexchange.com/questions/77136/xdg-open-default-applications-behavior</a></p>
+<p>So, to make emacs (what else?) the default for MIME type
+<code>text/plain</code> &hellip;</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">   locate -r &#39;emacs.*\.desktop&#39;
+   xdg-mime default emacs.desktop text/plain
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">   <span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span>  ! -z <span style="color:#e6db74">&#34;`which xdg-open`&#34;</span> <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span> alias open<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;xdg-open &#39;</span>; <span style="color:#66d9ef">fi</span>
+</code></pre></div></li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p>All done</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">   touch $HOME/.bashrc-ran
+   debug <span style="color:#e6db74">&#34;.bashrc done&#34;</span>
+</code></pre></div></li>
+</ul>
+<h3 id="1-dot-2-my-dot-bashrc-tangle-output-for-computers">1.2 - My .bashrc - tangle output for computers</h3>
+<p>Here is the actual .bashrc file for bash(1) to consume</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#PROG=`basename &#34;$0&#34; | tr -d &#39;\n&#39;`  # normal setting</span>
+PROG<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bashrc&#34;</span> <span style="color:#75715e"># setting for bashrc due to errors</span>
+
+<span style="color:#66d9ef">function</span> info<span style="color:#f92672">()</span>  <span style="color:#f92672">{</span> echo <span style="color:#e6db74">${</span>PROG<span style="color:#e6db74">}</span><span style="color:#ae81ff">\:</span> info: <span style="color:#e6db74">&#34;</span>$@<span style="color:#e6db74">&#34;</span> 1&gt;&amp;2; <span style="color:#f92672">}</span>
+<span style="color:#66d9ef">function</span> warn<span style="color:#f92672">()</span>  <span style="color:#f92672">{</span> echo <span style="color:#e6db74">${</span>PROG<span style="color:#e6db74">}</span><span style="color:#ae81ff">\:</span> warning: <span style="color:#e6db74">&#34;</span>$@<span style="color:#e6db74">&#34;</span> 1&gt;&amp;2; <span style="color:#f92672">}</span>
+<span style="color:#66d9ef">function</span> error<span style="color:#f92672">()</span> <span style="color:#f92672">{</span> echo <span style="color:#e6db74">${</span>PROG<span style="color:#e6db74">}</span><span style="color:#ae81ff">\:</span> error: <span style="color:#e6db74">&#34;</span>$@<span style="color:#e6db74">&#34;</span> 1&gt;&amp;2; <span style="color:#f92672">}</span>
+<span style="color:#66d9ef">function</span> debug<span style="color:#f92672">()</span> <span style="color:#f92672">{</span> <span style="color:#f92672">[[</span> -v DEBUG <span style="color:#f92672">]]</span> <span style="color:#f92672">&amp;&amp;</span> echo <span style="color:#e6db74">${</span>PROG<span style="color:#e6db74">}</span><span style="color:#ae81ff">\:</span> debug: <span style="color:#e6db74">&#34;</span>$@<span style="color:#e6db74">&#34;</span> 1&gt;&amp;<span style="color:#ae81ff">2</span> <span style="color:#f92672">||</span> true ; <span style="color:#f92672">}</span>
+<span style="color:#66d9ef">function</span> die<span style="color:#f92672">()</span>   <span style="color:#f92672">{</span> echo <span style="color:#e6db74">${</span>PROG<span style="color:#e6db74">}</span><span style="color:#ae81ff">\:</span> fatal: <span style="color:#e6db74">&#34;</span>$@<span style="color:#e6db74">&#34;</span> 1&gt;&amp;<span style="color:#ae81ff">2</span> <span style="color:#f92672">&amp;&amp;</span> exit 1; <span style="color:#f92672">}</span>
+
+export PS1<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;\# [\t] \u@\h \W/ </span>$<span style="color:#e6db74"> &#34;</span>
+
+alias rm<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;	rm -i&#39;</span>
+alias ag<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;	alias | grep -i&#39;</span>
+alias eg<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;	printenv | grep -i&#39;</span>
+alias hg<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;	history | grep -i&#39;</span>
+alias ht<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;	history | tail&#39;</span>
+alias fpg<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;	find . -print | egrep -i&#39;</span>
+alias egi<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;	egrep -i&#39;</span>
+alias psg<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;	/bin/ps -auxww | grep&#39;</span>
+alias p8<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;	ping -c 3 8.8.8.8&#39;</span> <span style="color:#75715e"># make sure routing works</span>
+alias pp<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;	ping -c 3 port111.com&#39;</span> <span style="color:#75715e"># make sure dns and routing work</span>
+alias locate<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;locate -r&#39;</span>
+
+<span style="color:#66d9ef">function</span> dirl<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e"># &#34;DIR&#34;ectory &#34;L&#34;ist directory stack, one per line</span>
+    <span style="color:#75715e"># Usage: dirl</span>
+
+    <span style="color:#66d9ef">for</span> d in <span style="color:#e6db74">`</span>dirs<span style="color:#e6db74">`</span>; <span style="color:#66d9ef">do</span> echo $d; <span style="color:#66d9ef">done</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">function</span> dirc<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e"># &#34;DIR&#34;ectory &#34;C&#34;onnect - connect to directory and list stack</span>
+    <span style="color:#75715e"># Usage: dirc [DIR</span>
+
+    pushd <span style="color:#e6db74">${</span>1<span style="color:#66d9ef">:-</span><span style="color:#e6db74">&#34;</span>$HOME<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">}</span> &gt; /dev/null
+    dirl
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">function</span> dirp <span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e"># &#34;DIR&#34;ectory &#34;P&#34;op - pop N entries off the directory stack</span>
+    <span style="color:#75715e"># Usage: dirp [N]</span>
+    #
+    <span style="color:#75715e"># OLD:</span>
+    <span style="color:#75715e">#   alias  dirp=&#39;popd &gt; /dev/null &amp;&amp; dirl&#39;</span>
+    <span style="color:#66d9ef">for</span> i in <span style="color:#e6db74">`</span>seq <span style="color:#e6db74">${</span>1<span style="color:#66d9ef">:-</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>; <span style="color:#66d9ef">do</span>
+        debug <span style="color:#e6db74">&#34;dirl: popd. i is </span>$i<span style="color:#e6db74">&#34;</span>
+        popd &gt; /dev/null;
+    <span style="color:#66d9ef">done</span>
+    dirl
+<span style="color:#f92672">}</span>
+
+alias cd<span style="color:#f92672">=</span>pushd
+
+<span style="color:#66d9ef">function</span> gf<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+<span style="color:#75715e"># grep-find: grep for patterins in files via find</span>
+#
+<span style="color:#75715e"># Usage: gf patterns [files [days]]</span>
+#
+<span style="color:#75715e"># Examples:</span>
+<span style="color:#75715e">#   gf findMeAnywhere</span>
+<span style="color:#75715e">#   gf findMeInTextFiles &#39;*.txt&#39;</span>
+<span style="color:#75715e">#   gf findMeInTextFiles .txt</span>
+<span style="color:#75715e">#   gf BEGIN\|END .org 30</span>
+
+local files<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>
+local days<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;365&#34;</span>
+
+set -o noglob
+
+<span style="color:#75715e"># First arg is pattern(s) for egrep</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -z <span style="color:#e6db74">${</span>1+x<span style="color:#e6db74">}</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+  echo <span style="color:#e6db74">&#39;gf needs string(s) to search for &#39;</span> 1&gt;&amp;<span style="color:#ae81ff">2</span>
+  info <span style="color:#e6db74">&#34;Usage: gf patterns [files [days]]&#34;</span>
+  <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>
+<span style="color:#66d9ef">fi</span>
+
+<span style="color:#75715e"># Second arg (if present) is files for find.  No globbing, so &#34;*.txt&#34; OK</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> ! -z <span style="color:#e6db74">${</span>2+x<span style="color:#e6db74">}</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+  <span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;</span>$2<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">=</span>~ ^<span style="color:#ae81ff">\.</span> <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+    <span style="color:#75715e"># Special case: treat &#34;.foo&#34; as &#34;*.foo&#34;</span>
+    <span style="color:#75715e"># Avoids needing to quote on command line</span>
+    files<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;-name *</span>$2<span style="color:#e6db74">&#34;</span>
+  <span style="color:#66d9ef">else</span>
+    files<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;-name </span><span style="color:#e6db74">${</span>2<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+  <span style="color:#66d9ef">fi</span>
+<span style="color:#66d9ef">fi</span>
+
+<span style="color:#75715e"># $3 (if present) is find -mtime arg, default 365</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> ! -z <span style="color:#e6db74">${</span>3+x<span style="color:#e6db74">}</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+  days<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>3<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">fi</span>
+
+<span style="color:#75715e"># set -x</span>
+find . -type f -mtime -<span style="color:#e6db74">${</span>days<span style="color:#e6db74">}</span> $files -exec egrep --color -H -i <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>1<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#ae81ff">\{\}</span> <span style="color:#ae81ff">\;</span>
+<span style="color:#75715e"># set +x</span>
+
+set +o noglob
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e"># Preserve history across sesssions</span>
+#
+<span style="color:#75715e"># http://unix.stackexchange.com/questions/1288/preserve-bash-history-in-multiple-terminal-windows</span>
+#
+export HISTCONTROL<span style="color:#f92672">=</span>ignoredups:erasedups  <span style="color:#75715e"># no duplicate entries</span>
+export HISTSIZE<span style="color:#f92672">=</span><span style="color:#ae81ff">100000</span>                   <span style="color:#75715e"># big big history</span>
+export HISTFILESIZE<span style="color:#f92672">=</span><span style="color:#ae81ff">100000</span>               <span style="color:#75715e"># big big history</span>
+shopt -s histappend                      <span style="color:#75715e"># append to history, don&#39;t overwrite it</span>
+
+<span style="color:#75715e"># Save and reload the history after each command finishes</span>
+export PROMPT_COMMAND<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;history -a; history -c; history -r;&#34;</span>
+
+
+<span style="color:#66d9ef">function</span> hgt<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e"># hgt == &#34;history grep (for arg) tail&#34;</span>
+    <span style="color:#75715e">#echo &#34;Histroy Grep tail&#34;</span>
+
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -z <span style="color:#e6db74">${</span>1+x<span style="color:#e6db74">}</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+        echo <span style="color:#e6db74">&#39;hgt needs an argument&#39;</span> 1&gt;&amp;<span style="color:#ae81ff">2</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">fi</span>
+
+    history | grep -i <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> | tail
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -e <span style="color:#e6db74">${</span>HOME<span style="color:#e6db74">}</span>/etc/hostname <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+    export HOSTNAME<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>cat <span style="color:#e6db74">${</span>HOME<span style="color:#e6db74">}</span>/etc/hostname<span style="color:#e6db74">`</span>
+<span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> -e /etc/hostname <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+    export HOSTNAME<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>cat /etc/hostname<span style="color:#e6db74">`</span>
+<span style="color:#66d9ef">else</span>
+    export HOSTNAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;unknown&#34;</span>
+<span style="color:#66d9ef">fi</span>
+
+<span style="color:#75715e"># Set timezone if ~/bin/tz.sh exists</span>
+
+<span style="color:#75715e"># NEW, if neeeed?</span>
+#
+<span style="color:#75715e"># https://linuxize.com/post/how-to-set-or-change-timezone-in-linux/</span>
+#
+<span style="color:#75715e"># OLD:</span>
+#
+<span style="color:#75715e"># if [ -e ~/bin/tz.sh ]; then</span>
+<span style="color:#75715e">#     echo Setting timezone.</span>
+<span style="color:#75715e">#     source ~/bin/tz.sh # should be in ~/rc.local</span>
+<span style="color:#75715e"># fi</span>
+
+<span style="color:#75715e"># STILL NEEDED?</span>
+#
+<span style="color:#75715e"># Set local for numeric output</span>
+LOCAL<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>locale -a | grep -i en_us | head -1<span style="color:#e6db74">`</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;</span>$LOCAL<span style="color:#e6db74">&#34;</span> !<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span> export LC_NUMERIC<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$LOCAL<span style="color:#e6db74">&#34;</span>; <span style="color:#66d9ef">fi</span>
+
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -e ~/bin/sshagent <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+    source ~/bin/sshagent
+<span style="color:#66d9ef">fi</span>
+
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;</span>$OSTYPE<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;linux-gnu&#34;</span>* <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+  alias 2clip<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;xclip -selection c&#39;</span>
+  alias 3clip<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;printf %s &#34;$(cat /dev/stdin)&#34; | xclip -selection c&#39;</span>  <span style="color:#75715e"># no final \n</span>
+<span style="color:#66d9ef">elif</span> <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;</span>$OSTYPE<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;darwin&#34;</span>* <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+  alias 2clip<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;pbcopy&#39;</span>
+<span style="color:#66d9ef">fi</span>
+
+pathrm<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e"># remove an item from the path</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -d <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+        removeThis<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;`echo </span>$1<span style="color:#e6db74"> | sed -e &#39;s#/#\\\/#&#39;g`&#34;</span>
+        newPath<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>echo $PATH | awk -v RS<span style="color:#f92672">=</span>: -v ORS<span style="color:#f92672">=</span>: <span style="color:#e6db74">&#34;/</span>$removeThis<span style="color:#e6db74">/ {next} {print}&#34;</span> | sed <span style="color:#e6db74">&#39;s/[ :]*$//g&#39;</span><span style="color:#e6db74">`</span>
+        export PATH<span style="color:#f92672">=</span>$newPath
+    <span style="color:#66d9ef">fi</span>
+<span style="color:#f92672">}</span>
+
+
+pathlast<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e"># add path to the end if not there</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -d <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;:</span>$PATH<span style="color:#e6db74">:&#34;</span> !<span style="color:#f92672">=</span> *<span style="color:#e6db74">&#34;:</span>$1<span style="color:#e6db74">:&#34;</span>* <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+        export PATH<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>PATH:+<span style="color:#e6db74">&#34;</span>$PATH<span style="color:#e6db74">:&#34;</span><span style="color:#e6db74">}</span>$1<span style="color:#e6db74">&#34;</span>
+    <span style="color:#66d9ef">fi</span>
+<span style="color:#f92672">}</span>
+
+
+pathfirst<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e"># add path to the front if not there</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -d <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;:</span>$PATH<span style="color:#e6db74">:&#34;</span> !<span style="color:#f92672">=</span> *<span style="color:#e6db74">&#34;:</span>$1<span style="color:#e6db74">:&#34;</span>* <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+        export PATH<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">:</span><span style="color:#e6db74">${</span>PATH<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+    <span style="color:#66d9ef">fi</span>
+<span style="color:#f92672">}</span>
+
+path<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+  <span style="color:#75715e"># show path</span>
+  echo $PATH
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e"># show path, one entry per line</span>
+alias pathcat<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;echo </span>$PATH<span style="color:#e6db74"> | sed &#39;s/:/\n/g&#39;&#34;</span>
+
+
+<span style="color:#75715e"># Be sure we have a few specific paths if they exist</span>
+
+pathlast $HOME/bin
+pathlast /usr/local/bin
+pathlast /opt/bin
+
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -d <span style="color:#e6db74">${</span>HOME<span style="color:#e6db74">}</span>/rc.local <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+    <span style="color:#66d9ef">for</span> rcfile in <span style="color:#66d9ef">$(</span>find <span style="color:#e6db74">${</span>HOME<span style="color:#e6db74">}</span>/rc.local -name <span style="color:#ae81ff">\*</span>.sh<span style="color:#66d9ef">)</span>; <span style="color:#66d9ef">do</span>
+        debug running localrc <span style="color:#e6db74">${</span>rcfile<span style="color:#e6db74">}</span>
+        source <span style="color:#e6db74">${</span>rcfile<span style="color:#e6db74">}</span>
+    <span style="color:#66d9ef">done</span>
+<span style="color:#66d9ef">fi</span>
+
+alias emacs<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;setsid emacs&#39;</span>
+
+<span style="color:#75715e"># from http://stuff-things.net/2014/12/16/working-with-emacsclient/</span>
+
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -z <span style="color:#e6db74">&#34;</span>$SSH_CONNECTION<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+    export EMACSCLIENT<span style="color:#f92672">=</span>emacsclient
+    alias ec<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$EMACSCLIENT<span style="color:#e6db74"> -c -n&#34;</span>
+    export EDITOR<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$EMACSCLIENT<span style="color:#e6db74"> -c&#34;</span>
+    export ALTERNATE_EDITOR<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>
+<span style="color:#66d9ef">else</span>
+    export EDITOR<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>type -P emacs <span style="color:#f92672">||</span> type -P ed<span style="color:#66d9ef">)</span>
+<span style="color:#66d9ef">fi</span>
+export VISUAL<span style="color:#f92672">=</span>$EDITOR
+
+<span style="color:#75715e"># coloring for ls functions</span>
+
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;</span>$OSTYPE<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;linux-gnu&#34;</span> <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+    color<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;--color&#34;</span>;
+<span style="color:#66d9ef">else</span>
+    color<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>
+<span style="color:#66d9ef">fi</span>
+
+BIN_LS<span style="color:#f92672">=</span>/bin/ls
+alias ls<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;	ls &#39;</span>$color<span style="color:#e6db74">&#39; -a&#39;</span>
+
+
+<span style="color:#75715e"># Long List Reverse Tail</span>
+<span style="color:#66d9ef">function</span> llrt<span style="color:#f92672">()</span> <span style="color:#f92672">{</span> ls -lrt $color <span style="color:#e6db74">${</span>*<span style="color:#66d9ef">:-</span><span style="color:#e6db74">}</span>; <span style="color:#f92672">}</span>
+
+<span style="color:#75715e"># Long List Time</span>
+<span style="color:#66d9ef">function</span> llt<span style="color:#f92672">()</span> <span style="color:#f92672">{</span> ls -lt $color <span style="color:#e6db74">${</span>*<span style="color:#66d9ef">:-</span><span style="color:#e6db74">}</span>; <span style="color:#f92672">}</span>
+
+<span style="color:#75715e"># Long List Time, More</span>
+<span style="color:#66d9ef">function</span> lltm<span style="color:#f92672">()</span> <span style="color:#f92672">{</span> ls -lt $color <span style="color:#e6db74">${</span>*<span style="color:#66d9ef">:-</span><span style="color:#e6db74">}</span> | more; <span style="color:#f92672">}</span>
+
+<span style="color:#75715e"># Long List Time, Less</span>
+<span style="color:#66d9ef">function</span> lltl<span style="color:#f92672">()</span> <span style="color:#f92672">{</span> ls -alt $color <span style="color:#e6db74">${</span>*<span style="color:#66d9ef">:-</span><span style="color:#e6db74">}</span> | more; <span style="color:#f92672">}</span>
+
+<span style="color:#75715e"># Long List Time, Head</span>
+<span style="color:#66d9ef">function</span> llth<span style="color:#f92672">()</span> <span style="color:#f92672">{</span> ls -lt $color <span style="color:#e6db74">${</span>*<span style="color:#66d9ef">:-</span><span style="color:#e6db74">}</span> | head; <span style="color:#f92672">}</span>
+
+<span style="color:#75715e"># Long List Time, Tail</span>
+<span style="color:#66d9ef">function</span> lltt<span style="color:#f92672">()</span> <span style="color:#f92672">{</span> ls -alt $color <span style="color:#e6db74">${</span>*<span style="color:#66d9ef">:-</span><span style="color:#e6db74">}</span> | tail; <span style="color:#f92672">}</span>
+
+
+<span style="color:#75715e"># List Sort Size</span>
+<span style="color:#66d9ef">function</span> lss<span style="color:#f92672">()</span> <span style="color:#f92672">{</span> ls -a1s $color <span style="color:#e6db74">${</span>*<span style="color:#66d9ef">:-</span><span style="color:#e6db74">}</span> | sort -n; <span style="color:#f92672">}</span>
+
+<span style="color:#75715e"># List Sort Size Reverse</span>
+<span style="color:#66d9ef">function</span> lssr<span style="color:#f92672">()</span> <span style="color:#f92672">{</span> ls -a1s $color <span style="color:#e6db74">${</span>*<span style="color:#66d9ef">:-</span><span style="color:#e6db74">}</span> | sort -nr; <span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">function</span> nf <span style="color:#f92672">()</span>
+<span style="color:#f92672">{</span>
+    <span style="color:#75715e"># list the newest file in the current directory</span>
+    NF<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>find <span style="color:#e6db74">${</span>1<span style="color:#66d9ef">:-</span>.<span style="color:#e6db74">}</span> -maxdepth <span style="color:#ae81ff">1</span> -type f -print0 | xargs -0 ls -1t  |  head -1;<span style="color:#e6db74">`</span>;
+    echo <span style="color:#e6db74">${</span>NF<span style="color:#66d9ef">:-</span>/dev/null<span style="color:#e6db74">}</span> | sed <span style="color:#e6db74">&#34;s/ /\\\ /g&#34;</span>
+<span style="color:#f92672">}</span>
+
+
+<span style="color:#75715e"># new file tail file</span>
+<span style="color:#66d9ef">function</span> nftf <span style="color:#f92672">{</span> NF<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>nf <span style="color:#e6db74">${</span>1<span style="color:#66d9ef">:-</span>.<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>; debug NF $NF;  echo <span style="color:#e6db74">&#34;</span>$NF<span style="color:#e6db74">&#34;</span> | xargs tail -f  ; <span style="color:#f92672">}</span>
+
+<span style="color:#75715e"># new file tail</span>
+<span style="color:#66d9ef">function</span> nft <span style="color:#f92672">{</span> NF<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>nf <span style="color:#e6db74">${</span>1<span style="color:#66d9ef">:-</span>.<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>; debug NF $NF;  echo <span style="color:#e6db74">&#34;</span>$NF<span style="color:#e6db74">&#34;</span> | xargs tail  ; <span style="color:#f92672">}</span>
+
+<span style="color:#75715e"># new file head</span>
+<span style="color:#66d9ef">function</span> nfh <span style="color:#f92672">{</span> NF<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>nf <span style="color:#e6db74">${</span>1<span style="color:#66d9ef">:-</span>.<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>; debug NF $NF;  echo <span style="color:#e6db74">&#34;</span>$NF<span style="color:#e6db74">&#34;</span> | xargs head  ; <span style="color:#f92672">}</span>
+
+<span style="color:#75715e"># new file less</span>
+<span style="color:#66d9ef">function</span> nfl <span style="color:#f92672">{</span> NF<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>nf <span style="color:#e6db74">${</span>1<span style="color:#66d9ef">:-</span>.<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>; debug NF $NF;  echo <span style="color:#e6db74">&#34;</span>$NF<span style="color:#e6db74">&#34;</span> | xargs less  ; <span style="color:#f92672">}</span>
+
+<span style="color:#75715e"># new file cat</span>
+<span style="color:#66d9ef">function</span> nfc <span style="color:#f92672">{</span> NF<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>nf <span style="color:#e6db74">${</span>1<span style="color:#66d9ef">:-</span>.<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>; debug NF $NF;  echo <span style="color:#e6db74">&#34;</span>$NF<span style="color:#e6db74">&#34;</span> | xargs cat  ; <span style="color:#f92672">}</span>
+
+<span style="color:#75715e"># new file ls</span>
+<span style="color:#66d9ef">function</span> nfls <span style="color:#f92672">{</span> NF<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>nf <span style="color:#e6db74">${</span>1<span style="color:#66d9ef">:-</span>.<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>; debug NF $NF;  echo <span style="color:#e6db74">&#34;</span>$NF<span style="color:#e6db74">&#34;</span> | xargs ls -A1t  ; <span style="color:#f92672">}</span>
+
+<span style="color:#75715e"># new file ls -l</span>
+<span style="color:#66d9ef">function</span> nflsl <span style="color:#f92672">{</span> NF<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>nf <span style="color:#e6db74">${</span>1<span style="color:#66d9ef">:-</span>.<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>; debug NF $NF;  echo <span style="color:#e6db74">&#34;</span>$NF<span style="color:#e6db74">&#34;</span> | xargs
+ls -Atl  ; <span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span>  ! -z <span style="color:#e6db74">&#34;`which xdg-open`&#34;</span> <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span> alias open<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;xdg-open &#39;</span>; <span style="color:#66d9ef">fi</span>
+
+touch $HOME/.bashrc-ran
+debug <span style="color:#e6db74">&#34;.bashrc done&#34;</span>
+</code></pre></div><h3 id="1-dot-3-my-dot-bashrc-the-org-mode-source-file">1.3 - My .bashrc - The org mode source file</h3>
+<p>Here is the .bash.org input file</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-org" data-lang="org"><span style="color:#75715e">#+title</span><span style="color:#75715e">: .bashrc</span>
+<span style="color:#75715e">#+date</span><span style="color:#75715e">: &lt;2020-12-06 03:13:07 Sunday&gt;</span>
+<span style="color:#75715e">#+author</span><span style="color:#75715e">: George M Jones</span>
+<span style="color:#75715e">#+email</span><span style="color:#75715e">: gmj@pobox.com</span>
+<span style="color:#75715e">#+options</span><span style="color:#75715e">: &#39;:nil *:t -:t ::t &lt;:t H:3 \n:nil ^:nil arch:headline</span>
+<span style="color:#75715e">#+options</span><span style="color:#75715e">: author:t broken-links:nil c:nil creator:nil</span>
+<span style="color:#75715e">#+options</span><span style="color:#75715e">: d:(not &#34;LOGBOOK&#34;) date:t e:t email:nil f:t inline:t num:2</span>
+<span style="color:#75715e">#+options</span><span style="color:#75715e">: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t</span>
+<span style="color:#75715e">#+options</span><span style="color:#75715e">: timestamp:t title:t toc:t todo:t |:t</span>
+<span style="color:#75715e">#+language</span><span style="color:#75715e">: en</span>
+<span style="color:#75715e">#+select_tags</span><span style="color:#75715e">: export</span>
+<span style="color:#75715e">#+exclude_tags</span><span style="color:#75715e">: noexport</span>
+<span style="color:#75715e">#+creator</span><span style="color:#75715e">: Emacs 28.0.50 (Org mode 9.4)</span>
+
+
+*<span style="font-weight:bold"> About this .bashrc file</span>
+<span style="color:#75715e">**</span> Intro
+   This is George Jones&#39; .bashrc file as an literate programming file in
+   emacs org mode using babel blocks.
+
+<span style="color:#75715e">**</span> To generate the actual .bashrc
+   This .bashrc.org file must be processed to generate the actual
+   .bashrc It can be processed interactively to generate .bashrc via
+   org-babel-tangle-file or from the command line as
+
+<span style="color:#75715e">   #+begin_example</span>
+  emacs --batch --eval &#34;(require &#39;org)&#34; --eval &#39;(org-babel-tangle-file &#34;.bashrc.org&#34;)&#39;
+<span style="color:#75715e">   #+end_example</span>
+
+   Permanent changes must be made to the .org version, as the actual
+   .bashrc will be overwritten when the .org version is &#34;compiled&#34;
+
+<span style="color:#75715e">**</span> Debugging
+
+  In most bash files I do
+
+<span style="color:#75715e">  #+begin_example</span>
+  set -e
+  set -u
+<span style="color:#75715e">  #+end_example</span>
+
+  but there are problems setting it in .bashrc.   An error then causes
+  you to exit the shell entirely (not what you want), and there are
+  several constructs that cause warnings due to undefined variables
+  (these can<span style="font-style:italic">/probably should be fixd)
+</span><span style="font-style:italic">
+</span><span style="font-style:italic">  Set
+</span><span style="font-style:italic">
+</span><span style="font-style:italic">  #+begin_example
+</span><span style="font-style:italic">  export DEBUG=1
+</span><span style="font-style:italic">  #+end_example
+</span><span style="font-style:italic">
+</span><span style="font-style:italic">  to enable debugging output from the debug helper function.
+</span><span style="font-style:italic">
+</span><span style="font-style:italic">* The actual executable .bashrc
+</span><span style="font-style:italic">** Helper functions
+</span><span style="font-style:italic">   I define a few syslog-ish helper functions to print warnings,
+</span><span style="font-style:italic">   errors, etc.
+</span><span style="font-style:italic">
+</span><span style="font-style:italic">   #+begin_src shell :tangle .bashrc :noweb no-export
+</span><span style="font-style:italic">  #PROG=`basename &#34;$0&#34; | tr -d &#39;\n&#39;`  # normal setting
+</span><span style="font-style:italic">  PROG=&#34;bashrc&#34; # setting for bashrc due to errors
+</span><span style="font-style:italic">
+</span><span style="font-style:italic">  function info()  { echo ${PROG}\: info: &#34;$@&#34; 1&gt;&amp;2; }
+</span><span style="font-style:italic">  function warn()  { echo ${PROG}\: warning: &#34;$@&#34; 1&gt;&amp;2; }
+</span><span style="font-style:italic">  function error() { echo ${PROG}\: error: &#34;$@&#34; 1&gt;&amp;2; }
+</span><span style="font-style:italic">  function debug() { [[ -v DEBUG ]] &amp;&amp; echo ${PROG}\: debug: &#34;$@&#34; 1&gt;&amp;2 || true ; }
+</span><span style="font-style:italic">  function die()   { echo ${PROG}\: fatal: &#34;$@&#34; 1&gt;&amp;2 &amp;&amp; exit 1; }
+</span><span style="font-style:italic">   #+end_src
+</span><span style="font-style:italic">
+</span><span style="font-style:italic">** Set a reasonable default prompt
+</span><span style="font-style:italic">
+</span><span style="font-style:italic">   Here I set a reasonable default prompt that includes timestamp,
+</span><span style="font-style:italic">   username, host and current directory:
+</span><span style="font-style:italic">
+</span><span style="font-style:italic"> #+begin_src shell :tangle .bashrc :noweb no-export
+</span><span style="font-style:italic">export PS1=&#34;\# [\t] \u@\h \W/</span> $ &#34;
+ #+end_src
+
+<span style="color:#75715e">**</span> Misc aliases
+
+   Define various aliases that I use
+
+<span style="color:#75715e">   #+begin_src </span><span style="color:#75715e">shell</span><span style="color:#75715e"> :tangle .bashrc :noweb no-export
+</span><span style="color:#75715e"></span>  alias rm<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;	rm -i&#39;</span>
+  alias ag<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;	alias | grep -i&#39;</span>
+  alias eg<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;	printenv | grep -i&#39;</span>
+  alias hg<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;	history | grep -i&#39;</span>
+  alias ht<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;	history | tail&#39;</span>
+  alias fpg<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;	find . -print | egrep -i&#39;</span>
+  alias egi<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;	egrep -i&#39;</span>
+  alias psg<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;	/bin/ps -auxww | grep&#39;</span>
+  alias p8<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;	ping -c 3 8.8.8.8&#39;</span> <span style="color:#75715e"># make sure routing works</span>
+  alias pp<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;	ping -c 3 port111.com&#39;</span> <span style="color:#75715e"># make sure dns and routing work</span>
+  alias locate<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;locate -r&#39;</span>
+<span style="color:#75715e">   #+end_src</span>
+
+<span style="color:#75715e">**</span> cd commands that use/print the directory stack
+
+   These aliases support pushd/popd/dirs like functionality while
+   listing one directory per line
+
+   I like to keep a &#34;stack&#34; of directories so I can work on one thing
+   then &#34;pop&#34; back to where I was. <span style="color:#a6e22e">=pushd=</span> an <span style="color:#a6e22e">=popd=</span> support this,
+   and <span style="color:#a6e22e">=dirs=</span> lists the directories, but I prefer to have them listed
+   one per line.
+
+
+<span style="color:#75715e">   #+begin_src </span><span style="color:#75715e">shell</span><span style="color:#75715e"> :tangle .bashrc :noweb no-export
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">function</span> dirl<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+      <span style="color:#75715e"># &#34;DIR&#34;ectory &#34;L&#34;ist directory stack, one per line</span>
+      <span style="color:#75715e"># Usage: dirl</span>
+
+      <span style="color:#66d9ef">for</span> d in <span style="color:#e6db74">`</span>dirs<span style="color:#e6db74">`</span>; <span style="color:#66d9ef">do</span> echo $d; <span style="color:#66d9ef">done</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">function</span> dirc<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+      <span style="color:#75715e"># &#34;DIR&#34;ectory &#34;C&#34;onnect - connect to directory and list stack</span>
+      <span style="color:#75715e"># Usage: dirc [DIR</span>
+
+      pushd <span style="color:#e6db74">${</span>1<span style="color:#66d9ef">:-</span><span style="color:#e6db74">&#34;</span>$HOME<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">}</span> &gt; /dev/null
+      dirl
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">function</span> dirp <span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+      <span style="color:#75715e"># &#34;DIR&#34;ectory &#34;P&#34;op - pop N entries off the directory stack</span>
+      <span style="color:#75715e"># Usage: dirp [N]</span>
+      #
+      <span style="color:#75715e"># OLD:</span>
+      <span style="color:#75715e">#   alias  dirp=&#39;popd &gt; /dev/null &amp;&amp; dirl&#39;</span>
+      <span style="color:#66d9ef">for</span> i in <span style="color:#e6db74">`</span>seq <span style="color:#e6db74">${</span>1<span style="color:#66d9ef">:-</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>; <span style="color:#66d9ef">do</span>
+          debug <span style="color:#e6db74">&#34;dirl: popd. i is </span>$i<span style="color:#e6db74">&#34;</span>
+          popd &gt; /dev/null;
+      <span style="color:#66d9ef">done</span>
+      dirl
+  <span style="color:#f92672">}</span>
+
+  alias cd<span style="color:#f92672">=</span>pushd
+<span style="color:#75715e">   #+end_src</span>
+
+<span style="color:#75715e">**</span> Misc functions
+
+<span style="color:#75715e">   #+begin_src </span><span style="color:#75715e">shell</span><span style="color:#75715e"> :tangle .bashrc :noweb no-export
+</span><span style="color:#75715e"></span>
+  <span style="color:#66d9ef">function</span> gf<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+  <span style="color:#75715e"># grep-find: grep for patterins in files via find</span>
+  #
+  <span style="color:#75715e"># Usage: gf patterns [files [days]]</span>
+  #
+  <span style="color:#75715e"># Examples:</span>
+  <span style="color:#75715e">#   gf findMeAnywhere</span>
+  <span style="color:#75715e">#   gf findMeInTextFiles &#39;*.txt&#39;</span>
+  <span style="color:#75715e">#   gf findMeInTextFiles .txt</span>
+  <span style="color:#75715e">#   gf BEGIN\|END .org 30</span>
+
+  local files<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>
+  local days<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;365&#34;</span>
+
+  set -o noglob
+
+  <span style="color:#75715e"># First arg is pattern(s) for egrep</span>
+  <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -z <span style="color:#e6db74">${</span>1+x<span style="color:#e6db74">}</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+    echo <span style="color:#e6db74">&#39;gf needs string(s) to search for &#39;</span> 1&gt;&amp;<span style="color:#ae81ff">2</span>
+    info <span style="color:#e6db74">&#34;Usage: gf patterns [files [days]]&#34;</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>
+  <span style="color:#66d9ef">fi</span>
+
+  <span style="color:#75715e"># Second arg (if present) is files for find.  No globbing, so &#34;*.txt&#34; OK</span>
+  <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> ! -z <span style="color:#e6db74">${</span>2+x<span style="color:#e6db74">}</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;</span>$2<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">=</span>~ ^<span style="color:#ae81ff">\.</span> <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+      <span style="color:#75715e"># Special case: treat &#34;.foo&#34; as &#34;*.foo&#34;</span>
+      <span style="color:#75715e"># Avoids needing to quote on command line</span>
+      files<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;-name *</span>$2<span style="color:#e6db74">&#34;</span>
+    <span style="color:#66d9ef">else</span>
+      files<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;-name </span><span style="color:#e6db74">${</span>2<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+    <span style="color:#66d9ef">fi</span>
+  <span style="color:#66d9ef">fi</span>
+
+  <span style="color:#75715e"># $3 (if present) is find -mtime arg, default 365</span>
+  <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> ! -z <span style="color:#e6db74">${</span>3+x<span style="color:#e6db74">}</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+    days<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>3<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+  <span style="color:#66d9ef">fi</span>
+
+  <span style="color:#75715e"># set -x</span>
+  find . -type f -mtime -<span style="color:#e6db74">${</span>days<span style="color:#e6db74">}</span> $files -exec egrep --color -H -i <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>1<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#ae81ff">\{\}</span> <span style="color:#ae81ff">\;</span>
+  <span style="color:#75715e"># set +x</span>
+
+  set +o noglob
+  <span style="color:#f92672">}</span>
+<span style="color:#75715e"> #+end_src</span>
+
+<span style="color:#75715e">**</span> Bash history functions and settings
+<span style="color:#75715e">   #+begin_src </span><span style="color:#75715e">shell</span><span style="color:#75715e"> :tangle .bashrc :noweb no-export
+</span><span style="color:#75715e"></span>
+  <span style="color:#75715e"># Preserve history across sesssions</span>
+  #
+  <span style="color:#75715e"># http://unix.stackexchange.com/questions/1288/preserve-bash-history-in-multiple-terminal-windows</span>
+  #
+  export HISTCONTROL<span style="color:#f92672">=</span>ignoredups:erasedups  <span style="color:#75715e"># no duplicate entries</span>
+  export HISTSIZE<span style="color:#f92672">=</span><span style="color:#ae81ff">100000</span>                   <span style="color:#75715e"># big big history</span>
+  export HISTFILESIZE<span style="color:#f92672">=</span><span style="color:#ae81ff">100000</span>               <span style="color:#75715e"># big big history</span>
+  shopt -s histappend                      <span style="color:#75715e"># append to history, don&#39;t overwrite it</span>
+
+  <span style="color:#75715e"># Save and reload the history after each command finishes</span>
+  export PROMPT_COMMAND<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;history -a; history -c; history -r;&#34;</span>
+
+
+  <span style="color:#66d9ef">function</span> hgt<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+      <span style="color:#75715e"># hgt == &#34;history grep (for arg) tail&#34;</span>
+      <span style="color:#75715e">#echo &#34;Histroy Grep tail&#34;</span>
+
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -z <span style="color:#e6db74">${</span>1+x<span style="color:#e6db74">}</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+          echo <span style="color:#e6db74">&#39;hgt needs an argument&#39;</span> 1&gt;&amp;<span style="color:#ae81ff">2</span>
+          <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>
+      <span style="color:#66d9ef">fi</span>
+
+      history | grep -i <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> | tail
+      <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#75715e">   #+end_src</span>
+
+<span style="color:#75715e">**</span> Set the hostnane, timezone and local
+   Set HOSTNAME if ~/etc/hostname exists
+
+<span style="color:#75715e">   #+begin_src </span><span style="color:#75715e">shell</span><span style="color:#75715e"> :tangle .bashrc :noweb no-export
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -e <span style="color:#e6db74">${</span>HOME<span style="color:#e6db74">}</span>/etc/hostname <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+       export HOSTNAME<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>cat <span style="color:#e6db74">${</span>HOME<span style="color:#e6db74">}</span>/etc/hostname<span style="color:#e6db74">`</span>
+   <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> -e /etc/hostname <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+       export HOSTNAME<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>cat /etc/hostname<span style="color:#e6db74">`</span>
+   <span style="color:#66d9ef">else</span>
+       export HOSTNAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;unknown&#34;</span>
+   <span style="color:#66d9ef">fi</span>
+
+   <span style="color:#75715e"># Set timezone if ~/bin/tz.sh exists</span>
+
+   <span style="color:#75715e"># NEW, if neeeed?</span>
+   #
+   <span style="color:#75715e"># https://linuxize.com/post/how-to-set-or-change-timezone-in-linux/</span>
+   #
+   <span style="color:#75715e"># OLD:</span>
+   #
+   <span style="color:#75715e"># if [ -e ~/bin/tz.sh ]; then</span>
+   <span style="color:#75715e">#     echo Setting timezone.</span>
+   <span style="color:#75715e">#     source ~/bin/tz.sh # should be in ~/rc.local</span>
+   <span style="color:#75715e"># fi</span>
+
+   <span style="color:#75715e"># STILL NEEDED?</span>
+   #
+   <span style="color:#75715e"># Set local for numeric output</span>
+   LOCAL<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>locale -a | grep -i en_us | head -1<span style="color:#e6db74">`</span>
+   <span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;</span>$LOCAL<span style="color:#e6db74">&#34;</span> !<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span> export LC_NUMERIC<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$LOCAL<span style="color:#e6db74">&#34;</span>; <span style="color:#66d9ef">fi</span>
+<span style="color:#75715e">   #+end_src</span>
+
+<span style="color:#75715e">**</span> Set up ssh agent
+   Add keys by hand if needed via
+
+<span style="color:#75715e">   #+begin_example</span>
+   ssh-add ~/.ssh/id_*
+<span style="color:#75715e">   #+end_example</span>
+
+<span style="color:#75715e">   #+begin_src </span><span style="color:#75715e">shell</span><span style="color:#75715e"> :tangle .bashrc :noweb no-export
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -e ~/bin/sshagent <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+       source ~/bin/sshagent
+   <span style="color:#66d9ef">fi</span>
+<span style="color:#75715e">   #+end_src</span>
+
+<span style="color:#75715e">**</span> Copy stdin to clipboard
+
+<span style="color:#75715e">   #+begin_src </span><span style="color:#75715e">shell</span><span style="color:#75715e"> :tangle .bashrc :noweb no-export
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;</span>$OSTYPE<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;linux-gnu&#34;</span>* <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+     alias 2clip<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;xclip -selection c&#39;</span>
+     alias 3clip<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;printf %s &#34;$(cat /dev/stdin)&#34; | xclip -selection c&#39;</span>  <span style="color:#75715e"># no final \n</span>
+   <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;</span>$OSTYPE<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;darwin&#34;</span>* <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+     alias 2clip<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;pbcopy&#39;</span>
+   <span style="color:#66d9ef">fi</span>
+<span style="color:#75715e">   #+end_src</span>
+
+<span style="color:#75715e">**</span> Path functions
+  These path* functions add and remove elements to PATH.
+  They insure that entries are unique.
+  They allow you to place a path first or last in the order (e.g.
+  so that <span style="color:#a6e22e">=~/bin=</span> comes before <span style="color:#a6e22e">=/usr/local/bin=</span>)
+
+<span style="color:#75715e">  #+begin_src </span><span style="color:#75715e">shell</span><span style="color:#75715e"> :tangle .bashrc :noweb no-export
+</span><span style="color:#75715e"></span>  pathrm<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+      <span style="color:#75715e"># remove an item from the path</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -d <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+          removeThis<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;`echo </span>$1<span style="color:#e6db74"> | sed -e &#39;s#/#\\\/#&#39;g`&#34;</span>
+          newPath<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>echo $PATH | awk -v RS<span style="color:#f92672">=</span>: -v ORS<span style="color:#f92672">=</span>: <span style="color:#e6db74">&#34;/</span>$removeThis<span style="color:#e6db74">/ {next} {print}&#34;</span> | sed <span style="color:#e6db74">&#39;s/[ :]*$//g&#39;</span><span style="color:#e6db74">`</span>
+          export PATH<span style="color:#f92672">=</span>$newPath
+      <span style="color:#66d9ef">fi</span>
+  <span style="color:#f92672">}</span>
+
+
+  pathlast<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+      <span style="color:#75715e"># add path to the end if not there</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -d <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;:</span>$PATH<span style="color:#e6db74">:&#34;</span> !<span style="color:#f92672">=</span> *<span style="color:#e6db74">&#34;:</span>$1<span style="color:#e6db74">:&#34;</span>* <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+          export PATH<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>PATH:+<span style="color:#e6db74">&#34;</span>$PATH<span style="color:#e6db74">:&#34;</span><span style="color:#e6db74">}</span>$1<span style="color:#e6db74">&#34;</span>
+      <span style="color:#66d9ef">fi</span>
+  <span style="color:#f92672">}</span>
+
+
+  pathfirst<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+      <span style="color:#75715e"># add path to the front if not there</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -d <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;:</span>$PATH<span style="color:#e6db74">:&#34;</span> !<span style="color:#f92672">=</span> *<span style="color:#e6db74">&#34;:</span>$1<span style="color:#e6db74">:&#34;</span>* <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+          export PATH<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">:</span><span style="color:#e6db74">${</span>PATH<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+      <span style="color:#66d9ef">fi</span>
+  <span style="color:#f92672">}</span>
+
+  path<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e"># show path</span>
+    echo $PATH
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#75715e"># show path, one entry per line</span>
+  alias pathcat<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;echo </span>$PATH<span style="color:#e6db74"> | sed &#39;s/:/\n/g&#39;&#34;</span>
+
+
+  <span style="color:#75715e"># Be sure we have a few specific paths if they exist</span>
+
+  pathlast $HOME/bin
+  pathlast /usr/local/bin
+  pathlast /opt/bin
+<span style="color:#75715e">  #+end_src</span>
+
+<span style="color:#75715e">**</span> source ~/rc.local/*.sh to do non-general bash setup
+   Execute any .sh files in ~<span style="font-style:italic">/rc.local/</span><span style="font-weight:bold">*.sh
+</span><span style="font-weight:bold">
+</span><span style="font-weight:bold">   This allows me to split out setup for aliases and commands that
+</span><span style="font-weight:bold">   only get used on certian systems or in certian contexts (git, go,
+</span><span style="font-weight:bold">   mail, blog..)
+</span><span style="font-weight:bold">
+</span><span style="font-weight:bold">   #+begin_src shell :tangle .bashrc :noweb no-export
+</span><span style="font-weight:bold">
+</span><span style="font-weight:bold">   if [ -d ${HOME}/rc.local ]; then
+</span><span style="font-weight:bold">       for rcfile in $(find ${HOME}/rc.local -name \*</span>.sh); do
+           debug running localrc ${rcfile}
+           source ${rcfile}
+       done
+   fi
+   #+end_src
+
+<span style="color:#75715e">**</span> Invoking emacs
+<span style="color:#75715e">   #+begin_src </span><span style="color:#75715e">shell</span><span style="color:#75715e"> :tangle .bashrc :noweb no-export
+</span><span style="color:#75715e"></span>   alias emacs<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;setsid emacs&#39;</span>
+
+   <span style="color:#75715e"># from http://stuff-things.net/2014/12/16/working-with-emacsclient/</span>
+
+   <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -z <span style="color:#e6db74">&#34;</span>$SSH_CONNECTION<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+       export EMACSCLIENT<span style="color:#f92672">=</span>emacsclient
+       alias ec<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$EMACSCLIENT<span style="color:#e6db74"> -c -n&#34;</span>
+       export EDITOR<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$EMACSCLIENT<span style="color:#e6db74"> -c&#34;</span>
+       export ALTERNATE_EDITOR<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>
+   <span style="color:#66d9ef">else</span>
+       export EDITOR<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>type -P emacs <span style="color:#f92672">||</span> type -P ed<span style="color:#66d9ef">)</span>
+   <span style="color:#66d9ef">fi</span>
+   export VISUAL<span style="color:#f92672">=</span>$EDITOR
+<span style="color:#75715e">   #+end_src</span>
+
+<span style="color:#75715e">**</span> ls aliases
+<span style="color:#75715e">   #+begin_src </span><span style="color:#75715e">shell</span><span style="color:#75715e"> :tangle .bashrc :noweb no-export
+</span><span style="color:#75715e"></span>
+   <span style="color:#75715e"># coloring for ls functions</span>
+
+   <span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;</span>$OSTYPE<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;linux-gnu&#34;</span> <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+       color<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;--color&#34;</span>;
+   <span style="color:#66d9ef">else</span>
+       color<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>
+   <span style="color:#66d9ef">fi</span>
+
+   BIN_LS<span style="color:#f92672">=</span>/bin/ls
+   alias ls<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;	ls &#39;</span>$color<span style="color:#e6db74">&#39; -a&#39;</span>
+
+
+   <span style="color:#75715e"># Long List Reverse Tail</span>
+   <span style="color:#66d9ef">function</span> llrt<span style="color:#f92672">()</span> <span style="color:#f92672">{</span> ls -lrt $color <span style="color:#e6db74">${</span>*<span style="color:#66d9ef">:-</span><span style="color:#e6db74">}</span>; <span style="color:#f92672">}</span>
+
+   <span style="color:#75715e"># Long List Time</span>
+   <span style="color:#66d9ef">function</span> llt<span style="color:#f92672">()</span> <span style="color:#f92672">{</span> ls -lt $color <span style="color:#e6db74">${</span>*<span style="color:#66d9ef">:-</span><span style="color:#e6db74">}</span>; <span style="color:#f92672">}</span>
+
+   <span style="color:#75715e"># Long List Time, More</span>
+   <span style="color:#66d9ef">function</span> lltm<span style="color:#f92672">()</span> <span style="color:#f92672">{</span> ls -lt $color <span style="color:#e6db74">${</span>*<span style="color:#66d9ef">:-</span><span style="color:#e6db74">}</span> | more; <span style="color:#f92672">}</span>
+
+   <span style="color:#75715e"># Long List Time, Less</span>
+   <span style="color:#66d9ef">function</span> lltl<span style="color:#f92672">()</span> <span style="color:#f92672">{</span> ls -alt $color <span style="color:#e6db74">${</span>*<span style="color:#66d9ef">:-</span><span style="color:#e6db74">}</span> | more; <span style="color:#f92672">}</span>
+
+   <span style="color:#75715e"># Long List Time, Head</span>
+   <span style="color:#66d9ef">function</span> llth<span style="color:#f92672">()</span> <span style="color:#f92672">{</span> ls -lt $color <span style="color:#e6db74">${</span>*<span style="color:#66d9ef">:-</span><span style="color:#e6db74">}</span> | head; <span style="color:#f92672">}</span>
+
+   <span style="color:#75715e"># Long List Time, Tail</span>
+   <span style="color:#66d9ef">function</span> lltt<span style="color:#f92672">()</span> <span style="color:#f92672">{</span> ls -alt $color <span style="color:#e6db74">${</span>*<span style="color:#66d9ef">:-</span><span style="color:#e6db74">}</span> | tail; <span style="color:#f92672">}</span>
+
+
+   <span style="color:#75715e"># List Sort Size</span>
+   <span style="color:#66d9ef">function</span> lss<span style="color:#f92672">()</span> <span style="color:#f92672">{</span> ls -a1s $color <span style="color:#e6db74">${</span>*<span style="color:#66d9ef">:-</span><span style="color:#e6db74">}</span> | sort -n; <span style="color:#f92672">}</span>
+
+   <span style="color:#75715e"># List Sort Size Reverse</span>
+   <span style="color:#66d9ef">function</span> lssr<span style="color:#f92672">()</span> <span style="color:#f92672">{</span> ls -a1s $color <span style="color:#e6db74">${</span>*<span style="color:#66d9ef">:-</span><span style="color:#e6db74">}</span> | sort -nr; <span style="color:#f92672">}</span>
+
+<span style="color:#75715e">   #+end_src</span>
+
+<span style="color:#75715e">**</span> Aliases for viewing the newest file in a directoy
+<span style="color:#75715e">   #+begin_src </span><span style="color:#75715e">shell</span><span style="color:#75715e"> :tangle .bashrc :noweb no-export
+</span><span style="color:#75715e"></span>
+   <span style="color:#66d9ef">function</span> nf <span style="color:#f92672">()</span>
+   <span style="color:#f92672">{</span>
+       <span style="color:#75715e"># list the newest file in the current directory</span>
+       NF<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>find <span style="color:#e6db74">${</span>1<span style="color:#66d9ef">:-</span>.<span style="color:#e6db74">}</span> -maxdepth <span style="color:#ae81ff">1</span> -type f -print0 | xargs -0 ls -1t  |  head -1;<span style="color:#e6db74">`</span>;
+       echo <span style="color:#e6db74">${</span>NF<span style="color:#66d9ef">:-</span>/dev/null<span style="color:#e6db74">}</span> | sed <span style="color:#e6db74">&#34;s/ /\\\ /g&#34;</span>
+   <span style="color:#f92672">}</span>
+
+
+   <span style="color:#75715e"># new file tail file</span>
+   <span style="color:#66d9ef">function</span> nftf <span style="color:#f92672">{</span> NF<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>nf <span style="color:#e6db74">${</span>1<span style="color:#66d9ef">:-</span>.<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>; debug NF $NF;  echo <span style="color:#e6db74">&#34;</span>$NF<span style="color:#e6db74">&#34;</span> | xargs tail -f  ; <span style="color:#f92672">}</span>
+
+   <span style="color:#75715e"># new file tail</span>
+   <span style="color:#66d9ef">function</span> nft <span style="color:#f92672">{</span> NF<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>nf <span style="color:#e6db74">${</span>1<span style="color:#66d9ef">:-</span>.<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>; debug NF $NF;  echo <span style="color:#e6db74">&#34;</span>$NF<span style="color:#e6db74">&#34;</span> | xargs tail  ; <span style="color:#f92672">}</span>
+
+   <span style="color:#75715e"># new file head</span>
+   <span style="color:#66d9ef">function</span> nfh <span style="color:#f92672">{</span> NF<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>nf <span style="color:#e6db74">${</span>1<span style="color:#66d9ef">:-</span>.<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>; debug NF $NF;  echo <span style="color:#e6db74">&#34;</span>$NF<span style="color:#e6db74">&#34;</span> | xargs head  ; <span style="color:#f92672">}</span>
+
+   <span style="color:#75715e"># new file less</span>
+   <span style="color:#66d9ef">function</span> nfl <span style="color:#f92672">{</span> NF<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>nf <span style="color:#e6db74">${</span>1<span style="color:#66d9ef">:-</span>.<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>; debug NF $NF;  echo <span style="color:#e6db74">&#34;</span>$NF<span style="color:#e6db74">&#34;</span> | xargs less  ; <span style="color:#f92672">}</span>
+
+   <span style="color:#75715e"># new file cat</span>
+   <span style="color:#66d9ef">function</span> nfc <span style="color:#f92672">{</span> NF<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>nf <span style="color:#e6db74">${</span>1<span style="color:#66d9ef">:-</span>.<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>; debug NF $NF;  echo <span style="color:#e6db74">&#34;</span>$NF<span style="color:#e6db74">&#34;</span> | xargs cat  ; <span style="color:#f92672">}</span>
+
+   <span style="color:#75715e"># new file ls</span>
+   <span style="color:#66d9ef">function</span> nfls <span style="color:#f92672">{</span> NF<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>nf <span style="color:#e6db74">${</span>1<span style="color:#66d9ef">:-</span>.<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>; debug NF $NF;  echo <span style="color:#e6db74">&#34;</span>$NF<span style="color:#e6db74">&#34;</span> | xargs ls -A1t  ; <span style="color:#f92672">}</span>
+
+   <span style="color:#75715e"># new file ls -l</span>
+   <span style="color:#66d9ef">function</span> nflsl <span style="color:#f92672">{</span> NF<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>nf <span style="color:#e6db74">${</span>1<span style="color:#66d9ef">:-</span>.<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>; debug NF $NF;  echo <span style="color:#e6db74">&#34;</span>$NF<span style="color:#e6db74">&#34;</span> | xargs
+   ls -Atl  ; <span style="color:#f92672">}</span>
+<span style="color:#75715e">   #+end_src</span>
+
+<span style="color:#75715e">**</span> viewing files
+   Notes on setting up file<span style="font-style:italic">/mime type associations can be found at
+</span><span style="font-style:italic">
+</span><span style="font-style:italic">   https:/</span>/unix.stackexchange.com/questions/77136/xdg-open-default-applications-behavior
+
+   So, to make emacs (what else?) the default for MIME type <span style="color:#a6e22e">=text/plain=</span> ...
+
+<span style="color:#75715e">   #+begin_example</span>
+   locate -r &#39;emacs.*\.desktop&#39;
+   xdg-mime default emacs.desktop text/plain
+<span style="color:#75715e">   #+end_example</span>
+
+<span style="color:#75715e">   #+begin_src </span><span style="color:#75715e">shell</span><span style="color:#75715e"> :tangle .bashrc :noweb no-export
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span>  ! -z <span style="color:#e6db74">&#34;`which xdg-open`&#34;</span> <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span> alias open<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;xdg-open &#39;</span>; <span style="color:#66d9ef">fi</span>
+<span style="color:#75715e">   #+end_src</span>
+
+<span style="color:#75715e">**</span> All done
+<span style="color:#75715e">   #+begin_src </span><span style="color:#75715e">shell</span><span style="color:#75715e"> :tangle .bashrc :noweb no-export
+</span><span style="color:#75715e"></span>   touch $HOME/.bashrc-ran
+   debug <span style="color:#e6db74">&#34;.bashrc done&#34;</span>
+<span style="color:#75715e">   #+end_src</span>
+</code></pre></div><p>Congratulations for reading this far.   Go forth and write literate programs.</p>
+<p>Posts 38 of #100DaysToOffload <a href="https://100daystooffload.com/">https://100daystooffload.com/</a>.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>This was about 10 years before the world wide web &hellip; maybe Berners-Lee got some inspiration on the name from Knuth? Or Sir Walter Scott: &ldquo;‘Oh what a tangled web we weave/When first we practice to deceive&rdquo; <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+</div>
+<hr>
+<h2>Comments</h2>
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "curiousmusings" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </main>
+
+    
+  </body>
+</html>

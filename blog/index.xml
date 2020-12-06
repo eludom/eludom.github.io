@@ -6,10 +6,51 @@
     <description>Recent content in Blogs on Curious Musings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Nov 2020 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 05 Dec 2020 00:00:00 -0500</lastBuildDate>
     
 	<atom:link href="https://eludom.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>.bashrc as literate programming</title>
+      <link>https://eludom.github.io/blog/bashrc/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://eludom.github.io/blog/bashrc/</guid>
+      <description>&lt;h2 id=&#34;knuth-gets-annoyed-at-his-publishers--tex--is-born-dot&#34;&gt;Knuth gets annoyed at his publishers, \(\TeX\) is born.&lt;/h2&gt;
+&lt;p&gt;Back in the late 70s Donald Knuth who was (and still is) publishing a
+seminal series of Computer Science text books got annoyed at the
+typesetting, layouts and font choices he was being presented by
+publishers.   So he did what any self-respecting hacker who happened
+to be Donald Knuth would do: he created his own typesetting system
+called \(\TeX\) which (along with \(\LaTeX\) which borrowed heavily from SCRIBE)
+is something of a standard to this day in academic publishing.&lt;/p&gt;
+&lt;p&gt;Because, you know, why is it unreasonable to expect publishers to
+render simple equations, right?&lt;/p&gt;
+&lt;p&gt;\begin{multline*}
+\vec{E}_{\mathrm{tot}}=
+q\cdot k_{b}\cdot \dfrac{r}{r^3}
+\left\lgroup
+\frac{\hat{r}-\left(\dfrac{d}{2\cdot r}\right)\hat{d}}
+{\biggl(1+\left(\dfrac{d}{2\cdot r}\right)^2-
+\left(\dfrac{d}{r}\right)\hat{r}\cdot\hat{d}\cdot\cos(\theta)
+\biggr)^{3/2}}
+\right.
+\\\&lt;br&gt;
+\left.
+{}-
+\frac{\hat{r}+\left(\dfrac{d}{2\cdot r}\right)\hat{d}}
+{\biggl(1+\left(\dfrac{d}{2\cdot r}\right)^2+
+\left(\dfrac{d}{r}\right)\cdot\hat{r}\cdot\hat{d}\cdot\cos(\theta)
+\biggr)^{3/2}}
+\right\rgroup
+\end{multline*}&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;a href=&#34;https://tex.stackexchange.com/questions/371644/how-to-write-this-long-equation&#34;&gt;https://tex.stackexchange.com/questions/371644/how-to-write-this-long-equation&lt;/a&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;But wait, there&amp;rsquo;s more.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>What a day for a daydream</title>
