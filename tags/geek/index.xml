@@ -6,10 +6,39 @@
     <description>Recent content in geek on Curious Musings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 05 Dec 2020 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 06 Dec 2020 00:00:00 -0500</lastBuildDate>
     
 	<atom:link href="https://eludom.github.io/tags/geek/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Of Typewriters, Scribe, LaTeX, Org mode, Hugo and Paper</title>
+      <link>https://eludom.github.io/blog/typewriters/</link>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://eludom.github.io/blog/typewriters/</guid>
+      <description>&lt;h2 id=&#34;what-is-this-and-why-was-it-written&#34;&gt;What is this and why was it written?&lt;/h2&gt;
+&lt;p&gt;This is my personal history of putting
+words-on-page-or-screen-or-blog-entry covering the period from
+the late 1970s to present (2020-12-05).&lt;/p&gt;
+&lt;p&gt;It was written (partially) at the request of &lt;a href=&#34;https://helpdeskheadesk.net/about/&#34;&gt;JTR&lt;/a&gt; from
+whom I borrowed a Hugo blog theme.  Thanks JTR.&lt;/p&gt;
+&lt;p&gt;I was writing a post where I wanted to include the \(\TeX\) symbol
+in the post, which is perfectly possible in emacs org mode where
+\(\TeX\) and \(\LaTeX\) are first class citizens, but it wasn&amp;rsquo;t
+working.&lt;/p&gt;
+&lt;p&gt;The blog exports to markdown via the &lt;a href=&#34;https://ox-hugo.scripter.co/&#34;&gt;ox-hugo&lt;/a&gt; Org exporter back
+end (lost yet?)  which &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; then translates to HTML which can
+then be previewed locally with Hugo&amp;rsquo;s own web server and then
+pushed to the live site, in my case, this site using git push.&lt;/p&gt;
+&lt;p&gt;I pinged JTR who, it turns out had little experience with
+\(\LaTeX\) and so was not able to help.  Along the way, he asked
+me&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Is there more you can tell me about use case for it? In other words,
+can I get you to vent some more about this, it&amp;rsquo;s interesting.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
     
     <item>
       <title>.bashrc as literate programming</title>

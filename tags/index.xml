@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Curious Musings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 05 Dec 2020 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 06 Dec 2020 00:00:00 -0500</lastBuildDate>
     
 	<atom:link href="https://eludom.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,16 +14,25 @@
     <item>
       <title>100DaysToOffload</title>
       <link>https://eludom.github.io/tags/100daystooffload/</link>
-      <pubDate>Sat, 05 Dec 2020 00:00:00 -0500</pubDate>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 -0500</pubDate>
       
       <guid>https://eludom.github.io/tags/100daystooffload/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>blogging</title>
+      <link>https://eludom.github.io/tags/blogging/</link>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://eludom.github.io/tags/blogging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>emacs</title>
       <link>https://eludom.github.io/tags/emacs/</link>
-      <pubDate>Sat, 05 Dec 2020 00:00:00 -0500</pubDate>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 -0500</pubDate>
       
       <guid>https://eludom.github.io/tags/emacs/</guid>
       <description></description>
@@ -32,9 +41,18 @@
     <item>
       <title>geek</title>
       <link>https://eludom.github.io/tags/geek/</link>
-      <pubDate>Sat, 05 Dec 2020 00:00:00 -0500</pubDate>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 -0500</pubDate>
       
       <guid>https://eludom.github.io/tags/geek/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>history</title>
+      <link>https://eludom.github.io/tags/history/</link>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://eludom.github.io/tags/history/</guid>
       <description></description>
     </item>
     
@@ -53,15 +71,6 @@
       <pubDate>Wed, 25 Nov 2020 00:00:00 -0500</pubDate>
       
       <guid>https://eludom.github.io/tags/life/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>history</title>
-      <link>https://eludom.github.io/tags/history/</link>
-      <pubDate>Tue, 03 Nov 2020 00:00:00 -0500</pubDate>
-      
-      <guid>https://eludom.github.io/tags/history/</guid>
       <description></description>
     </item>
     
@@ -215,15 +224,6 @@
       <pubDate>Wed, 19 Aug 2020 00:00:00 -0400</pubDate>
       
       <guid>https://eludom.github.io/tags/philosophy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>blogging</title>
-      <link>https://eludom.github.io/tags/blogging/</link>
-      <pubDate>Sun, 16 Aug 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://eludom.github.io/tags/blogging/</guid>
       <description></description>
     </item>
     
