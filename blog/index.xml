@@ -6,10 +6,20 @@
     <description>Recent content in Blogs on Curious Musings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 Dec 2020 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 03 Jul 2021 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://eludom.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The World Needs Visionaries</title>
+      <link>https://eludom.github.io/blog/visionaries/</link>
+      <pubDate>Sat, 03 Jul 2021 00:00:00 -0400</pubDate>
+      
+      <guid>https://eludom.github.io/blog/visionaries/</guid>
+      <description>Jeff Bezos is stepping down as CEO of Amazon Monday. I met him briefly at an internal company conference (the Amazon Machine Learning conference) when I worked there 2016.
+   Figure 1: Jeff Bezos  I admire him. He&amp;rsquo;s created things. He built a company that&amp;rsquo;s changing the world. He had vision. He (and his in-laws) took risks. He provided leadership (see the The Amazon Leadership Principals) and he knew when to get out of the way.</description>
+    </item>
     
     <item>
       <title>Of Typewriters, Scribe, LaTeX, Org mode, Hugo and Paper</title>
@@ -197,15 +207,6 @@ just hanging out on Facebook?&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>test</title>
-      <link>https://eludom.github.io/blog/test/</link>
-      <pubDate>Sun, 11 Oct 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://eludom.github.io/blog/test/</guid>
-      <description>By this all men will know that you are My disciples, if you have love for one another.” [[https://biblehub.com/nasb/john/13-35.htm][John 13:35]] </description>
-    </item>
-    
-    <item>
       <title>Source Code Distribution From Printouts to Github</title>
       <link>https://eludom.github.io/blog/sourcecode/</link>
       <pubDate>Sat, 10 Oct 2020 00:00:00 -0400</pubDate>
@@ -315,16 +316,6 @@ Right.&lt;/p&gt;
       
       <guid>https://eludom.github.io/blog/privacy-intro/</guid>
       <description>In this world where Big Internet firms track you to sell you stuff (and to sell YOU), big Government tracks you because, well, they can, and where I found myself on a motion activated camera when backpacking alone in the &amp;ldquo;backcountry&amp;rdquo; in an attempt to &amp;ldquo;get away from it all&amp;rdquo;, I&amp;rsquo;ve spend some time thinking about privacy.
-Life is short. I could spend a lot of time registering domain names, managing certificates, running my own mail server, de-googling, convincing my friends and family to use nifty new security and privacy apps, and generally fighting the privacy fight as an individual against entire well-funded industries and governments.</description>
-    </item>
-    
-    <item>
-      <title>Privacy: what is it and why do we care? …</title>
-      <link>https://eludom.github.io/blog/privacy/</link>
-      <pubDate>Tue, 22 Sep 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://eludom.github.io/blog/privacy/</guid>
-      <description>In this world where Big Internet firms track you to sell you stuff (and to sell YOU), big Government tracks you because, well, they can, and where I found myself on motion activated cameras when hiking alone deep in the &amp;ldquo;backcountry&amp;rdquo; in an attempt to &amp;ldquo;get away from it all&amp;rdquo;, I&amp;rsquo;ve spend some time thinking about privacy.
 Life is short. I could spend a lot of time registering domain names, managing certificates, running my own mail server, de-googling, convincing my friends and family to use nifty new security and privacy apps, and generally fighting the privacy fight as an individual against entire well-funded industries and governments.</description>
     </item>
     
@@ -601,15 +592,6 @@ turkey as &lt;a href=&#34;https://musings.tychi.me/so-long-and-thanks-for-all-th
     </item>
     
     <item>
-      <title>TLS 1.3, China blocking</title>
-      <link>https://eludom.github.io/blog/blocking-tls-13/</link>
-      <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://eludom.github.io/blog/blocking-tls-13/</guid>
-      <description> See Paul Vixie Tweet 2020-08-09 + my android brave reading bookmarks (cloudflare blog, etc.)  </description>
-    </item>
-    
-    <item>
       <title>Publishing a blog on Github with Org and Hugo</title>
       <link>https://eludom.github.io/blog/hugo-org-github/</link>
       <pubDate>Sun, 16 Aug 2020 00:00:00 -0400</pubDate>
@@ -622,17 +604,6 @@ S3 buckets, I wish my blog could look as slick ast
 &lt;a href=&#34;https://eludom.github.io/&#34;&gt;https://eludom.github.io/&lt;/a&gt;&amp;rdquo; your&amp;rsquo;re in luck, All but the
 &lt;em&gt;simple&lt;/em&gt; part.  Here are some of the references I used.&lt;/p&gt;
 &lt;p&gt;Post 19 of #100DaysToOffload &lt;a href=&#34;https://100daystooffload.com/&#34;&gt;https://100daystooffload.com/&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Walled Gardens</title>
-      <link>https://eludom.github.io/blog/walled-gardens/</link>
-      <pubDate>Tue, 11 Aug 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://eludom.github.io/blog/walled-gardens/</guid>
-      <description>This is a brain dump on something like 40 years experience with &amp;ldquo;social media&amp;rdquo; of various forms.
-Dial-up BBSs, Fidonet, Usenet, IRC, CompuServe, AOL, Slashdot, Sourceforge, blogspot, Facebook, Jabber, Google+, Twitter, LinkedIn, Mastadon &amp;ldquo;&amp;hellip;we didn&amp;rsquo;t start the fire&amp;hellip;&amp;rdquo; OK, maybe we did.
-I hope this is useful, or at least interesting. It may wind up just being a mix of introspection, hubris or narcissism, it may be part of working up the nerve to quit Twitter as I quit Facebook in 2016, maybe I&amp;rsquo;ll even work up the nerve to go cold turkey as tychi is doing.</description>
     </item>
     
     <item>
@@ -777,16 +748,6 @@ comment !)&lt;/p&gt;
                         &lt;/p&gt;
                 
             &lt;/figcaption&gt;&lt;/figure&gt;</description>
-    </item>
-    
-    <item>
-      <title>1500 miles down, 700 to go</title>
-      <link>https://eludom.github.io/blog/get-wet/</link>
-      <pubDate>Mon, 25 May 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://eludom.github.io/blog/get-wet/</guid>
-      <description>1500 miles down, 700 to go to finish section hiking the Appalachian Trail with 215 miles completed this year in 3 trips.
-Of course, I have some of the hardest miles left: the Smokies, Mt. Washington, the Whites, the Presidentials, the Bigelows, but with persistence, luck, health (and some HARD hiking) I should finish in a few years.</description>
     </item>
     
     <item>
